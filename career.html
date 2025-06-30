@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Career</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="assets/css/main.css" rel="stylesheet">
+    
+
+	<style>
+		svg:not(:root) {
+    		overflow: hidden;
+		}
+		.main-wrapper {
+			max-width: 1170px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.upload-main-wrapper{
+			width: 220px;
+			margin: 0 auto;
+		}
+		#file-upload-name{
+			margin: 4px 0 0 0;
+			font-size: 12px;
+		}
+		.upload-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin: 40px auto 0;
+			position: relative;
+			cursor: pointer;
+			background-color: #bcaef5;
+			padding: 8px 10px;
+			border-radius: 10px;
+			overflow: hidden;
+			transition: 0.2s linear all;
+			color: #ffffff;
+		}
+		.upload-wrapper input[type="file"] {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			top: 0;
+			bottom: 0;
+			cursor: pointer;
+			z-index: 1;
+		}
+		.upload-wrapper > svg {
+			width: 50px;
+			height: auto;
+			cursor: pointer;
+		}
+		.upload-wrapper.success > svg{
+			transform: translateX(-200px);
+		}
+		.upload-wrapper.uploaded {
+			transition: 0.2s linear all;
+			width: 60px;
+			border-radius: 50%;
+			height: 60px;
+			text-align: center;
+		}
+		.upload-wrapper .file-upload-text {
+			position: absolute;
+			left: 80px;
+			opacity: 1;
+			visibility: visible;
+			transition: 0.2s linear all;
+		}
+		.upload-wrapper.uploaded .file-upload-text {
+			text-indent: -999px;
+			margin: 0;
+		}
+		.file-success-text {
+			opacity: 0;
+			transition: 0.2s linear all;
+			visibility: hidden;
+			transform: translateX(200px);
+			position: absolute;
+			left: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.file-success-text svg {
+			width: 25px;
+			height: auto;
+		}
+		.file-success-text span{
+		margin-left: 15px;
+		}
+		.upload-wrapper.success .file-success-text{
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+		}
+		.upload-wrapper.success.uploaded .file-success-text{
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+		}
+		.upload-wrapper.success.uploaded .file-success-text span{
+			display: none;
+		}
+		.upload-wrapper .file-success-text circle{
+			stroke-dasharray: 380;
+			stroke-dashoffset: 380;
+			transition: 1s linear all;
+			transition-delay: 1.4s;
+		}
+		.upload-wrapper.success .file-success-text  circle {
+			stroke-dashoffset: 0;
+		}
+		.upload-wrapper .file-success-text polyline {
+			stroke-dasharray: 380;
+			stroke-dashoffset: 380;
+			transition: 1s linear all;
+			transition-delay: 2s;
+		}
+		.upload-wrapper.success .file-success-text polyline {
+			stroke-dashoffset: 0;
+		}
+		.upload-wrapper.success .file-upload-text{
+			-webkit-animation-name: bounceOutLeft;
+			animation-name: bounceOutLeft;
+			-webkit-animation-duration: 0.2s;
+			animation-duration: 0.2s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+		@-webkit-keyframes bounceOutLeft {
+			20% {
+				opacity: 1;
+				-webkit-transform: translate3d(20px, 0, 0);
+				transform: translate3d(20px, 0, 0);
+			}
+
+			to {
+				opacity: 0;
+				-webkit-transform: translate3d(-2000px, 0, 0);
+				transform: translate3d(-2000px, 0, 0);
+			}
+		}
+
+		@keyframes bounceOutLeft {
+			20% {
+				opacity: 1;
+				-webkit-transform: translate3d(20px, 0, 0);
+				transform: translate3d(20px, 0, 0);
+			}
+
+			to {
+				opacity: 0;
+				-webkit-transform: translate3d(-2000px, 0, 0);
+				transform: translate3d(-2000px, 0, 0);
+			}
+		}
+	</style>
+  </head>
+  <body>
+    
+	<header id="header" class="header d-flex align-items-center fixed-top">
+		<div class="container-fluid container-xl position-relative d-flex align-items-center">
+	
+		  <a href="index.html" class="logo d-flex align-items-center me-auto">
+			<!-- Uncomment the line below if you also wish to use an image logo -->
+			<img src="images/logo-purple.png" alt="">
+			<!-- <h1 class="sitename">Logis</h1> -->
+		  </a>
+	
+		  <nav id="navmenu" class="navmenu">
+			<ul>
+			  <li><a href="index.html">Home<br></a></li>
+			  <li><a href="about.html">About</a></li>
+			  <li><a href="services.html">Services</a></li>
+			  <li><a href="career.html" class="active">Career</a></li>
+			  <li><a href="contact.html">Contact</a></li>
+			</ul>
+			<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+		  </nav>
+	
+		  <a class="btn-getstarted" href="contact.html">Get Started</a>
+	
+		</div>
+	  </header>
+	
+	  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(images/bg1.jpeg);">
+		<div class="container position-relative">
+		  <h1>Career</h1>
+		  <p>Be part of a team that's revolutionizing B2B sales and marketing with innovation, excellence, and growth opportunities</p>
+		  <nav class="breadcrumbs">
+			<ol>
+			  <li><a href="index.html">Home</a></li>
+			  <li class="current">Career</li>
+			</ol>
+		  </nav>
+		</div>
+	  </div><!-- End Page Title -->
+
+
+    <!--<section class="section ftco-no-pt ftc-no-pb">
+    	<div class="container">
+
+			<div class="col-lg-12 py-5">
+				<div class="row">
+					<div class="heading-section" style="text-align: center;">
+						<h2 class="mb-4">Join Our Team</h2>
+					</div>
+				</div>
+				<p>We are always looking for talented individuals. Please upload your resume below:</p>
+			</div>
+				
+				
+			<!-- <form id="resumeForm" enctype="multipart/form-data">
+				<label for="resume">Upload your resume:</label>
+				<input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+				<button type="submit">Submit</button>
+			</form> -->
+	
+			<!--<div id="responseMessage" style="text-align: center; margin-top: 20px;"></div>
+
+			<div class="upload-main-wrapper" style="min-height: 500px;">
+				<div class="upload-wrapper">
+					<form id="resumeForm" enctype="multipart/form-data">
+						<input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+					</form>
+
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="224.3881704980842 176.8527621722847 221.13266283524905 178.8472378277154" width="221.13" height="178.85"><defs><path d="M357.38 176.85C386.18 176.85 409.53 204.24 409.53 238.02C409.53 239.29 409.5 240.56 409.42 241.81C430.23 246.95 445.52 264.16 445.52 284.59C445.52 284.59 445.52 284.59 445.52 284.59C445.52 309.08 423.56 328.94 396.47 328.94C384.17 328.94 285.74 328.94 273.44 328.94C246.35 328.94 224.39 309.08 224.39 284.59C224.39 284.59 224.39 284.59 224.39 284.59C224.39 263.24 241.08 245.41 263.31 241.2C265.3 218.05 281.96 199.98 302.22 199.98C306.67 199.98 310.94 200.85 314.93 202.46C324.4 186.96 339.88 176.85 357.38 176.85Z" id="b1aO7LLtdW"></path><path d="M306.46 297.6L339.79 297.6L373.13 297.6L339.79 255.94L306.46 297.6Z" id="c4SXvvMdYD"></path><path d="M350.79 293.05L328.79 293.05L328.79 355.7L350.79 355.7L350.79 293.05Z" id="b11si2zUk"></path></defs><g><g><g><use xlink:href="#b1aO7LLtdW" opacity="1" fill="#ffffff" fill-opacity="1"></use></g><g><g><use xlink:href="#c4SXvvMdYD" opacity="1" fill="#363535" fill-opacity="1"></use></g><g><use xlink:href="#b11si2zUk" opacity="1" fill="#363535" fill-opacity="1"></use></g></g></g></g></svg>
+					<span class="file-upload-text">Upload File</span>
+					<div class="file-success-text">
+						<svg version="1.1" id="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"  xml:space="preserve">
+						<circle style="fill:rgba(0,0,0,0);stroke:#ffffff;stroke-width:10;stroke-miterlimit:10;" cx="49.799" cy="49.746" r="44.757"/>
+						<polyline style="fill:rgba(0,0,0,0);stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="27.114,51 41.402,65.288 72.485,34.205 "/>
+						</svg> <span>Successfully</span>
+					</div>
+				</div>
+				<p id="file-upload-name"></p>
+			</div>
+
+    		</div>
+    	</div>
+    </section>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Join Our Team | LeadXcel B2B</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 35px;
+        }
+        
+        /* Header Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #5423c6 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-section p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+        }
+        
+        .hero-nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .hero-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 12px 24px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-nav a:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Why Join Section */
+        .why-join {
+            padding: 25px;
+            background: #f8fafc;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #1a202c;
+            margin-bottom: -12px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.92rem;
+            color: #718096;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 15px;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 25px 25px 5px;
+            border-radius: 16px;
+            text-align: left;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+        
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea, #5423c6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.1rem;
+            color: #1a202c;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .benefit-card p {
+            color: #718096;
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+        
+        /* Open Positions */
+        .positions {
+            padding: 15px 0;
+             background: #f8fafc;
+        }
+        
+        .position-card {
+            background: #fafafa;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .position-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea, #5423c6);
+        }
+        
+        .position-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+            background: white;
+        }
+        
+        .position-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .position-title {
+            font-size: 1.2rem;
+            color: #1a202c;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .position-type {
+            background: #e6fffa;
+            color: #234e52;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #b2f5ea;
+        }
+        
+        .position-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #718096;
+            font-size: 0.95rem;
+        }
+        
+        .detail-item i {
+            color: #667eea;
+            width: 16px;
+            font-size: 0.9rem;
+        }
+        
+        .position-description {
+            color: #4a5568;
+            margin-bottom: 10px;
+            line-height: 1.7;
+            font-size: 0.92rem;
+        }
+        
+        .apply-btn {
+            background: linear-gradient(135deg, #667eea, #5423c6);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: none;
+        }
+        
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+        }
+        .apply-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .apply-btn:hover::before {
+            left: 100%;
+        }
+        /* Application Form */
+        .application-form {
+            padding: 0px 0 50px 0;
+            background: #f8fafc;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+        }
+        
+        .form-group {
+            margin-bottom: 32px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1a202c;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 0.82rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+        
+        .file-upload {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .file-upload input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .file-upload-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            background: #fafafa;
+            color: #718096;
+            transition: all 0.3s ease;
+        }
+        
+        .file-upload:hover .file-upload-label {
+            border-color: #667eea;
+            background: #f0f4ff;
+            color: #667eea;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea, #5423c6);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(102, 126, 234, 0.4);
+        }
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+        .success-message {
+            background: #f0fff4;
+            color: #22543d;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid #9ae6b4;
+            display: none;
+            text-align: center;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 { font-size: 2.5rem; }
+            .hero-section p { font-size: 1.1rem; }
+            .hero-nav { 
+                flex-direction: column; 
+                gap: 16px; 
+                align-items: center;
+            }
+            .hero-nav a {
+                width: 200px;
+                text-align: center;
+            }
+            .form-row { grid-template-columns: 1fr; }
+            .form-container { 
+                padding: 40px 24px; 
+                margin: 0 20px;
+            }
+            .position-header { 
+                flex-direction: column; 
+                gap: 16px; 
+            }
+            .position-details {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefit-card {
+                padding: 32px 24px;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading state */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .loading .submit-btn {
+            background: #a0aec0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Why Join Section -->
+    <section class="why-join" id="benefits">
+        <div class="container">
+                </div>
+
+              <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Accelerated Growth</h3>
+                    <p>Fast-track your career with mentorship programs, skill development workshops, and clear advancement pathways in the dynamic B2B landscape.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaborative Excellence</h3>
+                    <p>Work alongside industry experts in a supportive environment that values innovation, creativity, and collective success in achieving ambitious goals.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation Focus</h3>
+                    <p>Be at the forefront of B2B technology and methodologies, working with cutting-edge tools and strategies that define industry standards.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Recognition & Rewards</h3>
+                    <p>Competitive compensation packages, performance bonuses, and comprehensive benefits that recognize your contributions and achievements.</p>
+                </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="positions" id="positions">
+        <div class="container">
+            <h3 class="section-title">Current Opportunities</h3>
+            <p class="section-subtitle">Discover your next career move with roles designed to challenge and inspire professional growth</p>
+            
+            <div class="position-card">
+                <div class="position-header">
+                    <div>
+                        <h3 class="position-title">Research Analyst</h3>
+                    </div>
+                    <span class="position-type">Full-time</span>
+                </div>
+                <div class="position-details">
+                    <div class="detail-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>0-5 years experience</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Graduate/Undergraduate</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Pune, Maharashtra</span>
+                    </div>
+                </div>
+                <p class="position-description">
+                    Drive our research initiatives by analyzing market trends, identifying high-potential leads, and supporting strategic demand generation campaigns. Work with advanced analytics tools to uncover insights that fuel business growth.
+                </p>
+                <button class="apply-btn" onclick="scrollToApplication('B2B Research Analyst')">Apply Now</button>
+            </div>
+
+			<div class="position-card">
+                <div class="position-header">
+                    <div>
+                        <h3 class="position-title">Lead Generation Executive</h3>
+                    </div>
+                    <span class="position-type">Full-time</span>
+                </div>
+                <div class="position-details">
+                    <div class="detail-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>0-5 years experience</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Graduate/Undergraduate</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Pune, Maharashtra</span>
+                    </div>
+                </div>
+                <p class="position-description">
+                    Identify and engage high-value prospects through targeted outreach campaigns, driving qualified opportunities into the sales pipeline. Collaborate across teams to execute data-driven strategies that accelerate B2B growth.
+                </p>
+                <button class="apply-btn" onclick="scrollToApplication('Lead Generation Executive')">Apply Now</button>
+            </div>
+
+
+            <div class="position-card">
+                <div class="position-header">
+                    <div>
+                        <h3 class="position-title">Business Development Executive</h3>
+                    </div>
+                    <span class="position-type">Full-time</span>
+                </div>
+                <div class="position-details">
+                    <div class="detail-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>1-5 years experience</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-industry"></i>
+                        <span>B2B Experience Preferred</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-handshake"></i>
+                        <span>Client Relations</span>
+                    </div>
+                </div>
+                <p class="position-description">
+                    Build and nurture strategic client relationships while driving revenue growth through our proven ABM strategies and appointment setting services. Lead conversion optimization and exceed ambitious targets.
+                </p>
+                <button class="apply-btn" onclick="scrollToApplication('Business Development Executive')">Apply Now</button>
+            </div>
+
+            <div class="position-card">
+                <div class="position-header">
+                    <div>
+                        <h3 class="position-title">MIS Executive</h3>
+                    </div>
+                    <span class="position-type">Full-time</span>
+                </div>
+                <div class="position-details">
+                    <div class="detail-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>2-8 years experience</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Data Analytics</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-database"></i>
+                        <span>Reporting Systems</span>
+                    </div>
+                </div>
+                <p class="position-description">
+                    Transform complex data into actionable business insights through comprehensive reporting and analytics. Create dashboards and reports that drive strategic decision-making across all business functions.
+                </p>
+                <button class="apply-btn" onclick="scrollToApplication('MIS Executive')">Apply Now</button>
+            </div>
+
+            <div class="position-card">
+                <div class="position-header">
+                    <div>
+                        <h3 class="position-title">Quality Analyst</h3>
+                    </div>
+                    <span class="position-type">Full-time</span>
+                </div>
+                <div class="position-details">
+                    <div class="detail-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>1-5 years experience</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-industry"></i>
+                        <span>B2B Experience Preferred</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Process Optimization</span>
+                    </div>
+                </div>
+                <p class="position-description">
+                    Ensure excellence in our lead generation and client engagement processes. Monitor quality metrics, implement process improvements, and maintain the highest standards of service delivery.
+                </p>
+                <button class="apply-btn" onclick="scrollToApplication('Quality Analyst')">Apply Now</button>
+            </div>
+
+            <div class="position-card">
+                <div class="position-header">
+                    <div>
+                        <h3 class="position-title">Digital Marketing Trainee</h3>
+                    </div>
+                    <span class="position-type">Trainee Program</span>
+                </div>
+                <div class="position-details">
+                    <div class="detail-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>0-1 year experience</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Fresh Graduates</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Career Launch</span>
+                    </div>
+                </div>
+                <p class="position-description">
+                    Launch your career in B2B digital marketing with comprehensive training in email campaigns, content syndication, and multi-channel marketing strategies. Learn from industry veterans and grow rapidly.
+                </p>
+                <button class="apply-btn" onclick="scrollToApplication('Digital Marketing Trainee')">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application-form" id="apply">
+        <div class="container">
+            <h2 class="section-title">Ready to Join Our Team?</h2>
+            <p class="section-subtitle">Take the next step in your career journey with us</p>
+            
+            <div class="form-container">
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Thank you for your application! We'll review your profile and get back to you within 48 hours.
+                </div>
+                
+                <form id="applicationForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+91 9876543210">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="position">Position Applied For *</label>
+                        <select id="position" name="position" required>
+                            <option value="">Select Position</option>
+                            <option value="Research Analyst">Research Analyst</option>
+							<option value="Lead Generation Executive">Lead Generation Executive</option>
+                            <option value="Business Development Executive">Business Development Executive</option>
+                            <option value="MIS Executive">MIS Executive</option>
+                            <option value="Quality Analyst">Quality Analyst</option>
+                            <option value="Digital Marketing Trainee">Digital Marketing Trainee</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="experience">Years of Experience *</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">Select Experience</option>
+                                <option value="0-1">0-1 years</option>
+                                <option value="1-3">1-3 years</option>
+                                <option value="3-5">3-5 years</option>
+                                <option value="5-8">5-8 years</option>
+                                <option value="8+">8+ years</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="currentCTC">Current CTC (LPA)</label>
+                            <input type="text" id="currentCTC" name="currentCTC" placeholder="e.g., 5.5">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="noticePeriod">Notice Period *</label>
+                        <select id="noticePeriod" name="noticePeriod" required>
+                            <option value="">Select Notice Period</option>
+                            <option value="Immediate">Immediate</option>
+                            <option value="15 days">15 days</option>
+                            <option value="1 month">1 month</option>
+                            <option value="2 months">2 months</option>
+                            <option value="3 months">3 months</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="resume">Upload Resume *</label>
+                        <div class="file-upload">
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                            <div class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Choose file (PDF, DOC, DOCX - Max 5MB)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="motivation">Why do you want to join LeadXcel? *</label>
+                        <textarea id="motivation" name="motivation" rows="4" required placeholder="Tell us what excites you about this opportunity and how you can contribute to our mission..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Auto-select position when apply button is clicked
+        function scrollToApplication(position) {
+            document.getElementById('position').value = position;
+            document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Handle file upload display
+        document.getElementById('resume').addEventListener('change', function(e) {
+            const label = document.querySelector('.file-upload-label span');
+            if (e.target.files.length > 0) {
+                label.textContent = e.target.files[0].name;
+            } else {
+                label.textContent = 'Choose file (PDF, DOC, DOCX - Max 5MB)';
+            }
+        });
+        
+        // Handle form submission
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Add loading state
+            document.getElementById('applicationForm').classList.add('loading');
+            
+            // Simulate form submission
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('applicationForm').reset();
+                document.getElementById('applicationForm').classList.remove('loading');
+                document.querySelector('.file-upload-label span').textContent = 'Choose file (PDF, DOC, DOCX - Max 5MB)';
+                
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.hero-nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</main>
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+	<div class="container1" style="max-width: 82%; margin:0 auto;">
+		<div class="row mb-5 pb-5 align-items-center d-flex">
+			<div class="col-md-6">
+				<div class="heading-section heading-section-white ftco-animate">
+					<!-- <span class="subheading">Connect with Customer Experience</span> -->
+			  <h2 style="font-size: 30px;">Connect with Customer Experience</h2>
+			</div>
+			</div>
+			<div class="col-md-3 ftco-animate">
+				<!-- <div class="price">
+					<span class="subheading">Starting at Only</span>
+					<h3>$4.50<span>/mo</span></h3>
+				</div> -->
+			</div>
+			<div class="col-md-3 ftco-animate">
+				<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-4">Get started now</a></p>
+			</div>
+		</div>
+	  <div class="row mb-5">
+		<div class="col-md">
+		  <div class="ftco-footer-widget mb-4 bg-primary p-4">
+			<h2 class="ftco-heading-2"><img src="images/logo-white.png" width="100" /></h2>
+			<p>We optimize B2B lead generation and turbocharge your growth by leveraging the power of unified data-centric solutions.</p>
+			<ul class="ftco-footer-social list-unstyled mb-0">
+			  <!-- <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li> -->
+			  <li class="ftco-animate"><a href="https://www.linkedin.com/company/leadxcelb2b/about"><span class="icon-linkedin"></span></a></li>
+			  <li class="ftco-animate"><a href="https://www.facebook.com/people/LeadXcel/61562476256447"><span class="icon-facebook"></span></a></li>
+			</ul>
+		  </div>
+		</div>
+		<div class="col-md">
+		  <div class="ftco-footer-widget mb-4 ml-md-5">
+			<h2 class="ftco-heading-2">Unseful Links</h2>
+			<ul class="list-unstyled">
+			  <li><a href="services.html" class="py-2 d-block">Services</a></li>
+			  <li><a href="career.html" class="py-2 d-block">Career</a></li>
+			  <li><a href="policy.html" class="py-2 d-block">Policy</a></li>
+			</ul>
+		  </div>
+		</div>
+		<div class="col-md">
+		   <div class="ftco-footer-widget mb-4">
+			<h2 class="ftco-heading-2">Navigational</h2>
+			<ul class="list-unstyled">
+			  <li><a href="index.html" class="py-2 d-block">Home</a></li>
+			  <li><a href="about.html" class="py-2 d-block">About</a></li>
+			  <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+			</ul>
+		  </div>
+		</div>
+		<div class="col-md">
+		  <div class="ftco-footer-widget mb-4">
+			  <h2 class="ftco-heading-2">Office</h2>
+			  <div class="block-23 mb-3">
+				<ul>
+				  <li><span class="icon icon-map-marker"></span><span class="text">Kharadi, Pune, India</span></li>
+				  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 7721-050-050</span></a></li>
+				  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@leadxcelb2b.com</span></a></li>
+				</ul>
+			  </div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-md-12 text-center">
+
+		  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+		</div>
+	  </div>
+	</div>
+  </footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

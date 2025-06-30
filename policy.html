@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Career</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="assets/css/main.css" rel="stylesheet">
+    
+  
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif; */
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header
+        .header {
+            background: #ffffff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #e0e0e0;
+        } */
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #333333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #2563eb;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 0;
+            background-color: #ffffff;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .policy-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .policy-header p {
+            font-size: 0.9rem;
+            color: #666666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .policy-content {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.2rem;
+            color: #2563eb;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .policy-section h3 {
+            font-size: 1.1rem;
+            color: #333333;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        .policy-section p {
+            margin-bottom: 15px;
+            color: #555555;
+            font-size: 0.9rem;
+        }
+
+        .policy-section ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .policy-section li {
+            margin-bottom: 8px;
+            color: #555555;
+            font-size: 0.9rem;
+        }
+
+        .highlight-box {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #333333;
+        }
+
+        .highlight-box ul {
+            margin-bottom: 0;
+        }
+
+        .contact-info {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .contact-info h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #333333;
+        }
+
+        .last-updated {
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+        }
+
+        .last-updated strong {
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f8fafc;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .footer p {
+            color: #666666;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+
+            .policy-content {
+                padding: 25px;
+                margin: 0 10px;
+            }
+
+            .policy-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Link styling */
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Table of contents */
+        .toc {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .toc h3 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: #333333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            color: #2563eb;
+        }
+    </style>
+
+	<style>
+		svg:not(:root) {
+    		overflow: hidden;
+		}
+		.main-wrapper {
+			max-width: 1170px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.upload-main-wrapper{
+			width: 220px;
+			margin: 0 auto;
+		}
+		#file-upload-name{
+			margin: 4px 0 0 0;
+			font-size: 12px;
+		}
+		.upload-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin: 40px auto 0;
+			position: relative;
+			cursor: pointer;
+			background-color: #bcaef5;
+			padding: 8px 10px;
+			border-radius: 10px;
+			overflow: hidden;
+			transition: 0.2s linear all;
+			color: #ffffff;
+		}
+		.upload-wrapper input[type="file"] {
+			width: 100%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			top: 0;
+			bottom: 0;
+			cursor: pointer;
+			z-index: 1;
+		}
+		.upload-wrapper > svg {
+			width: 50px;
+			height: auto;
+			cursor: pointer;
+		}
+		.upload-wrapper.success > svg{
+			transform: translateX(-200px);
+		}
+		.upload-wrapper.uploaded {
+			transition: 0.2s linear all;
+			width: 60px;
+			border-radius: 50%;
+			height: 60px;
+			text-align: center;
+		}
+		.upload-wrapper .file-upload-text {
+			position: absolute;
+			left: 80px;
+			opacity: 1;
+			visibility: visible;
+			transition: 0.2s linear all;
+		}
+		.upload-wrapper.uploaded .file-upload-text {
+			text-indent: -999px;
+			margin: 0;
+		}
+		.file-success-text {
+			opacity: 0;
+			transition: 0.2s linear all;
+			visibility: hidden;
+			transform: translateX(200px);
+			position: absolute;
+			left: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.file-success-text svg {
+			width: 25px;
+			height: auto;
+		}
+		.file-success-text span{
+		margin-left: 15px;
+		}
+		.upload-wrapper.success .file-success-text{
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+		}
+		.upload-wrapper.success.uploaded .file-success-text{
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+		}
+		.upload-wrapper.success.uploaded .file-success-text span{
+			display: none;
+		}
+		.upload-wrapper .file-success-text circle{
+			stroke-dasharray: 380;
+			stroke-dashoffset: 380;
+			transition: 1s linear all;
+			transition-delay: 1.4s;
+		}
+		.upload-wrapper.success .file-success-text  circle {
+			stroke-dashoffset: 0;
+		}
+		.upload-wrapper .file-success-text polyline {
+			stroke-dasharray: 380;
+			stroke-dashoffset: 380;
+			transition: 1s linear all;
+			transition-delay: 2s;
+		}
+		.upload-wrapper.success .file-success-text polyline {
+			stroke-dashoffset: 0;
+		}
+		.upload-wrapper.success .file-upload-text{
+			-webkit-animation-name: bounceOutLeft;
+			animation-name: bounceOutLeft;
+			-webkit-animation-duration: 0.2s;
+			animation-duration: 0.2s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+		@-webkit-keyframes bounceOutLeft {
+			20% {
+				opacity: 1;
+				-webkit-transform: translate3d(20px, 0, 0);
+				transform: translate3d(20px, 0, 0);
+			}
+
+			to {
+				opacity: 0;
+				-webkit-transform: translate3d(-2000px, 0, 0);
+				transform: translate3d(-2000px, 0, 0);
+			}
+		}
+
+		@keyframes bounceOutLeft {
+			20% {
+				opacity: 1;
+				-webkit-transform: translate3d(20px, 0, 0);
+				transform: translate3d(20px, 0, 0);
+			}
+
+			to {
+				opacity: 0;
+				-webkit-transform: translate3d(-2000px, 0, 0);
+				transform: translate3d(-2000px, 0, 0);
+			}
+		}
+	</style>
+  </head>
+  <body>
+    
+	<header id="header" class="header d-flex align-items-center fixed-top">
+		<div class="container-fluid container-xl position-relative d-flex align-items-center">
+	
+		  <a href="index.html" class="logo d-flex align-items-center me-auto">
+			<!-- Uncomment the line below if you also wish to use an image logo -->
+			<img src="images/logo-purple.png" alt="">
+			<!-- <h1 class="sitename">Logis</h1> -->
+		  </a>
+	
+		  <nav id="navmenu" class="navmenu">
+			<ul>
+			  <li><a href="index.html">Home<br></a></li>
+			  <li><a href="about.html">About</a></li>
+			  <li><a href="services.html">Services</a></li>
+			  <li><a href="career.html">Career</a></li>
+			  <li><a href="contact.html">Contact</a></li>
+			</ul>
+			<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+		  </nav>
+	
+		  <a class="btn-getstarted" href="contact.html">Get Started</a>
+	
+		</div>
+	  </header>
+	
+	  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(images/bg1.jpeg);">
+		<div class="container position-relative">
+		  <h1>Privacy Policy</h1>
+		  <p>Privacy Policy with You in Mind</p>
+		  <nav class="breadcrumbs">
+			<ol>
+			  <li><a href="index.html">Home</a></li>
+			  <li class="current">Policy</li>
+			</ol>
+		  </nav>
+		</div>
+	  </div><!-- End Page Title -->
+
+
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="policy-header">
+                <p>This policy outlines how we collect, use, and protect your information in our B2B lead generation services.</p>
+            </div>
+
+            <div class="policy-content">
+                <div class="last-updated">
+                    <strong>Last Updated: June 24, 2025</strong>
+                </div>
+
+                <div class="toc">
+                    <h3>Table of Contents</h3>
+                    <ul>
+                        <li><a href="#introduction">1. Introduction</a></li>
+                        <li><a href="#information-we-collect">2. Information We Collect</a></li>
+                        <li><a href="#how-we-use-information">3. How We Use Your Information</a></li>
+                        <li><a href="#information-sharing">4. Information Sharing and Disclosure</a></li>
+                        <li><a href="#data-security">5. Data Security</a></li>
+                        <li><a href="#your-rights">6. Your Rights and Choices</a></li>
+                        <li><a href="#data-retention">7. Data Retention</a></li>
+                        <li><a href="#international-transfers">8. International Data Transfers</a></li>
+                        <li><a href="#cookies">9. Cookies and Tracking Technologies</a></li>
+                        <li><a href="#third-party">10. Third-Party Links and Services</a></li>
+                        <li><a href="#children">11. Children's Privacy</a></li>
+                        <li><a href="#changes">12. Changes to This Privacy Policy</a></li>
+                        <li><a href="#contact">13. Contact Information</a></li>
+                        <li><a href="#governing-law">14. Governing Law</a></li>
+                    </ul>
+                </div>
+
+                <div class="policy-section" id="introduction">
+                    <h2>1. Introduction</h2>
+                    <p>LeadXcel B2B ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or engage with our B2B lead generation platform.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Important:</strong> By using our services, you consent to the collection and use of information in accordance with this policy. We are fully compliant with GDPR, CCPA, and other applicable data protection regulations.</p>
+                    </div>
+                </div>
+
+                <div class="policy-section" id="information-we-collect">
+                    <h2>2. Information We Collect</h2>
+                    
+                    <h3>2.1 Personal Information</h3>
+                    <p>We collect information that identifies, relates to, describes, or is capable of being associated with you, including:</p>
+                    <ul>
+                        <li>Name and business contact information (email, phone, address)</li>
+                        <li>Company name, title, and industry information</li>
+                        <li>Lead generation preferences and targeting criteria</li>
+                        <li>Account credentials and billing information</li>
+                        <li>Communication records and correspondence</li>
+                    </ul>
+
+                    <h3>2.2 Business Information</h3>
+                    <p>For our B2B services, we collect:</p>
+                    <ul>
+                        <li>Target market demographics and firmographics</li>
+                        <li>Campaign performance metrics and analytics</li>
+                        <li>Lead qualification criteria and scoring models</li>
+                        <li>Marketing automation and CRM integration data</li>
+                    </ul>
+
+                    <h3>2.3 Technical Information</h3>
+                    <p>We automatically collect certain technical information, including:</p>
+                    <ul>
+                        <li>IP addresses, browser type, and device information</li>
+                        <li>Website usage patterns and click-through rates</li>
+                        <li>Email engagement metrics (opens, clicks, responses)</li>
+                        <li>Cookies and similar tracking technologies</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section" id="how-we-use-information">
+                    <h2>3. How We Use Your Information</h2>
+                    <p>We use the collected information for the following business purposes:</p>
+                    
+                    <h3>3.1 Service Delivery</h3>
+                    <ul>
+                        <li>Providing B2B lead generation and demand generation services</li>
+                        <li>Account-based marketing (ABM) campaign execution</li>
+                        <li>Appointment setting and sales enablement</li>
+                        <li>Email marketing and nurture campaigns</li>
+                        <li>Performance reporting and analytics</li>
+                    </ul>
+
+                    <h3>3.2 Business Operations</h3>
+                    <ul>
+                        <li>Account management and customer support</li>
+                        <li>Billing, invoicing, and payment processing</li>
+                        <li>Service optimization and quality improvement</li>
+                        <li>Compliance monitoring and fraud prevention</li>
+                    </ul>
+
+                    <h3>3.3 Communication</h3>
+                    <ul>
+                        <li>Responding to inquiries and providing customer support</li>
+                        <li>Sending service updates and important notifications</li>
+                        <li>Marketing communications (with your consent)</li>
+                        <li>Industry insights and thought leadership content</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section" id="information-sharing">
+                    <h2>4. Information Sharing and Disclosure</h2>
+                    <p>We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:</p>
+
+                    <h3>4.1 Service Providers</h3>
+                    <p>We may share information with trusted third-party service providers who assist us in:</p>
+                    <ul>
+                        <li>Data processing and analytics platforms</li>
+                        <li>Email marketing and automation tools</li>
+                        <li>CRM and sales enablement systems</li>
+                        <li>Cloud hosting and data storage services</li>
+                        <li>Payment processing and billing systems</li>
+                    </ul>
+
+                    <h3>4.2 Legal Requirements</h3>
+                    <p>We may disclose information when required by law or to:</p>
+                    <ul>
+                        <li>Comply with legal processes or government requests</li>
+                        <li>Protect our rights, property, or safety</li>
+                        <li>Prevent fraud or illegal activities</li>
+                        <li>Enforce our terms of service</li>
+                    </ul>
+
+                    <h3>4.3 Business Transfers</h3>
+                    <p>In the event of a merger, acquisition, or sale of business assets, your information may be transferred as part of the transaction, subject to confidentiality agreements.</p>
+                </div>
+
+                <div class="policy-section" id="data-security">
+                    <h2>5. Data Security</h2>
+                    <p>We implement comprehensive security measures to protect your information:</p>
+                    
+                    <div class="highlight-box">
+                        <ul>
+                            <li><strong>Encryption:</strong> All data is encrypted in transit and at rest using industry-standard protocols</li>
+                            <li><strong>Access Controls:</strong> Role-based access controls and multi-factor authentication</li>
+                            <li><strong>Regular Audits:</strong> Periodic security assessments and penetration testing</li>
+                            <li><strong>Employee Training:</strong> Regular privacy and security training for all staff</li>
+                            <li><strong>Incident Response:</strong> Comprehensive data breach response procedures</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="policy-section" id="your-rights">
+                    <h2>6. Your Rights and Choices</h2>
+                    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+
+                    <h3>6.1 GDPR Rights (EU Residents)</h3>
+                    <ul>
+                        <li><strong>Access:</strong> Request copies of your personal information</li>
+                        <li><strong>Rectification:</strong> Request correction of inaccurate information</li>
+                        <li><strong>Erasure:</strong> Request deletion of your personal information</li>
+                        <li><strong>Portability:</strong> Request transfer of your data to another service</li>
+                        <li><strong>Restriction:</strong> Request limitation of processing activities</li>
+                        <li><strong>Objection:</strong> Object to certain types of processing</li>
+                    </ul>
+
+                    <h3>6.2 CCPA Rights (California Residents)</h3>
+                    <ul>
+                        <li>Right to know what personal information is collected</li>
+                        <li>Right to delete personal information</li>
+                        <li>Right to opt-out of the sale of personal information</li>
+                        <li>Right to non-discrimination for exercising privacy rights</li>
+                    </ul>
+
+                    <h3>6.3 Marketing Communications</h3>
+                    <p>You can opt-out of marketing communications at any time by:</p>
+                    <ul>
+                        <li>Clicking the unsubscribe link in our emails</li>
+                        <li>Contacting us directly using the information below</li>
+                        <li>Updating your preferences in your account settings</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section" id="data-retention">
+                    <h2>7. Data Retention</h2>
+                    <p>We retain your information for as long as necessary to provide our services and comply with legal obligations:</p>
+                    <ul>
+                        <li><strong>Active Accounts:</strong> Information is retained while your account remains active</li>
+                        <li><strong>Closed Accounts:</strong> Data is retained for up to 7 years for legal and business purposes</li>
+                        <li><strong>Marketing Data:</strong> Retained until you opt-out or request deletion</li>
+                        <li><strong>Legal Requirements:</strong> Some data may be retained longer to comply with legal obligations</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section" id="international-transfers">
+                    <h2>8. International Data Transfers</h2>
+                    <p>As a global B2B lead generation company, we may transfer your information to countries outside your jurisdiction. We ensure adequate protection through:</p>
+                    <ul>
+                        <li>Standard Contractual Clauses (SCCs) approved by regulatory authorities</li>
+                        <li>Adequacy decisions by relevant data protection authorities</li>
+                        <li>Binding Corporate Rules (BCRs) where applicable</li>
+                        <li>Other lawful transfer mechanisms as required</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section" id="cookies">
+                    <h2>9. Cookies and Tracking Technologies</h2>
+                    <p>We use cookies and similar technologies to enhance your experience and improve our services:</p>
+
+                    <h3>9.1 Types of Cookies</h3>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> Necessary for website functionality</li>
+                        <li><strong>Performance Cookies:</strong> Help us understand how visitors use our site</li>
+                        <li><strong>Functional Cookies:</strong> Remember your preferences and settings</li>
+                        <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements</li>
+                    </ul>
+
+                    <h3>9.2 Managing Cookies</h3>
+                    <p>You can control cookies through your browser settings or by using our cookie preference center. Note that disabling certain cookies may affect the functionality of our services.</p>
+                </div>
+
+                <div class="policy-section" id="third-party">
+                    <h2>10. Third-Party Links and Services</h2>
+                    <p>Our website and services may contain links to third-party websites or integrate with third-party services. We are not responsible for the privacy practices of these external sites. We encourage you to review their privacy policies before providing any personal information.</p>
+                </div>
+
+                <div class="policy-section" id="children">
+                    <h2>11. Children's Privacy</h2>
+                    <p>Our services are designed for business use and are not intended for individuals under 18 years of age. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child, we will take steps to delete such information promptly.</p>
+                </div>
+
+                <div class="policy-section" id="changes">
+                    <h2>12. Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of material changes by:</p>
+                    <ul>
+                        <li>Posting the updated policy on our website</li>
+                        <li>Sending email notifications to registered users</li>
+                        <li>Providing in-app notifications where applicable</li>
+                    </ul>
+                    <p>Your continued use of our services after such changes constitutes acceptance of the updated policy.</p>
+                </div>
+
+                <div class="policy-section" id="contact">
+                    <h2>13. Contact Information</h2>
+                    <div class="contact-info">
+                        <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+                        
+                        <h3>LeadXcel B2B Privacy Team</h3>
+                        <p><strong>Email:</strong> privacy@leadxcelb2b.com</p>
+                        <p><strong>Address:</strong> Kharadi, Pune, MH, India </p>
+                        <p><strong>Phone:</strong> +91 7721-050-050</p>
+                        
+                        <p><strong>Data Protection Officer:</strong> dpo@leadxcelb2b.com</p>
+                        <p><strong>Response Time:</strong> We will respond to your inquiry within 30 days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+	<div class="container1" style="max-width: 82%; margin:0 auto;">
+		<div class="row mb-5 pb-5 align-items-center d-flex">
+			<div class="col-md-6">
+				<div class="heading-section heading-section-white ftco-animate">
+					<!-- <span class="subheading">Connect with Customer Experience</span> -->
+			  <h2 style="font-size: 30px;">Connect with Customer Experience</h2>
+			</div>
+			</div>
+			<div class="col-md-3 ftco-animate">
+				<!-- <div class="price">
+					<span class="subheading">Starting at Only</span>
+					<h3>$4.50<span>/mo</span></h3>
+				</div> -->
+			</div>
+			<div class="col-md-3 ftco-animate">
+				<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-4">Get started now</a></p>
+			</div>
+		</div>
+	  <div class="row mb-5">
+		<div class="col-md">
+		  <div class="ftco-footer-widget mb-4 bg-primary p-4">
+			<h2 class="ftco-heading-2"><img src="images/logo-white.png" width="100" /></h2>
+			<p>We optimize B2B lead generation and turbocharge your growth by leveraging the power of unified data-centric solutions.</p>
+			<ul class="ftco-footer-social list-unstyled mb-0">
+			  <!-- <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li> -->
+			  <li class="ftco-animate"><a href="https://www.linkedin.com/company/leadxcelb2b/about"><span class="icon-linkedin"></span></a></li>
+			  <li class="ftco-animate"><a href="https://www.facebook.com/people/LeadXcel/61562476256447"><span class="icon-facebook"></span></a></li>
+			</ul>
+		  </div>
+		</div>
+		<div class="col-md">
+		  <div class="ftco-footer-widget mb-4 ml-md-5">
+			<h2 class="ftco-heading-2">Unseful Links</h2>
+			<ul class="list-unstyled">
+			  <li><a href="services.html" class="py-2 d-block">Services</a></li>
+			  <li><a href="career.html" class="py-2 d-block">Career</a></li>
+			  <li><a href="policy.html" class="py-2 d-block">Policy</a></li>
+			</ul>
+		  </div>
+		</div>
+		<div class="col-md">
+		   <div class="ftco-footer-widget mb-4">
+			<h2 class="ftco-heading-2">Navigational</h2>
+			<ul class="list-unstyled">
+			  <li><a href="index.html" class="py-2 d-block">Home</a></li>
+			  <li><a href="about.html" class="py-2 d-block">About</a></li>
+			  <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+			</ul>
+		  </div>
+		</div>
+		<div class="col-md">
+		  <div class="ftco-footer-widget mb-4">
+			  <h2 class="ftco-heading-2">Office</h2>
+			  <div class="block-23 mb-3">
+				<ul>
+				  <li><span class="icon icon-map-marker"></span><span class="text">Kharadi, Pune, India</span></li>
+				  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 7721-050-050</span></a></li>
+				  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@leadxcelb2b.com</span></a></li>
+				</ul>
+			  </div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-md-12 text-center">
+
+		  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+		</div>
+	  </div>
+	</div>
+  </footer>
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+        // Auto-select position when apply button is clicked
+        function scrollToApplication(position) {
+            document.getElementById('position').value = position;
+            document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Handle file upload display
+        document.getElementById('resume').addEventListener('change', function(e) {
+            const label = document.querySelector('.file-upload-label span');
+            if (e.target.files.length > 0) {
+                label.textContent = e.target.files[0].name;
+            } else {
+                label.textContent = 'Choose file (PDF, DOC, DOCX - Max 5MB)';
+            }
+        });
+        
+        // Handle form submission
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Add loading state
+            document.getElementById('applicationForm').classList.add('loading');
+            
+            // Simulate form submission
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('applicationForm').reset();
+                document.getElementById('applicationForm').classList.remove('loading');
+                document.querySelector('.file-upload-label span').textContent = 'Choose file (PDF, DOC, DOCX - Max 5MB)';
+                
+                // Scroll to success message
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.hero-nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
