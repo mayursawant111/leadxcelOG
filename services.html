@@ -100,13 +100,23 @@
 	  </div><!-- End Page Title -->
 
 
-
-	<!-- Features Section -->
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - LeadXcel</title>
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-light: #64748b;
+            --white: #f#f8fafc;
+            --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --gradient-secondary: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -114,794 +124,601 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background-color: #f8fafc;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 2rem 3rem;
         }
 
         /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
+        .hero-section {
             position: relative;
+            padding: 8rem 0 6rem;
+            background: var(--gradient-primary);
             overflow: hidden;
         }
 
-        .hero::before {
+        .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.15"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(%23a)"/><circle cx="900" cy="200" r="120" fill="url(%23a)"/><circle cx="300" cy="800" r="100" fill="url(%23a)"/><circle cx="800" cy="700" r="90" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
         }
 
         .hero-content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
+            text-align: center;
+            color: var(--white);
         }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, #fff, #e0e7ff);
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
             opacity: 0.9;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
-        /* Services Grid */
-        .services-section {
-            padding: 100px 0;
-            background: white;
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0 4rem 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
         }
 
         .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #1f2937;
-            margin-bottom: 15px;
+            /* font-size: 2.50rem; */
             font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: -2.5rem;
+            letter-spacing: -0.025em;
         }
 
-        .section-title p {
-            font-size: 1.1rem;
-            color: #6b7280;
+        .section-description {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
+            line-height: 1.7;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #e5e7eb;
+        /* About Content */
+        .about-content {
+            background: var(--white);
+            border-radius: 2rem;
+            padding: 2rem 1rem 2rem 1rem;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid #e2e8f0;
+            margin-bottom: -1rem;
             position: relative;
             overflow: hidden;
         }
 
-        .service-card::before {
+        .about-content::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
+            background: var(--gradient-primary);
         }
 
-        .service-card:hover::before {
+        .about-text {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Features Grid */
+        .features-section {
+            padding: 1rem 0;
+            background: none;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            /* box-shadow: var(--shadow-md); */
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            /* background: var(--gradient-primary);
+            transform: scaleX(1);
+            transform-origin: left; 
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
+            background: linear-gradient(90deg, #667eea, #5423c6);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover::before {
             transform: scaleX(1);
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        .feature-card:hover {
+            /* transform: translateY(-8px);
+            box-shadow: var(--shadow-xl); */
+            transform: translateY(-8px);
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.12);
+            border-color: #667eea;
         }
 
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border-radius: 15px;
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--gradient-primary);
+            border-radius: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
-            color: white;
-        }
-
-        .service-icon svg {
-            width: 28px;
-            height: 28px;
-            fill: white;
-        }
-
-        .service-card h3 {
+            margin-bottom: 2rem;
+            color: var(--white);
             font-size: 1.5rem;
-            color: #1f2937;
-            margin-bottom: 15px;
             font-weight: 600;
         }
 
-        .service-card p {
-            color: #6b7280;
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .feature-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
             line-height: 1.7;
-            margin-bottom: 20px;
         }
 
-        .service-features {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .service-features li {
-            color: #4b5563;
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .service-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        /* Process Section */
-        .process-section {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .process-step {
+        .feature-divider {
+            grid-column: 1 / -1;
             text-align: center;
+            margin: 2rem 0;
+        }
+
+        .divider-line {
+            height: 2px;
+            background: var(--gradient-primary);
+            width: 100px;
+            margin: 0 auto;
+            border-radius: 1px;
+        }
+
+        /* Leadership Section */
+        .leadership-section {
+            padding: 1rem 0 4rem;
+            background: var(--white);
             position: relative;
         }
 
-        .process-number {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border-radius: 50%;
+        .leadership-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .leadership-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .leadership-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+            font-weight: 400;
+        }
+
+        .leader-spotlight {
+            background: var(--white);
+            border-radius: 2rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .leader-spotlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .leader-spotlight:hover::before {
+            opacity: 1;
+            animation: glow-pulse 2s ease-in-out infinite;
+        }
+
+        .leader-spotlight:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25), var(--shadow-xl);
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+
+        .leader-image-container {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .leader-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .leader-spotlight:hover .leader-image {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .leader-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .leader-image-fallback {
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
-            color: white;
-            font-size: 2rem;
-            font-weight: 700;
+            color: var(--white);
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        .leader-details {
+            flex: 1;
             position: relative;
+            z-index: 2;
         }
 
-        .process-step h3 {
-            font-size: 1.3rem;
-            color: #1f2937;
-            margin-bottom: 15px;
+        .leader-name {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.025em;
+        }
+
+        .leader-title {
+            font-size: 1.375rem;
+            color: var(--primary-color);
             font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .process-step p {
-            color: #6b7280;
-            line-height: 1.6;
+        .leader-bio {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
         }
 
-        /* Stats Section */
-        .stats-section {
-            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-            color: white;
-            padding: 80px 0;
+        .leader-achievements {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
+        .achievement {
             text-align: center;
         }
 
-        .stat-item {
-            padding: 20px;
-        }
-
-        .stat-number {
-            font-size: 3rem;
+        .achievement-number {
+            font-size: 1.5rem;
             font-weight: 700;
-            color: #6366f1;
-            margin-bottom: 10px;
+            color: var(--primary-color);
             display: block;
         }
 
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
+        .achievement-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
         }
 
-        /* FAQ Section */
+        FAQ Section
         .faq-section {
-            padding: 100px 0;
-            background: white;
+            padding: 6rem 0;
+            background: var(--secondary-color);
         }
 
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
+        .faq-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
         .faq-item {
-            margin-bottom: 20px;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            overflow: hidden;
+            background: var(--white);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
 
         .faq-question {
-            background: #f8f9fa;
-            padding: 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: #e5e7eb;
-        }
-
-        .faq-question h3 {
-            font-size: 1.1rem;
-            color: #1f2937;
+            font-size: 1.375rem;
             font-weight: 600;
-            margin: 0;
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            color: #6366f1;
-            transition: transform 0.3s ease;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.4;
         }
 
         .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-answer.active {
-            padding: 20px;
-            max-height: 200px;
-        }
-
-        .faq-answer p {
-            color: #6b7280;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(45deg);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: #f8f9fa;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .cta-content h2 {
-            font-size: 2.5rem;
-            color: #1f2937;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .cta-content p {
-            font-size: 1.1rem;
-            color: #6b7280;
-            margin-bottom: 40px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #6366f1;
-            border: 2px solid #6366f1;
-        }
-
-        .btn-secondary:hover {
-            background: #6366f1;
-            color: white;
-            transform: translateY(-2px);
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1.5rem;
             }
 
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .service-card {
-                padding: 30px;
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-            }
-
-            .cta-buttons {
+            .leader-spotlight {
                 flex-direction: column;
-                align-items: center;
+                text-align: center;
+                gap: 2rem;
+                padding: 3rem;
             }
 
-            .btn {
-                width: 100%;
-                max-width: 300px;
+            .leader-details {
+                text-align: center;
             }
-        }
 
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .hero-title {
+                font-size: 3.5rem;
             }
         }
 
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease forwards;
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 6rem 0 4rem;
+            }
+
+            .hero-title {
+                font-size: 2.75rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 2.25rem;
+            }
+
+            .about-content {
+                padding: 2.5rem;
+            }
+
+            .feature-card {
+                padding: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .leader-spotlight {
+                padding: 2rem;
+            }
+
+            .leader-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .leader-name {
+                font-size: 1.875rem;
+            }
+
+            .leader-achievements {
+                justify-content: center;
+            }
         }
 
-        .service-card {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
 
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
-        .service-card:nth-child(5) { animation-delay: 0.5s; }
-        .service-card:nth-child(6) { animation-delay: 0.6s; }
+            .hero-title {
+                font-size: 2.25rem;
+            }
+
+            .section-title {
+                font-size: 1.875rem;
+            }
+
+            .about-content {
+                padding: 2rem;
+            }
+
+            .leader-spotlight {
+                padding: 1.5rem;
+            }
+        }
     </style>
+	<!-- Features Section -->
+    <section id="features" class="features section">
 
-
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>What We Offer</h2>
-                <p>Our comprehensive suite of B2B lead generation services is designed to drive measurable results and accelerate your business growth</p>
-            </div>
-
-            <div class="services-grid">
-                <!-- Account-Based Marketing -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L9 7V9C9 10.1 9.9 11 11 11V16L7.5 17.5C7.09 17.66 6.84 18.08 6.84 18.5C6.84 19.17 7.38 19.72 8.05 19.72H15.95C16.62 19.72 17.16 19.17 17.16 18.5C17.16 18.08 16.91 17.66 16.5 17.5L13 16V11C14.1 11 15 10.1 15 9Z"/>
-                        </svg>
-                    </div>
-                    <h3>Account-Based Marketing</h3>
-                    <p>Strategic ABM programs targeting high-value accounts with personalized messaging, multi-channel engagement, and detailed attribution tracking to maximize deal velocity and size.</p>
-                    <ul class="service-features">
-                        <li>High-value account identification</li>
-                        <li>Personalized messaging campaigns</li>
-                        <li>Multi-channel engagement strategies</li>
-                        <li>Detailed attribution tracking</li>
-                        <li>Deal velocity optimization</li>
-                    </ul>
-                </div>
-
-                <!-- Email Marketing Automation -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
-                        </svg>
-                    </div>
-                    <h3>Email Marketing Automation</h3>
-                    <p>Sophisticated email campaigns with advanced segmentation, behavioral triggers, and performance analytics. Includes deliverability optimization and compliance management.</p>
-                    <ul class="service-features">
-                        <li>Advanced segmentation</li>
-                        <li>Behavioral trigger campaigns</li>
-                        <li>Performance analytics</li>
-                        <li>Deliverability optimization</li>
-                        <li>Compliance management</li>
-                    </ul>
-                </div>
-
-                <!-- Executive Appointment Setting -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12,2A3,3 0 0,1 15,5V7H19A2,2 0 0,1 21,9V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V9A2,2 0 0,1 5,7H9V5A3,3 0 0,1 12,2M12,4A1,1 0 0,0 11,5V7H13V5A1,1 0 0,0 12,4Z"/>
-                        </svg>
-                    </div>
-                    <h3>Executive Appointment Setting</h3>
-                    <p>Premium appointment setting services with C-level executives and key decision makers. Includes qualification, scheduling coordination, and attendance guarantee.</p>
-                    <ul class="service-features">
-                        <li>C-level executive targeting</li>
-                        <li>Decision maker identification</li>
-                        <li>Qualification processes</li>
-                        <li>Scheduling coordination</li>
-                        <li>Attendance guarantee</li>
-                    </ul>
-                </div>
-
-                <!-- Lead Nurturing Programs -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.5,10C4,10 2,12 2,14.5C2,17 4,19 6.5,19C9,19 11,17 11,14.5C11,12 9,10 6.5,10M6.5,17C5.1,17 4,15.9 4,14.5C4,13.1 5.1,12 6.5,12C7.9,12 9,13.1 9,14.5C9,15.9 7.9,17 6.5,17M17.5,10C15,10 13,12 13,14.5C13,17 15,19 17.5,19C20,19 22,17 22,14.5C22,12 20,10 17.5,10M17.5,17C16.1,17 15,15.9 15,14.5C15,13.1 16.1,12 17.5,12C18.9,12 20,13.1 20,14.5C20,15.9 18.9,17 17.5,17M12,1L8,5H11V9H13V5H16L12,1Z"/>
-                        </svg>
-                    </div>
-                    <h3>Lead Nurturing Programs</h3>
-                    <p>Multi-touch nurturing sequences designed to build relationships, establish thought leadership, and guide prospects through complex B2B buying journeys.</p>
-                    <ul class="service-features">
-                        <li>Multi-touch sequences</li>
-                        <li>Relationship building</li>
-                        <li>Thought leadership content</li>
-                        <li>Buying journey guidance</li>
-                        <li>Conversion optimization</li>
-                    </ul>
-                </div>
-
-                <!-- Content Syndication -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M13,13V7A1,1 0 0,0 12,6A1,1 0 0,0 11,7V13A1,1 0 0,0 12,14A1,1 0 0,0 13,13M13,17V15A1,1 0 0,0 12,14A1,1 0 0,0 11,15V17A1,1 0 0,0 12,18A1,1 0 0,0 13,17Z"/>
-                        </svg>
-                    </div>
-                    <h3>Content Syndication</h3>
-                    <p>Strategic content distribution across premium B2B networks to amplify reach, generate qualified leads, and establish market authority in your industry vertical.</p>
-                    <ul class="service-features">
-                        <li>Premium B2B networks</li>
-                        <li>Reach amplification</li>
-                        <li>Qualified lead generation</li>
-                        <li>Market authority building</li>
-                        <li>Industry vertical targeting</li>
-                    </ul>
-                </div>
-
-                <!-- Revenue Operations -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2M7.5,13A2.5,2.5 0 0,0 5,15.5A2.5,2.5 0 0,0 7.5,18A2.5,2.5 0 0,0 10,15.5A2.5,2.5 0 0,0 7.5,13M16.5,13A2.5,2.5 0 0,0 14,15.5A2.5,2.5 0 0,0 16.5,18A2.5,2.5 0 0,0 19,15.5A2.5,2.5 0 0,0 16.5,13Z"/>
-                        </svg>
-                    </div>
-                    <h3>Revenue Operations</h3>
-                    <p>End-to-end revenue operations including CRM optimization, lead scoring models, attribution analysis, and sales-marketing alignment for maximum efficiency.</p>
-                    <ul class="service-features">
-                        <li>CRM optimization</li>
-                        <li>Lead scoring models</li>
-                        <li>Attribution analysis</li>
-                        <li>Sales-marketing alignment</li>
-                        <li>Efficiency maximization</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Process</h2>
-                <p>A proven 4-step methodology that delivers consistent results for our clients</p>
-            </div>
-
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="process-number">1</div>
-                    <h3>Strategy and Planning</h3>
-                    <p>We analyze your target market, define ideal customer profiles, and create comprehensive demand generation strategies aligned with your business objectives.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="process-number">2</div>
-                    <h3>Campaign Deployment</h3>
-                    <p>Our team sets up and launches multi-channel campaigns using advanced automation tools, ensuring optimal targeting and message delivery across all touchpoints.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="process-number">3</div>
-                    <h3>Execution and Outreach</h3>
-                    <p>We execute personalized outreach campaigns, nurture leads through the sales funnel, and maintain consistent engagement with prospects at every stage.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="process-number">4</div>
-                    <h3>Optimization and Reporting</h3>
-                    <p>Continuous monitoring, A/B testing, and data-driven optimization ensure maximum ROI while providing detailed analytics and performance reports.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Client Satisfaction</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Countries</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">10M+</span>
-                    <span class="stat-label">Global Data</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Satisfied Clients</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-                <p>Helping You Understand Our Services Better</p>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>What is B2B lead generation?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>B2B lead generation is the process of identifying potential customers for a business's products or services.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>Why Account-Based Marketing works for B2B?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>ABM works by focusing resources on high-value accounts and enabling personalized engagement, leading to more effective lead nurturing and conversions. It aligns marketing and sales teams, shortens sales cycles, and ensures measurable ROI.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>How do I increase Demand Generation in B2B?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Focus on targeted content marketing and lead nurturing campaigns, while leveraging effective SEO and social media strategies to attract and engage potential customers. Additionally, consider collaborations with industry influencers or partners to expand your reach.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>Which are the best ways for b2b lead generation?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Effective B2B lead generation involves targeted content marketing, including informative blog posts and whitepapers, and leveraging platforms like LinkedIn for networking and outreach to establish relationships with potential clients.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>How do you plan a webinar marketing?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Plan a webinar marketing strategy by defining your target audience, promoting through email and social media, offering valuable content, and using analytics to measure success.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Accelerate Your Growth?</h2>
-                <p>Let's discuss how our proven B2B demand generation strategies can help you achieve your revenue goals and drive sustainable business growth.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">Get Started</a>
-                    <a href="#" class="btn btn-secondary">Schedule Consultation</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // FAQ Toggle Function
-        function toggleFAQ(element) {
-            const faqItem = element.parentElement;
-            const faqAnswer = faqItem.querySelector('.faq-answer');
-            const toggle = element.querySelector('.faq-toggle');
-            
-            faqItem.classList.toggle('active');
-            faqAnswer.classList.toggle('active');
-        }
-
-        // Add smooth scrolling and interactive elements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate stats on scroll
-            const observerOptions = {
-                threshold: 0.5,
-                rootMargin: '0px 0px -100px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const statNumbers = entry.target.querySelectorAll('.stat-number');
-                        statNumbers.forEach(stat => {
-                            const finalValue = stat.textContent;
-                            const numericValue = parseInt(finalValue.replace(/\D/g, ''));
-                            const suffix = finalValue.replace(/\d/g, '');
-                            
-                            let currentValue = 0;
-                            const increment = numericValue / 50;
-                            
-                            const timer = setInterval(() => {
-                                currentValue += increment;
-                                if (currentValue >= numericValue) {
-                                    stat.textContent = finalValue;
-                                    clearInterval(timer);
-                                } else {
-                                    stat.textContent = Math.floor(currentValue) + suffix;
-                                }
-                            }, 30);
-                        });
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            const statsSection = document.querySelector('.stats-section');
-            if (statsSection) {
-                observer.observe(statsSection);
-            }
-
-            // Add hover effects to service cards
-            const serviceCards = document.querySelectorAll('.service-card');
-            serviceCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-
-
+		<!-- Section Title -->
+		<div class="container section-title" data-aos="fade-up">
+			<span>Our Services<br></span>
+			<h2>Our ServiceS</h2>
+		  <p>Our innovative, custom-tailored solutions enable you to power your sales funnel with our great marketing and advertising expertise. Our Intelligent Technology Stack is adaptable and expandable, allowing you to distinguish yourself from the competition.</p>
+		</div><!-- End Section Title -->
   
+		<div class="container">
+  
+		  <div class="row gy-4 align-items-center features-item">
+			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+			  <img src="images/demand-generation.jpeg" class="img-fluid" alt="">
+			</div>
+			<div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+			  <h3>Demand Generation</h3>
+			  <p class="fst-italic">
+				B2B demand generation is the strategic process of creating awareness, interest, and desire for your products or services within your target market. It involves a series of activities aimed at driving potential customers to take action, such as requesting a demo, downloading a whitepaper, or signing up for a newsletter.
+			  </p>
+			  <ul>
+				<li><i class="bi bi-check"></i><span> Target Market Identification</span></li>
+				<li><i class="bi bi-check"></i> <span>Content Creation</span></li>
+				<li><i class="bi bi-check"></i> <span>Sales Enablement</span></li>
+			  </ul>
+			</div>
+		  </div><!-- Features Item -->
+  
+		  <div class="row gy-4 align-items-center features-item">
+			<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+			  <img src="images/content-syndication.jpeg" class="img-fluid" alt="">
+			</div>
+			<div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+			  <h3>Content Syndication</h3>
+			  <p class="fst-italic">
+				We specialize in content syndication for global clients, offering targeted distribution to verified contacts. Our platform ensures your content reaches the right audience, enhancing visibility and engagement across diverse markets.
+			  </p>
+			  <ul>
+				<li><i class="bi bi-check"></i><span> Expert Content Syndication</span></li>
+				<li><i class="bi bi-check"></i> <span>Verified Contacts</span></li>
+				<li><i class="bi bi-check"></i> <span>Enhanced Visibility</span></li>
+			  </ul>
+			</div>
+		  </div><!-- Features Item -->
+  
+		  <div class="row gy-4 align-items-center features-item">
+			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+			  <img src="images/email-marketing.jpeg" class="img-fluid" alt="">
+			</div>
+			<div class="col-md-7" data-aos="fade-up">
+			  <h3>Email Marketing</h3>
+			  <p>Our B2B company delivers targeted email marketing services designed to boost product awareness among prospects. We craft and send personalized emails while providing real-time delivery reports to ensure you track engagement and optimize your outreach efforts effectively.</p>
+			  <ul>
+				<li><i class="bi bi-check"></i> <span>Targeted Email Marketing</span></li>
+				<li><i class="bi bi-check"></i><span>Personalized Campaigns</span></li>
+				<li><i class="bi bi-check"></i> <span>Real-Time Tracking</span>.</li>
+			  </ul>
+			</div>
+		  </div><!-- Features Item -->
+  
+		  <div class="row gy-4 align-items-center features-item">
+			<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+			  <img src="images/lead-generation.jpeg" class="img-fluid" alt="">
+			</div>
+			<div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+			  <h3>Lead Generation</h3>
+			  <p class="fst-italic">
+				Our B2B lead generation services leverage advanced AI tools and extensive research to deliver high-quality, actionable leads. We provide targeted leads across MQL, SQL, and BANT categories, ensuring you connect with the most promising prospects for your business.
+			  </p>
+			</div>
+		  </div><!-- Features Item -->
 
+		  <div class="row gy-4 align-items-center features-item">
+			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+			  <img src="images/account-based-marketing.jpeg" class="img-fluid" alt="">
+			</div>
+			<div class="col-md-7" data-aos="fade-up">
+			  <h3>Account Based Marketing</h3>
+			  <p>Our Account-Based Marketing (ABM) service helps you focus on the most important companies for your business. We start by finding the right target companies, then we create special marketing plans just for them. We use different methods like emails, social media, and direct contact to reach out to these companies effectively. We keep track of how well our efforts are working and make improvements to ensure you get the best results. This way, you build stronger relationships with key clients and boost your business growth.</p>
+				<ul>
+				<li><i class="bi bi-check"></i> <span>Targeted Approach</span></li>
+				<li><i class="bi bi-check"></i><span>Customized Marketing Plans</span></li>
+				<li><i class="bi bi-check"></i> <span>Performance Tracking</span>.</li>
+			  </ul>
+			</div>
+		  </div><!-- Features Item -->
+  
+		</div>
+  
+	  </section><!-- /Features Section -->
 
 
 
@@ -919,54 +736,62 @@
   
 		  <div class="row justify-content-center">
   
-			<div class="col-lg-10">
+			<div class="col-lg-12">
   
 			  <div class="faq-container">
+          <div class="row">
+              <div class="col-md-6">
+                <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                  <i class="faq-icon bi bi-question-circle"></i>
+                  <h3> What is B2B lead generation?</h3>
+                  <div class="faq-content">
+                  <p>B2B lead generation is the process of identifying potential customers for a business's products or services.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
   
-				<div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
-				  <i class="faq-icon bi bi-question-circle"></i>
-				  <h3> What is B2B lead generation?</h3>
-				  <div class="faq-content">
-					<p>B2B lead generation is the process of identifying potential customers for a business's products or services.</p>
-				  </div>
-				  <i class="faq-toggle bi bi-chevron-right"></i>
-				</div><!-- End Faq item-->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                  <i class="faq-icon bi bi-question-circle"></i>
+                  <h3>Why Account-Based Marketing works for B2B? </h3>
+                  <div class="faq-content">
+                  <p>ABM works by focusing resources on high-value accounts and enabling personalized engagement, leading to more effective lead nurturing and conversions. It aligns marketing and sales teams, shortens sales cycles, and ensures measurable ROI.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
   
-				<div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-				  <i class="faq-icon bi bi-question-circle"></i>
-				  <h3>Why Account-Based Marketing works for B2B? </h3>
-				  <div class="faq-content">
-					<p>ABM works by focusing resources on high-value accounts and enabling personalized engagement, leading to more effective lead nurturing and conversions. It aligns marketing and sales teams, shortens sales cycles, and ensures measurable ROI.</p>
-				  </div>
-				  <i class="faq-toggle bi bi-chevron-right"></i>
-				</div><!-- End Faq item-->
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                  <i class="faq-icon bi bi-question-circle"></i>
+                  <h3>How do I increase Demand Generation in B2B?</h3>
+                  <div class="faq-content">
+                  <p>Focus on targeted content marketing and lead nurturing campaigns, while leveraging effective SEO and social media strategies to attract and engage potential customers. Additionally, consider collaborations with industry influencers or partners to expand your reach.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+              </div>
+
+              <div class="col-md-6">
+
+                  <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <i class="faq-icon bi bi-question-circle"></i>
+                    <h3>Which are the best ways for b2b lead generation? </h3>
+                    <div class="faq-content">
+                    <p>Effective B2B lead generation involves targeted content marketing, including informative blog posts and whitepapers, and leveraging platforms like LinkedIn for networking and outreach to establish relationships with potential clients.</p>
+                    </div>
+                    <i class="faq-toggle bi bi-chevron-right"></i>
+                  </div><!-- End Faq item-->
   
-				<div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-				  <i class="faq-icon bi bi-question-circle"></i>
-				  <h3>How do I increase Demand Generation in B2B?</h3>
-				  <div class="faq-content">
-					<p>Focus on targeted content marketing and lead nurturing campaigns, while leveraging effective SEO and social media strategies to attract and engage potential customers. Additionally, consider collaborations with industry influencers or partners to expand your reach.</p>
-				  </div>
-				  <i class="faq-toggle bi bi-chevron-right"></i>
-				</div><!-- End Faq item-->
-  
-				<div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-				  <i class="faq-icon bi bi-question-circle"></i>
-				  <h3>Which are the best ways for b2b lead generation? </h3>
-				  <div class="faq-content">
-					<p>Effective B2B lead generation involves targeted content marketing, including informative blog posts and whitepapers, and leveraging platforms like LinkedIn for networking and outreach to establish relationships with potential clients.</p>
-				  </div>
-				  <i class="faq-toggle bi bi-chevron-right"></i>
-				</div><!-- End Faq item-->
-  
-				<div class="faq-item" data-aos="fade-up" data-aos-delay="600">
-				  <i class="faq-icon bi bi-question-circle"></i>
-				  <h3>How do you plan a webinar marketing? </h3>
-				  <div class="faq-content">
-					<p>Plan a webinar marketing strategy by defining your target audience, promoting through email and social media, offering valuable content, and using analytics to measure success.</p>
-				  </div>
-				  <i class="faq-toggle bi bi-chevron-right"></i>
-				</div><!-- End Faq item-->
+                  <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="faq-icon bi bi-question-circle"></i>
+                    <h3>How do you plan a webinar marketing? </h3>
+                    <div class="faq-content">
+                    <p>Plan a webinar marketing strategy by defining your target audience, promoting through email and social media, offering valuable content, and using analytics to measure success.</p>
+                    </div>
+                    <i class="faq-toggle bi bi-chevron-right"></i>
+                  </div><!-- End Faq item-->
+                
+              </div>
+
+          </div>
   
 			  </div>
   
