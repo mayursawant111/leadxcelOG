@@ -196,7 +196,7 @@
 
         .section-title {
             /* font-size: 2.50rem; */
-            font-weight: 700;
+            font-weight: 500;
             color: var(--text-primary);
             margin-bottom: -2.5rem;
             letter-spacing: -0.025em;
@@ -213,7 +213,7 @@
         /* About Content */
         .about-content {
             background: var(--white);
-            border-radius: 2rem;
+            border-radius: 16px;
             padding: 2rem 1rem 2rem 1rem;
             box-shadow: var(--shadow-xl);
             border: 1px solid #e2e8f0;
@@ -257,7 +257,7 @@
         .feature-card {
             background: var(--white);
             padding: 2rem;
-            border-radius: 1.5rem;
+            border-radius: 16px;
             /* box-shadow: var(--shadow-md); */
             border: 1px solid #e2e8f0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -297,7 +297,7 @@
             width: 4rem;
             height: 4rem;
             background: var(--gradient-primary);
-            border-radius: 1rem;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -332,7 +332,7 @@
             background: var(--gradient-primary);
             width: 100px;
             margin: 0 auto;
-            border-radius: 1px;
+            border-radius: 16px;
         }
 
         /* Leadership Section */
@@ -361,7 +361,7 @@
 
         .leader-spotlight {
             background: var(--white);
-            border-radius: 2rem;
+            border-radius: 16px;
             padding: 2rem;
             box-shadow: var(--shadow-xl);
             border: 1px solid #e2e8f0;
@@ -410,7 +410,7 @@
         .leader-image {
             width: 200px;
             height: 200px;
-            border-radius: 1.5rem;
+            border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
             position: relative;
@@ -511,10 +511,10 @@
 
         .faq-item {
             background: var(--white);
-            border-radius: 1.5rem;
+            border-radius: 16px;
             padding: 2.5rem;
             box-shadow: var(--shadow-md);
-            border: 1px solid #e2e8f0;
+            border: 0px solid #e2e8f0;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -639,7 +639,35 @@
 		</div><!-- End Section Title -->
   
 		<div class="container">
-  
+
+  			<div class="row gy-4 align-items-center features-item">
+			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+			  <img src="images/account-based-marketing.jpeg" class="img-fluid" alt="">
+			</div>
+			<div class="col-md-7" data-aos="fade-up">
+			  <h3>Account Based Marketing</h3>
+			  <p class="fst-italic">
+			  Our Account-Based Marketing (ABM) service helps you focus on the most important companies for your business. We start by finding the right target companies, then we create special marketing plans just for them. We use different methods like emails, social media, and direct contact to reach out to these companies effectively. We keep track of how well our efforts are working and make improvements to ensure you get the best results. This way, you build stronger relationships with key clients and boost your business growth.</p>
+				<ul>
+				<li><i class="bi bi-check"></i> <span>Targeted Approach</span></li>
+				<li><i class="bi bi-check"></i><span>Customized Marketing Plans</span></li>
+				<li><i class="bi bi-check"></i> <span>Performance Tracking</span>.</li>
+			  </ul>
+			</div>
+		  </div><!-- Features Item -->
+
+		   <div class="row gy-4 align-items-center features-item">
+			<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+			  <img src="images/lead-generation.jpeg" class="img-fluid" alt="">
+			</div>
+			<div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+			  <h3>Lead Generation</h3>
+			  <p class="fst-italic">
+				Our B2B lead generation services leverage advanced AI tools and extensive research to deliver high-quality, actionable leads. We provide targeted leads across MQL, SQL, and BANT categories, ensuring you connect with the most promising prospects for your business.
+			  </p>
+			</div>
+		  </div><!-- Features Item -->
+
 		  <div class="row gy-4 align-items-center features-item">
 			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
 			  <img src="images/demand-generation.jpeg" class="img-fluid" alt="">
@@ -680,38 +708,12 @@
 			</div>
 			<div class="col-md-7" data-aos="fade-up">
 			  <h3>Email Marketing</h3>
-			  <p>Our B2B company delivers targeted email marketing services designed to boost product awareness among prospects. We craft and send personalized emails while providing real-time delivery reports to ensure you track engagement and optimize your outreach efforts effectively.</p>
+			  <p class="fst-italic">
+			  Our B2B company delivers targeted email marketing services designed to boost product awareness among prospects. We craft and send personalized emails while providing real-time delivery reports to ensure you track engagement and optimize your outreach efforts effectively.</p>
 			  <ul>
 				<li><i class="bi bi-check"></i> <span>Targeted Email Marketing</span></li>
 				<li><i class="bi bi-check"></i><span>Personalized Campaigns</span></li>
 				<li><i class="bi bi-check"></i> <span>Real-Time Tracking</span>.</li>
-			  </ul>
-			</div>
-		  </div><!-- Features Item -->
-  
-		  <div class="row gy-4 align-items-center features-item">
-			<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
-			  <img src="images/lead-generation.jpeg" class="img-fluid" alt="">
-			</div>
-			<div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-			  <h3>Lead Generation</h3>
-			  <p class="fst-italic">
-				Our B2B lead generation services leverage advanced AI tools and extensive research to deliver high-quality, actionable leads. We provide targeted leads across MQL, SQL, and BANT categories, ensuring you connect with the most promising prospects for your business.
-			  </p>
-			</div>
-		  </div><!-- Features Item -->
-
-		  <div class="row gy-4 align-items-center features-item">
-			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-			  <img src="images/account-based-marketing.jpeg" class="img-fluid" alt="">
-			</div>
-			<div class="col-md-7" data-aos="fade-up">
-			  <h3>Account Based Marketing</h3>
-			  <p>Our Account-Based Marketing (ABM) service helps you focus on the most important companies for your business. We start by finding the right target companies, then we create special marketing plans just for them. We use different methods like emails, social media, and direct contact to reach out to these companies effectively. We keep track of how well our efforts are working and make improvements to ensure you get the best results. This way, you build stronger relationships with key clients and boost your business growth.</p>
-				<ul>
-				<li><i class="bi bi-check"></i> <span>Targeted Approach</span></li>
-				<li><i class="bi bi-check"></i><span>Customized Marketing Plans</span></li>
-				<li><i class="bi bi-check"></i> <span>Performance Tracking</span>.</li>
 			  </ul>
 			</div>
 		  </div><!-- Features Item -->
@@ -741,50 +743,95 @@
 			  <div class="faq-container">
           <div class="row">
               <div class="col-md-6">
-                <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                   <i class="faq-icon bi bi-question-circle"></i>
-                  <h3> What is B2B lead generation?</h3>
+                  <h3>What kind of services does LeadXcel provide?</h3>
                   <div class="faq-content">
-                  <p>B2B lead generation is the process of identifying potential customers for a business's products or services.</p>
+                  <p>At LeadXcel, we understand the challenges B2B technology companies face when it comes to reaching the right audience and generating qualified leads. That’s why we offer a complete set of marketing services designed to make your job easier—and more effective. From providing accurate prospect data and market insights, to managing event participation, generating and qualifying leads, nurturing them, and supporting your account-based and content marketing efforts—we’re here to support every step of your marketing journey. We also help streamline your marketing automation so your team can focus on what matters most.</p>
                   </div>
                   <i class="faq-toggle bi bi-chevron-right"></i>
                 </div><!-- End Faq item-->
   
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                   <i class="faq-icon bi bi-question-circle"></i>
-                  <h3>Why Account-Based Marketing works for B2B? </h3>
+                  <h3>How does LeadXcel help brands expand their global reach and drive engagement?</h3>
                   <div class="faq-content">
-                  <p>ABM works by focusing resources on high-value accounts and enabling personalized engagement, leading to more effective lead nurturing and conversions. It aligns marketing and sales teams, shortens sales cycles, and ensures measurable ROI.</p>
+                  <p>At LeadXcel, we help B2B tech companies reach the right audience worldwide. With access to a network of over 40 million business professionals, we make global outreach simple and effective. Our mix of proven strategies and smart tech ensures your campaigns reach the right people, drive engagement, and deliver results.</p>
                   </div>
                   <i class="faq-toggle bi bi-chevron-right"></i>
                 </div><!-- End Faq item-->
   
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                   <i class="faq-icon bi bi-question-circle"></i>
-                  <h3>How do I increase Demand Generation in B2B?</h3>
+                  <h3>Can LeadXcel tailor its services to meet specific marketing goals?</h3>
                   <div class="faq-content">
-                  <p>Focus on targeted content marketing and lead nurturing campaigns, while leveraging effective SEO and social media strategies to attract and engage potential customers. Additionally, consider collaborations with industry influencers or partners to expand your reach.</p>
+                  <p>At LeadXcel, we provide highly tailored marketing solutions based on each client’s specific needs. We recognize that every B2B technology company has its own set of goals and challenges. That’s why we take a collaborative approach—working closely with our clients to develop strategies and tactics that align with their business objectives and drive meaningful outcomes.</p>
                   </div>
                   <i class="faq-toggle bi bi-chevron-right"></i>
                 </div><!-- End Faq item-->
+
+				<div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="faq-icon bi bi-question-circle"></i>
+                    <h3>What are the advantages of partnering with a lead generation and demand management company like LeadXcel?</h3>
+                    <div class="faq-content">
+                    <p>Partnering with LeadXcel for lead and demand management offers clear advantages. With deep expertise in B2B technology marketing, we understand the unique challenges and opportunities in your industry. Our experienced team handles the execution, allowing you to focus on your core business. We also offer flexible, scalable solutions that adapt to your needs—delivering both efficiency and cost-effectiveness.</p>
+                    </div>
+                    <i class="faq-toggle bi bi-chevron-right"></i>
+                  </div><!-- End Faq item-->
+
+				  <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="faq-icon bi bi-question-circle"></i>
+                    <h3>How can I get started with LeadXcel?</h3>
+                    <div class="faq-content">
+                    <p>To get started with LeadXcel, simply reach out through our website or contact us directly. Our team will be glad to understand your marketing needs and offer a tailored solution aligned with your goals. From the first conversation to execution, our marketing professionals ensure a smooth and efficient onboarding experience.</p>
+                    </div>
+                    <i class="faq-toggle bi bi-chevron-right"></i>
+                  </div><!-- End Faq item-->
               </div>
 
               <div class="col-md-6">
 
                   <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
                     <i class="faq-icon bi bi-question-circle"></i>
-                    <h3>Which are the best ways for b2b lead generation? </h3>
+                    <h3>Who does LeadXcel cater to?</h3>
                     <div class="faq-content">
-                    <p>Effective B2B lead generation involves targeted content marketing, including informative blog posts and whitepapers, and leveraging platforms like LinkedIn for networking and outreach to establish relationships with potential clients.</p>
+                    <p>LeadXcel works with a diverse set of clients, including B2B technology companies, media agencies, and publishers across global markets. Our services are built to support their customer acquisition goals while ensuring stronger relationships and greater operational efficiency.</p>
                     </div>
                     <i class="faq-toggle bi bi-chevron-right"></i>
                   </div><!-- End Faq item-->
   
                   <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
                     <i class="faq-icon bi bi-question-circle"></i>
-                    <h3>How do you plan a webinar marketing? </h3>
+                    <h3>Why is LeadXcel considered a reliable and risk-free marketing partner?</h3>
                     <div class="faq-content">
-                    <p>Plan a webinar marketing strategy by defining your target audience, promoting through email and social media, offering valuable content, and using analytics to measure success.</p>
+                    <p>LeadXcel has over 10+ years of experience in Demand Generation, with a strong track record of delivering effective marketing campaigns for B2B technology companies. Our team of 100+ skilled marketing professionals brings deep industry expertise and insight to every project. We focus on delivering results while ensuring flexibility and risk mitigation, so our clients can adapt confidently to changing market conditions.</p>
+                    </div>
+                    <i class="faq-toggle bi bi-chevron-right"></i>
+                  </div><!-- End Faq item-->
+
+				  <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="faq-icon bi bi-question-circle"></i>
+                    <h3>In what ways does LeadXcel contribute to customer acquisition efforts?</h3>
+                    <div class="faq-content">
+                    <p>LeadXcel supports customer acquisition by fostering stronger client relationships and enhancing operational efficiency. Our approach helps companies meet their customer acquisition goals more effectively and sustainably.</p>
+                    </div>
+                    <i class="faq-toggle bi bi-chevron-right"></i>
+                  </div><!-- End Faq item-->
+
+				  <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="faq-icon bi bi-question-circle"></i>
+                    <h3>Does LeadXcel offer support with lead generation and qualification?</h3>
+                    <div class="faq-content">
+                    <p>Yes, lead generation and qualification are core services at LeadXcel. We use targeted strategies to identify and attract potential customers, ensuring a consistent flow of high-quality leads. Our team combines data-driven insights, lead scoring, and proven qualification methods to help you focus on the most promising opportunities for your business.</p>
+                    </div>
+                    <i class="faq-toggle bi bi-chevron-right"></i>
+                  </div><!-- End Faq item-->
+
+				  <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                    <i class="faq-icon bi bi-question-circle"></i>
+                    <h3>How does LeadXcel measure and ensure the success of its marketing campaigns?</h3>
+                    <div class="faq-content">
+                    <p>LeadXcel takes a data-driven approach to ensure the effectiveness of every marketing campaign. By leveraging prospect data and market intelligence, we gain valuable insights into your target audience—their preferences, behaviors, and needs. This enables us to craft highly targeted and personalized campaigns. We also monitor performance closely and make data-informed adjustments to continuously improve results.</p>
                     </div>
                     <i class="faq-toggle bi bi-chevron-right"></i>
                   </div><!-- End Faq item-->
@@ -821,7 +868,7 @@
       			</div> -->
       		</div>
       		<div class="col-md-3 ftco-animate">
-      			<p class="mb-0"><a href="contact.html" class="btn btn-primary py-3 px-4">Get Started</a></p>
+      			<p class="mb-0"><a href="contact.html" class="btn btn-primary py-3 px-4">Schedule Consultation</a></p>
       		</div>
       	</div>
         <div class="row mb-5">

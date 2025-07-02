@@ -399,7 +399,9 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+    border-radius: 16px;
+   }
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -9002,7 +9004,7 @@ textarea.form-control {
     letter-spacing: .1em; }
   .ftco-footer .ftco-footer-widget.bg-primary {
     background: #5423c6 !important;
-  border-radius: 8px; }
+  border-radius: 16px; }
   .ftco-footer .ftco-footer-widget h2 {
     font-weight: normal;
     color: #fff;
