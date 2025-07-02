@@ -16,7 +16,7 @@
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
-  --white:#f8fafc;
+  --white:#ffffff;
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #007bff;
@@ -8142,7 +8142,7 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: "Work Sans", Arial, sans-serif;
   background: #fff;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.8;
   font-weight: 400;
   color: #666666; }
@@ -8371,7 +8371,7 @@ h1, h2, h3, h4, h5,
         text-align: center;
         height: 750px; } }
     .hero-wrap .slider-text .one-third {
-      width: 60%;
+      width: 55%;
       position: relative;
       z-index: 1; }
       .hero-wrap .slider-text .one-third .overlay {
@@ -8400,7 +8400,7 @@ h1, h2, h3, h4, h5,
           left: 0;
           bottom: 0;
           right: 0;
-          width: 1200px;
+          width: 1359px;
           margin: 0 auto; } }
       @media (max-width: 1199.98px) {
         .hero-wrap .slider-text .one-forth {
@@ -8426,13 +8426,13 @@ h1, h2, h3, h4, h5,
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             right: 0;
-            max-width: 40%;
+            max-width: 55%;
             padding-left: 45px;
             padding-right: 3em; } }
     .hero-wrap .slider-text .subheading {
       color: #000;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 26px;
       letter-spacing: 4px;
       text-transform: uppercase;
       display: inline-block;
@@ -8441,7 +8441,7 @@ h1, h2, h3, h4, h5,
       position: relative;
       z-index: 1; }
     .hero-wrap .slider-text h1 {
-      font-size: 30px;
+      font-size: 45px;
       color: #040404;
       line-height: 1.2;
       font-weight: 700; }
@@ -8500,7 +8500,7 @@ h1, h2, h3, h4, h5,
   color: #000 !important; }
 
 .bg-light {
-  background: #f8fafc !important;
+  background: #ffffff !important;
   z-index: 0; }
 
 .bg-primary {
@@ -8725,7 +8725,7 @@ h1, h2, h3, h4, h5,
   width: 100%;
   display: block;
   padding: 30px;
-  background: #fff;
+  background: #ecf0ff;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;

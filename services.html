@@ -45,7 +45,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link href="assets/css/main.css" rel="stylesheet">
-  
+  <link href="assets/css/services.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Logis
@@ -98,536 +98,7 @@
 		  </nav>
 		</div>
 	  </div><!-- End Page Title -->
-
-
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary-color: #f1f5f9;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --text-light: #64748b;
-            --white: #f#f8fafc;
-            --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            --gradient-secondary: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.7;
-            color: var(--text-primary);
-            background-color: #f8fafc;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem 3rem;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            position: relative;
-            padding: 8rem 0 6rem;
-            background: var(--gradient-primary);
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.15"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(%23a)"/><circle cx="900" cy="200" r="120" fill="url(%23a)"/><circle cx="300" cy="800" r="100" fill="url(%23a)"/><circle cx="800" cy="700" r="90" fill="url(%23a)"/></svg>') no-repeat center center;
-            background-size: cover;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: var(--white);
-        }
-
-        .hero-title {
-            font-size: 4.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.025em;
-            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            font-weight: 400;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 3rem 0 4rem 0;
-            background: var(--white);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .section-title {
-            /* font-size: 2.50rem; */
-            font-weight: 500;
-            color: var(--text-primary);
-            margin-bottom: -2.5rem;
-            letter-spacing: -0.025em;
-        }
-
-        .section-description {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-
-        /* About Content */
-        .about-content {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2rem 1rem 2rem 1rem;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid #e2e8f0;
-            margin-bottom: -1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-primary);
-        }
-
-        .about-text {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        /* Features Grid */
-        .features-section {
-            padding: 1rem 0;
-            background: none;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 0.5rem;
-            margin-top: 2rem;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 16px;
-            /* box-shadow: var(--shadow-md); */
-            border: 1px solid #e2e8f0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            /* background: var(--gradient-primary);
-            transform: scaleX(1);
-            transform-origin: left; 
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
-            background: linear-gradient(90deg, #667eea, #5423c6);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .feature-card:hover {
-            /* transform: translateY(-8px);
-            box-shadow: var(--shadow-xl); */
-            transform: translateY(-8px);
-            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.12);
-            border-color: #667eea;
-        }
-
-        .feature-icon {
-            width: 4rem;
-            height: 4rem;
-            background: var(--gradient-primary);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            color: var(--white);
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .feature-description {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .feature-divider {
-            grid-column: 1 / -1;
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .divider-line {
-            height: 2px;
-            background: var(--gradient-primary);
-            width: 100px;
-            margin: 0 auto;
-            border-radius: 16px;
-        }
-
-        /* Leadership Section */
-        .leadership-section {
-            padding: 1rem 0 4rem;
-            background: var(--white);
-            position: relative;
-        }
-
-        .leadership-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .leadership-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .leadership-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-top: 1rem;
-            font-weight: 400;
-        }
-
-        .leader-spotlight {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid #e2e8f0;
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .leader-spotlight::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            pointer-events: none;
-        }
-
-        .leader-spotlight:hover::before {
-            opacity: 1;
-            animation: glow-pulse 2s ease-in-out infinite;
-        }
-
-        .leader-spotlight:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25), var(--shadow-xl);
-            border-color: rgba(37, 99, 235, 0.2);
-        }
-
-        @keyframes glow-pulse {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 1; }
-        }
-
-        .leader-image-container {
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .leader-image {
-            width: 200px;
-            height: 200px;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .leader-spotlight:hover .leader-image {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .leader-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .leader-image-fallback {
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 4rem;
-            font-weight: 300;
-            letter-spacing: 0.1em;
-        }
-
-        .leader-details {
-            flex: 1;
-            position: relative;
-            z-index: 2;
-        }
-
-        .leader-name {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.025em;
-        }
-
-        .leader-title {
-            font-size: 1.375rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .leader-bio {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .leader-achievements {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .achievement {
-            text-align: center;
-        }
-
-        .achievement-number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: block;
-        }
-
-        .achievement-label {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-weight: 500;
-        }
-
-        FAQ Section
-        .faq-section {
-            padding: 6rem 0;
-            background: var(--secondary-color);
-        }
-
-        .faq-grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .faq-item {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow-md);
-            border: 0px solid #e2e8f0;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .faq-item:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .faq-question {
-            font-size: 1.375rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .faq-answer {
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-
-            .leader-spotlight {
-                flex-direction: column;
-                text-align: center;
-                gap: 2rem;
-                padding: 3rem;
-            }
-
-            .leader-details {
-                text-align: center;
-            }
-
-            .hero-title {
-                font-size: 3.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 6rem 0 4rem;
-            }
-
-            .hero-title {
-                font-size: 2.75rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.25rem;
-            }
-
-            .section-title {
-                font-size: 2.25rem;
-            }
-
-            .about-content {
-                padding: 2.5rem;
-            }
-
-            .feature-card {
-                padding: 2rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .leader-spotlight {
-                padding: 2rem;
-            }
-
-            .leader-image {
-                width: 150px;
-                height: 150px;
-            }
-
-            .leader-name {
-                font-size: 1.875rem;
-            }
-
-            .leader-achievements {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 1rem;
-            }
-
-            .hero-title {
-                font-size: 2.25rem;
-            }
-
-            .section-title {
-                font-size: 1.875rem;
-            }
-
-            .about-content {
-                padding: 2rem;
-            }
-
-            .leader-spotlight {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    
 	<!-- Features Section -->
     <section id="features" class="features section">
 
@@ -646,7 +117,7 @@
 			</div>
 			<div class="col-md-7" data-aos="fade-up">
 			  <h3>Account Based Marketing</h3>
-			  <p class="fst-italic">
+			  <p>
 			  Our Account-Based Marketing (ABM) service helps you win high-value clients by focusing only on the companies that matter most to your business. We begin by identifying your ideal accounts using firmographic and intent data. Then, we craft personalized campaigns tailored to the decision-makers within those companies. Using a mix of email, content, social engagement, and direct outreach, we engage key stakeholders with relevant messages at the right time. We continuously monitor performance and optimize campaigns to maximize conversions and ROI.</p>
 				<ul>
 				<li><i class="bi bi-check"></i> <span>Precision Targeting of Ideal Accounts</span></li>
@@ -662,7 +133,7 @@
 			</div>
 			<div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
 			  <h3>Lead Generation</h3>
-			  <p class="fst-italic">
+			  <p>
 				Our Lead Generation service brings you high-quality potential customers who are actually interested in your product or service. We use various methods like online campaigns, data-driven outreach, and verified contact lists to find these leads. Our goal is to help you fill your sales pipeline with the right prospects who are ready to talk business.
 			  </p>
          <ul>
@@ -679,7 +150,7 @@
 			</div>
 			<div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
 			  <h3>Demand Generation</h3>
-			  <p class="fst-italic">
+			  <p>
 				Our Demand Generation service is designed to create interest in your product or service across your target market. We create informative and engaging content, run smart campaigns, and use multiple channels to make sure your message reaches the right people. The goal is to attract attention, educate your audience, and keep them engaged until they’re ready to buy.
 			  </p>
 			  <ul>
@@ -696,7 +167,7 @@
 			</div>
 			<div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
 			  <h3>Content Syndication</h3>
-			  <p class="fst-italic">
+			  <p>
 				Our Content Syndication service helps you share your content—like whitepapers, case studies, and articles—with a larger and more relevant audience. We make sure your valuable content reaches decision-makers in your target industry. This boosts your brand visibility, builds credibility, and generates qualified leads.
 			  </p>
 			  <ul>
@@ -713,7 +184,7 @@
 			</div>
 			<div class="col-md-7" data-aos="fade-up">
 			  <h3>Email Marketing</h3>
-			  <p class="fst-italic">
+			  <p>
 			  We use Email Marketing to send personalized and professional messages directly to your potential customers. Each email campaign is designed to grab attention, offer value, and encourage action. Whether it's promoting a product or sharing useful content, we make sure your message lands in the right inbox at the right time.</p>
 			  <ul>
 				<li><i class="bi bi-check"></i> <span>Targeted Email Lists</span></li>
@@ -730,7 +201,7 @@
 			</div>
 			<div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
 			  <h3>Data Solutions</h3>
-			  <p class="fst-italic">
+			  <p>
 			  We provide high-quality B2B data that helps you connect with the right people. Our data includes accurate contact details, firmographics, and intent signals. Whether you need a fresh list of prospects or want to clean and enrich your existing database, we’ve got you covered.</p>
 			  <ul>
 				<li><i class="bi bi-check"></i> <span>Verified & Updated B2B Data</span></li>

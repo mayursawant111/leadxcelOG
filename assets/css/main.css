@@ -1382,7 +1382,7 @@ section,
 
 .testimonials:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 40%);
+  background: color-mix(in srgb, var(--background-color), transparent 90%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1514,7 +1514,7 @@ section,
 }
 
 .faq .faq-container .faq-item h3 {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 15px;
   line-height: 24px;
   margin: 0 30px 0 32px;
