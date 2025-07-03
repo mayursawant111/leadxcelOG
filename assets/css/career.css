@@ -230,7 +230,7 @@
         /* Why Join Section */
         .why-join {
             padding: 25px;
-            background: #f8fafc;
+            background: #ffffff;
         }
         
         .section-title {
@@ -260,7 +260,7 @@
         }
         
         .benefit-card {
-            background: white;
+            background: #fafafa;
             padding: 25px 25px 5px;
             border-radius: 16px;
             text-align: left;
@@ -340,7 +340,7 @@
         /* Open Positions */
         .positions {
             padding: 15px 0;
-             background: #f8fafc;
+             background: ##ffffff;
         }
         
         .position-card {
@@ -456,7 +456,7 @@
         /* Application Form */
         .application-form {
             padding: 0px 0 50px 0;
-            background: #f8fafc;
+            background: ##ffffff;
         }
         
         .form-container {
@@ -542,7 +542,7 @@
             background: linear-gradient(135deg, #667eea, #5423c6);
             color: white;
             border: none;
-            padding: 20px 40px;
+            padding: 10px 40px;
             border-radius: 12px;
             font-size: 1.1rem;
             font-weight: 600;

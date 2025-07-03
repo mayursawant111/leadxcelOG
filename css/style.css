@@ -8142,7 +8142,7 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   font-family: "Work Sans", Arial, sans-serif;
   background: #fff;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
   font-weight: 400;
   color: #666666; }
@@ -8526,7 +8526,7 @@ h1, h2, h3, h4, h5,
     .btn.btn-primary:hover {
       border: 1px solid #5423c6;
       background: transparent;
-      /* color: #5423c6; } */
+      color: #5423c6; }
     }
     .btn.btn-primary.btn-outline-primary {
       border: 2px solid #5423c6;
@@ -8725,7 +8725,7 @@ h1, h2, h3, h4, h5,
   width: 100%;
   display: block;
   padding: 30px;
-  background: #ecf0ff;
+  background: #ededed;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -9139,6 +9139,7 @@ textarea.form-control {
   font-size: 500;
   display: block;
   margin-bottom: 0;
+  margin-top: 25px;
   text-transform: uppercase;
   letter-spacing: 1px; }
 

@@ -24,9 +24,10 @@
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
   
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -40,7 +41,7 @@
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
   <link rel="stylesheet" href="css/jquery.timepicker.css">
   <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/icomoon.css"> -->
 
 
   <link rel="stylesheet" href="css/style.css">
@@ -154,14 +155,19 @@
     <!-- Main Content -->
     <section class="main-content">
         <div class="container">
-            <div class="content-grid">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <span>Get in Touch<br></span>
+                <h2>Get in Touch</h2>
+                <p style="font-size: 16px; font-weight: 400;">Our lead generation experts are here to help you unlock exponential growth. Choose your preferred way to connect:</p>
+            </div><!-- End Section Title -->
+
+            
                 <!-- Contact Information -->
-                <div class="contact-info">
-                    <h2 class="section-title">Get in Touch</h2>
-                    <p class="section-subtitle">Our lead generation experts are here to help you unlock exponential growth. Choose your preferred way to connect:</p>
+                <!-- <div class="contact-info"> -->
                     
                     <div class="contact-cards">
-                        <div class="contact-card">
+                        <div class="contact-card ">
                             <div class="contact-card-header">
                                 <div class="contact-icon">
                                     <svg fill="currentColor" viewBox="0 0 24 24">
@@ -201,117 +207,72 @@
                             <a href="#" onclick="openCalendar()">Schedule Now</a>
                         </div>
                     </div>
+                <!-- </div> -->
+
+            <div class="content row">
+                <div class="col-md-6">
+                    <img src="images/aboutus1.jpg" style="width: 650px; height: 450px; border-radius: 16px;"/>
                 </div>
-
-                <!-- Contact Form -->
-                <div class="form-container">
-                    <div class="form-header">
-                        <h2 class="form-title">Start Your Growth Journey</h2>
-                        <p class="form-subtitle">Tell us about your business and we'll create a custom lead generation strategy just for you.</p>
+                
+                <div class="col-md-6">
+                    <!-- Contact Form -->
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h2 class="form-title">Start Your Growth Journey</h2>
                         
-                        <div class="value-props">
-                            <div class="value-prop">
-                                <svg fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
-                                Free Strategy Session
-                            </div>
-                            <div class="value-prop">
-                                <svg fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
-                                24hr Response
-                            </div>
-                            <div class="value-prop">
-                                <svg fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
-                                No Commitment
+                        </div>
+
+                        <form id="contactForm" class="form-grid" onsubmit="handleFormSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Name <span class="required">*</span></label>
+                                    <input type="text" name="firstName" class="form-input" placeholder="John Brooks" required>
+                                </div>
+                                <div class="form-group">
+                                <label class="form-label">Company Name <span class="required">*</span></label>
+                                <input type="text" name="company" class="form-input" placeholder="Your Company Inc." required>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                    <label class="form-label">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Business Email <span class="required">*</span></label>
+                                    <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">How can we help you?</label>
+                                    <select name="industry" class="form-input form-select">
+                                        <option value="">Select Your Requirements</option>
+                                        <option value="Marketing/Sales Ready Leads">Marketing/Sales Ready Leads</option>
+                                        <option value="Data/Audience Targeting">Data/Audience Targeting</option>
+                                        <option value="Customer Intent">Customer Intent</option>
+                                        <option value="Content/Media Distribution">Content/Media Distribution</option>
+                                        <option value="Lead Nurturing">Lead Nurturing</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                <label class="form-label">Tell us about your lead generation goals </label>
+                                <textarea name="message" class="form-input" placeholder="What challenges are you facing with lead generation? What are your growth targets? Any specific industries you're targeting?" required></textarea>
+                            </div>
+                            </div>
+
+                        
+
+                            <button type="submit" class="submit-btn">
+                                Get My Custom Strategy
+                            </button>
+
+
+                            <div class="guarantee">
+                            </div>
+                            </form>
                     </div>
-
-                    <form id="contactForm" class="form-grid" onsubmit="handleFormSubmit(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label">First Name <span class="required">*</span></label>
-                                <input type="text" name="firstName" class="form-input" placeholder="John" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Last Name <span class="required">*</span></label>
-                                <input type="text" name="lastName" class="form-input" placeholder="Smith" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label">Business Email <span class="required">*</span></label>
-                                <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Phone Number</label>
-                                <input type="tel" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Company Name <span class="required">*</span></label>
-                            <input type="text" name="company" class="form-input" placeholder="Your Company Inc." required>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label">Industry</label>
-                                <select name="industry" class="form-input form-select">
-                                    <option value="">Select your industry</option>
-                                    <option value="technology">Technology & Software</option>
-                                    <option value="healthcare">Healthcare & Medical</option>
-                                    <option value="finance">Finance & Banking</option>
-                                    <option value="manufacturing">Manufacturing</option>
-                                    <option value="consulting">Consulting Services</option>
-                                    <option value="real-estate">Real Estate</option>
-                                    <option value="marketing">Marketing & Advertising</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Company Size</label>
-                                <select name="companySize" class="form-input form-select">
-                                    <option value="">Select company size</option>
-                                    <option value="startup">Startup (1-10 employees)</option>
-                                    <option value="small">Small (11-50 employees)</option>
-                                    <option value="medium">Medium (51-200 employees)</option>
-                                    <option value="large">Large (201-1000 employees)</option>
-                                    <option value="enterprise">Enterprise (1000+ employees)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Monthly Lead Generation Budget</label>
-                            <select name="budget" class="form-input form-select">
-                                <option value="">Select your budget range</option>
-                                <option value="5k-10k">$5,000 - $10,000</option>
-                                <option value="10k-25k">$10,000 - $25,000</option>
-                                <option value="25k-50k">$25,000 - $50,000</option>
-                                <option value="50k-100k">$50,000 - $100,000</option>
-                                <option value="100k+">$100,000+</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Tell us about your lead generation goals <span class="required">*</span></label>
-                            <textarea name="message" class="form-input" placeholder="What challenges are you facing with lead generation? What are your growth targets? Any specific industries you're targeting?" required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">
-                            Get My Custom Strategy
-                        </button>
-
-
-                        <div class="guarantee">
-                          </div>
-                          </form>
                 </div>
             </div>
         </div>
@@ -456,7 +417,7 @@ Submitted on: ${new Date().toLocaleString()}
       		</div>
       		<div class="col-md-3 ftco-animate">
       			<!-- <div class="price">
-      				<span class="subheading">Starting at Only</span>
+      				<span class="subheading">Just a click away</span>
       				<h3>$4.50<span>/mo</span></h3>
       			</div> -->
       		</div>
@@ -479,21 +440,22 @@ Submitted on: ${new Date().toLocaleString()}
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Unseful Links</h2>
+              <h2 class="ftco-heading-2">Solutions</h2>
               <ul class="list-unstyled">
                 <li><a href="services.html" class="py-2 d-block">Services</a></li>
-                <li><a href="career.html" class="py-2 d-block">Career</a></li>
-                <li><a href="policy.html" class="py-2 d-block">Policy</a></li>
+                <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+                
               </ul>
             </div>
           </div>
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Navigational</h2>
+              <h2 class="ftco-heading-2">Company</h2>
               <ul class="list-unstyled">
-                <li><a href="index.html" class="py-2 d-block">Home</a></li>
                 <li><a href="about.html" class="py-2 d-block">About</a></li>
-                <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+                <li><a href="leadership.html" class="py-2 d-block">Leadership</a></li>
+                <li><a href="career.html" class="py-2 d-block">Career</a></li>
+                <li><a href="policy.html" class="py-2 d-block">Policy</a></li>
               </ul>
             </div>
           </div>

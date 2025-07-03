@@ -117,10 +117,10 @@
         }
 
         /* Contact Info */
-        .contact-info {
+        /* .contact-info {
             position: sticky;
             top: 100px;
-        }
+        } */
 
         .section-title {
             font-size: 1.9rem;
@@ -138,8 +138,8 @@
         }
 
         .contact-cards {
-            display: grid;
-            gap: 24px;
+            display: flex;
+            gap: 15px;
             margin-bottom: 50px;
         }
 
@@ -151,6 +151,7 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
 
         .contact-card::before {
@@ -374,7 +375,7 @@
 
         textarea.form-input {
             resize: vertical;
-            min-height: 140px;
+            min-height: 100px;
         }
 
         .form-select {
@@ -389,7 +390,7 @@
         .submit-btn {
             background: linear-gradient(135deg, #667eea 0%, #5423c6 100%);
             color: white;
-            padding: 20px 40px;
+            padding: 10px 35px;
             border: none;
             border-radius: 12px;
             font-size: 1.1rem;
