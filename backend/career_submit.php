@@ -36,7 +36,19 @@ if (!in_array($file['type'], $allowedTypes) || $fileSizeMB > 5) {
 $uploadDir = '../uploads/resumes/';
 if (!is_dir($uploadDir)) mkdir($uploadDir, 0777, true);
 
-$filename = time() . '_' . basename($file['name']);
+// Format name: lowercase, dashes, no special chars
+$sanitizedName = preg_replace('/[^a-z0-9]/i', '-', strtolower($_POST['fullName']));
+$sanitizedName = preg_replace('/-+/', '-', $sanitizedName); // remove double dashes
+
+// Get original file extension
+$ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+
+// Format datetime
+$datetime = date('Ymd_His');
+
+// Final filename
+$filename = $sanitizedName . '_' . $datetime . '.' . $ext;
+
 $targetPath = $uploadDir . $filename;
 
 if (!move_uploaded_file($file['tmp_name'], $targetPath)) {

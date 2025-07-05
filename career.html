@@ -575,33 +575,20 @@
             .then(response => response.json())
             .then(data => {
                 console.log("Data:",data)
-                showModal(data.message, data.status);
+                // showModal(data.message, data.status);
+                document.getElementById('successMessage').innerHTML(data.message)
                 if (data.status === "success") form.reset();
             })
             .catch(error => {
                 console.error("Error:", error);
-                showModal("Something went wrong. Please try again.", "error");
+                document.getElementById('errorMessage').innerHTML('Something went wrong. Please try again.')
+                // showModal("Something went wrong. Please try again.", "error");
             });
-
-            function showModal(message, status) {
-                console.log(message,status);
-                const modal = document.getElementById('modal');
-                const modalMessage = document.getElementById('modalMessage');
-                modalMessage.innerText = message;
-                modalMessage.style.color = (status === "success") ? "green" : "red";
-                modal.style.display = 'block';
-            }
 
             document.querySelector('.close-button').onclick = () => {
                 document.getElementById('modal').style.display = 'none';
             }
 
-            window.onclick = function (event) {
-                const modal = document.getElementById('modal');
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
         });
 
         
