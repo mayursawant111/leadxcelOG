@@ -516,3 +516,7 @@
                 padding: 1.5rem;
             }
         }
+        @media (max-width: 900px) {    
+        .section-title {
+        font-size: 12px;
+    }}

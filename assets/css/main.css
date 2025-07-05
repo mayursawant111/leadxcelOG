@@ -281,6 +281,7 @@ h6 {
     order: 2;
     margin: 0 15px 0 0;
     padding: 6px 15px;
+    font-size: 10px;
   }
 
   .header .navmenu {
@@ -772,7 +773,7 @@ h6 {
 
 .page-title:before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 60%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 80%);
   position: absolute;
   inset: 0;
 }
@@ -1569,7 +1570,7 @@ section,
 }
 
 .faq .faq-container .faq-active {
-  background-color: var(--heading-color);
+  background-color: white;
   transition: 0.3s;
 }
 
@@ -1578,7 +1579,7 @@ section,
 .faq .faq-container .faq-active .faq-toggle,
 .faq .faq-container .faq-active .faq-icon,
 .faq .faq-container .faq-active .faq-content {
-  color: var(--contrast-color);
+  color: var(--default-color);
 }
 
 .faq .faq-container .faq-active .faq-content {
@@ -2304,4 +2305,38 @@ margin-right: auto;
   height: 60px;
   width: 60px;
 }
+@media (max-width: 900px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .navmenu ul {
+        inset: 20px 20px 375px 270px;
+    }
+        .navmenu a, .navmenu a:focus {
+        font-size: 14px;
+    }
+    body {
+    font-size: 13px;
 
+  }
+  .services .icon span {
+    font-size: 28px;
+}
+.section-title h2 {
+        font-size: 21px;
+    }
+      .section-title span {
+        font-size: 28px;
+      }
+.section-title {
+    padding: 5px 0;
+}
+.page-title h1 {
+    font-size: 20px;
+}
+.page-title .breadcrumbs ol {
+    font-size: 13px;
+}
+
+}

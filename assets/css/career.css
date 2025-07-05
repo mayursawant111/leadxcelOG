@@ -229,7 +229,7 @@
 
         /* Why Join Section */
         .why-join {
-            padding: 25px;
+            padding: 42px;
             background: #ffffff;
         }
         
@@ -340,7 +340,7 @@
         /* Open Positions */
         .positions {
             padding: 15px 0;
-             background: ##ffffff;
+             background: #ffffff;
         }
         
         .position-card {
@@ -367,7 +367,7 @@
         .position-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 16px 32px rgba(0,0,0,0.1);
-            background: white;
+            background: #fafafa;
         }
         
         .position-header {
@@ -406,7 +406,7 @@
             align-items: center;
             gap: 8px;
             color: #718096;
-            font-size: 0.95rem;
+            font-size: 13px;
         }
         
         .detail-item i {
@@ -419,20 +419,21 @@
             color: #4a5568;
             margin-bottom: 10px;
             line-height: 1.7;
-            font-size: 0.92rem;
+            font-size: 14px;
         }
         
         .apply-btn {
             background: linear-gradient(135deg, #667eea, #5423c6);
             color: white;
             border: none;
-            padding: 14px 32px;
+            padding: 9px 24px;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 13px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-transform: none;
+            border-radius: 33px;
         }
         
         .apply-btn:hover {
@@ -456,7 +457,7 @@
         /* Application Form */
         .application-form {
             padding: 0px 0 50px 0;
-            background: ##ffffff;
+            /* background: #ffffff; */
         }
         
         .form-container {
@@ -544,7 +545,7 @@
             border: none;
             padding: 10px 40px;
             border-radius: 12px;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;

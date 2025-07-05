@@ -24,30 +24,25 @@
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <!-- <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-
-  <link rel="stylesheet" href="css/aos.css">
-
-  <link rel="stylesheet" href="css/ionicons.min.css">
-
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="css/jquery.timepicker.css">
-  <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/icomoon.css"> -->
-
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
   <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/contact.css" rel="stylesheet">
-  
+  <link href="assets/css/contact.css" rel="stylesheet">
+  <style>
+    .form-message {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    .success {
+        color: green;
+    }
+
+    .error {
+        color: red;
+    }
+  </style>
 </head>
 
 <body class="about-page">
@@ -222,7 +217,7 @@
                 
                 </div>
 
-                <form id="contactForm" class="form-grid" method="POST" action="backend/submit.php">
+                <form id="contactForm" class="form-grid">
                     <div class="form-row">
                         <div class="form-group">
                             <label class="form-label">Name <span class="required">*</span></label>
@@ -268,6 +263,7 @@
                         Get My Custom Strategy
                     </button>
 
+                    <div id="formMessage" class="form-message"></div>
 
                     <div class="guarantee">
                     </div>
@@ -279,106 +275,28 @@
     <br/><br/>
 
     <script>
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            const form = event.target;
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = e.target;
             const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            
-            // Get the submit button
-            const submitBtn = form.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            
-            // Show loading state
-            submitBtn.textContent = 'Sending...';
-            submitBtn.classList.add('loading');
-            submitBtn.disabled = true;
-            
-            // OPTION 1: Using a form handler service (recommended)
-            // Replace 'YOUR_FORM_ENDPOINT' with your actual endpoint
-            fetch('YOUR_FORM_ENDPOINT', {
+
+            fetch('backend/submit.php', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
+                body: formData
             })
-            .then(response => {
-                if (response.ok) {
-                    showSuccessMessage();
-                    form.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
+            .then(response => response.text())
+            .then(result => {
+                document.getElementById('formMessage').innerHTML = `<div class="success">${result}</div>`;
+                form.reset(); // clear form if needed
             })
             .catch(error => {
+                document.getElementById('formMessage').innerHTML = `<div class="error">Error submitting form. Please try again.</div>`;
                 console.error('Error:', error);
-                showErrorMessage();
-            })
-            .finally(() => {
-                // Reset button state
-                submitBtn.textContent = originalText;
-                submitBtn.classList.remove('loading');
-                submitBtn.disabled = false;
             });
-            
-            // OPTION 2: Fallback - mailto link (less reliable)
-            // Uncomment the lines below if you want to use mailto fallback
-            /*
-            const emailBody = `
-New Lead Generation Inquiry:
+        });
 
-Name: ${data.firstName} ${data.lastName}
-Email: ${data.email}
-Phone: ${data.phone || 'Not provided'}
-Company: ${data.company}
-Industry: ${data.industry || 'Not specified'}
-Company Size: ${data.companySize || 'Not specified'}
-Budget: ${data.budget || 'Not specified'}
 
-Message:
-${data.message}
-
-Submitted on: ${new Date().toLocaleString()}
-            `.trim();
-            
-            const mailtoLink = `mailto:sales@leadxcelb2b.com?subject=New Lead Generation Inquiry from ${data.firstName} ${data.lastName}&body=${encodeURIComponent(emailBody)}`;
-            window.location.href = mailtoLink;
-            
-            setTimeout(() => {
-                showSuccessMessage();
-                form.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.classList.remove('loading');
-                submitBtn.disabled = false;
-            }, 2000);
-            */
-        }
-
-        function showSuccessMessage() {
-            // Create success modal
-            const modal = document.createElement('div');
-            modal.innerHTML = `
-                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 10000;">
-                    <div style="background: white; padding: 40px; border-radius: 20px; text-align: center; max-width: 500px; margin: 20px;">
-                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-                            <svg width="40" height="40" fill="white" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: #1a1a1a;">Thank You!</h3>
-                        <p style="color: #6b7280; margin-bottom: 24px;">Your message has been sent successfully. Our team will review your requirements and get back to you within 24 hours with a custom strategy.</p>
-                        <button onclick="this.parentElement.parentElement.remove()" style="background: linear-gradient(135deg, #667eea, #5423c6); color: white; padding: 12px 24px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">Close</button>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-
-        function showErrorMessage() {
-            alert('There was an error sending your message. Please try again or contact us directly at sales@leadxcelb2b.com');
-        }
 
         function openCalendar() {
             // This would typically integrate with a calendar booking system
