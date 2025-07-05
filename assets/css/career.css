@@ -578,10 +578,24 @@
             color: #22543d;
             padding: 20px;
             border-radius: 12px;
-            margin-bottom: 24px;
+            margin-top: 15px;
+            margin-bottom: 15px;
             border: 1px solid #9ae6b4;
             display: none;
             text-align: center;
+            font-size: 12px;
+        }
+        .error-message {
+            background: #f0fff4;
+            color: #ce3232;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #e46d7b;
+            display: none;
+            text-align: center;
+            font-size: 12px;
         }
         
         /* Responsive Design */

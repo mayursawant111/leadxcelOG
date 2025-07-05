@@ -576,18 +576,18 @@
             .then(data => {
                 console.log("Data:",data)
                 // showModal(data.message, data.status);
-                document.getElementById('successMessage').innerHTML = data.message;
+                modal = document.getElementById('successMessage');
+                modal.innerHTML = `<div class="success">${data.message}</div>`;
+                modal.style.display = 'block';
                 if (data.status === "success") form.reset();
             })
             .catch(error => {
                 console.error("Error:", error);
-                document.getElementById('errorMessage').innerHTML = 'Something went wrong. Please try again.';
+                modal = document.getElementById('errorMessage');
+                modal.style.display = 'block';
+                modal.innerHTML = `<div class="success">Something went wrong. Please try again.</div>`;
                 // showModal("Something went wrong. Please try again.", "error");
             });
-
-            document.querySelector('.close-button').onclick = () => {
-                document.getElementById('modal').style.display = 'none';
-            }
 
         });
 
