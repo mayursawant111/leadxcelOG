@@ -2,7 +2,7 @@
 // DB connection variables — update with your own values
 $host = "localhost";
 $dbname = "u730929756_leadxcel_db";
-$username = "my_user";
+$username = "u730929756_my_user";
 $password = "Leadxcel##321";
 
 // Connect to MySQL
