@@ -325,9 +325,9 @@
                     <p class="section-subtitle">Take the next step in your career journey with us</p>
                     
                     <div class="form-container">
-                        <div class="success-message" id="successMessage">
+                        <!-- <div class="success-message" id="successMessage">
                             <i class="fas fa-check-circle"></i> 
-                        </div>
+                        </div> -->
                         
                         <form id="applicationForm">
                             <div class="form-row">
@@ -440,7 +440,7 @@
             const form = e.target;
             const formData = new FormData(form);
 
-            fetch('backend/submit_application.php', {
+            fetch('backend/career_submit.php', {
                 method: 'POST',
                 body: formData
             })
