@@ -325,10 +325,6 @@
                     <p class="section-subtitle">Take the next step in your career journey with us</p>
                     
                     <div class="form-container">
-                        <!-- <div class="success-message" id="successMessage">
-                            <i class="fas fa-check-circle"></i> 
-                        </div> -->
-                        
                         <form id="applicationForm">
                             <div class="form-row">
                             <div class="form-group">
@@ -409,6 +405,9 @@
                                     Submit Application
                                 </button>
                             </div>
+
+                            <div class="success-message" id="successMessage"></div>
+                            <div class="error-message" id="errorMessage"></div>
                         </form>
                     </div>
                 </div>
@@ -416,75 +415,6 @@
         </div>
     </section>
     
-
-    <script>
-        // Auto-select position when apply button is clicked
-        function scrollToApplication(position) {
-            document.getElementById('position').value = position;
-            document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // Handle file upload display
-        document.getElementById('resume').addEventListener('change', function(e) {
-            const label = document.querySelector('.file-upload-label span');
-            if (e.target.files.length > 0) {
-                label.textContent = e.target.files[0].name;
-            } else {
-                label.textContent = 'Choose file (PDF, DOC, DOCX - Max 5MB)';
-            }
-        });
-        
-        document.getElementById('applicationForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const formData = new FormData(form);
-
-            fetch('backend/career_submit.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                showModal(data.message, data.status);
-                if (data.status === "success") form.reset();
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                showModal("Something went wrong. Please try again.", "error");
-            });
-
-            function showModal(message, status) {
-                console.log(message,status);
-                const modal = document.getElementById('modal');
-                const modalMessage = document.getElementById('modalMessage');
-                modalMessage.innerText = message;
-                modalMessage.style.color = (status === "success") ? "green" : "red";
-                modal.style.display = 'block';
-            }
-
-            document.querySelector('.close-button').onclick = () => {
-                document.getElementById('modal').style.display = 'none';
-            }
-
-            window.onclick = function (event) {
-                const modal = document.getElementById('modal');
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        });
-
-        
-        // Smooth scroll for navigation links
-        document.querySelectorAll('.hero-nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
 </body>
 
 </main>
@@ -613,6 +543,77 @@
 <script src="js/jquery.timepicker.min.js"></script>
 <script src="js/scrollax.min.js"></script>
 <script src="js/main.js"></script>
+
+
+    <script>
+        // Auto-select position when apply button is clicked
+        function scrollToApplication(position) {
+            document.getElementById('position').value = position;
+            document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Handle file upload display
+        document.getElementById('resume').addEventListener('change', function(e) {
+            const label = document.querySelector('.file-upload-label span');
+            if (e.target.files.length > 0) {
+                label.textContent = e.target.files[0].name;
+            } else {
+                label.textContent = 'Choose file (PDF, DOC, DOCX - Max 5MB)';
+            }
+        });
+        
+        document.getElementById('applicationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch('backend/career_submit.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Data:",data)
+                showModal(data.message, data.status);
+                if (data.status === "success") form.reset();
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                showModal("Something went wrong. Please try again.", "error");
+            });
+
+            function showModal(message, status) {
+                console.log(message,status);
+                const modal = document.getElementById('modal');
+                const modalMessage = document.getElementById('modalMessage');
+                modalMessage.innerText = message;
+                modalMessage.style.color = (status === "success") ? "green" : "red";
+                modal.style.display = 'block';
+            }
+
+            document.querySelector('.close-button').onclick = () => {
+                document.getElementById('modal').style.display = 'none';
+            }
+
+            window.onclick = function (event) {
+                const modal = document.getElementById('modal');
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        });
+
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.hero-nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 
 </body>
 
