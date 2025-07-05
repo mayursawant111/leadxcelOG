@@ -576,12 +576,12 @@
             .then(data => {
                 console.log("Data:",data)
                 // showModal(data.message, data.status);
-                document.getElementById('successMessage').innerHTML(data.message)
+                document.getElementById('successMessage').innerHTML = data.message;
                 if (data.status === "success") form.reset();
             })
             .catch(error => {
                 console.error("Error:", error);
-                document.getElementById('errorMessage').innerHTML('Something went wrong. Please try again.')
+                document.getElementById('errorMessage').innerHTML = 'Something went wrong. Please try again.';
                 // showModal("Something went wrong. Please try again.", "error");
             });
 
