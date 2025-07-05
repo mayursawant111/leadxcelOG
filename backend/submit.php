@@ -33,7 +33,7 @@ $stmt->bind_param("ssssss", $name, $company, $phone, $email, $service, $goals);
 
 // Execute and respond
 if ($stmt->execute()) {
-    echo "Thank you! Your data has been saved.";
+    echo "Thank you! We will reach to you soon.";
     // Optional: redirect to a thank you page
     // header("Location: thank-you.html"); exit;
 } else {
