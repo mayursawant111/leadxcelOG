@@ -63,7 +63,7 @@ $stmt = $conn->prepare("INSERT INTO resumes (name, phone, email, current_ctc, yr
 $stmt->bind_param("ssssssssss", $name, $phone, $email, $currentCTC, $experience, $position, $noticePeriod, $resumeUrl, $motivation, $createdAt);
 
 if ($stmt->execute()) {
-    echo json_encode(["success" => "Your application has been submitted successfully."]);
+    echo json_encode(["success" => "Thank you for your application! We'll review your profile and get back to you within 48 hours."]);
 } else {
     http_response_code(500);
     echo json_encode(["error" => "Failed to save your application."]);
