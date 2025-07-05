@@ -80,10 +80,10 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(images/bg1.jpeg);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(images/contactus.jpg); background-position: 5% 40%">
 		<div class="container position-relative">
 		  <h1>Contact Us</h1>
-		  <p>Get in Touch with Us</p>
+		  <p>Get in Touch to get Started</p>
 		  <nav class="breadcrumbs">
 			<ol>
 			  <li><a href="index.html">Home</a></li>
@@ -159,7 +159,7 @@
             <div class="container section-title" data-aos="fade-up">
                 <span>Get in Touch<br></span>
                 <h2>Get in Touch</h2>
-                <p style="font-size: 16px; font-weight: 400;">Our lead generation experts are here to help you unlock exponential growth. Choose your preferred way to connect:</p>
+                <p style="font-size: 16px; font-weight: 400;">Our lead generation experts are here to help you unlock exponential growth. Choose your preferred way to connect</p>
             </div><!-- End Section Title -->
 
             
@@ -208,75 +208,75 @@
                         </div>
                     </div>
                 <!-- </div> -->
-
-            <div class="content row">
-                <div class="col-md-6">
-                    <img src="images/aboutus1.jpg" style="width: 650px; height: 450px; border-radius: 16px;"/>
-                </div>
-                
-                <div class="col-md-6">
-                    <!-- Contact Form -->
-                    <div class="form-container">
-                        <div class="form-header">
-                            <h2 class="form-title">Start Your Growth Journey</h2>
-                        
-                        </div>
-
-                        <form id="contactForm" class="form-grid" onsubmit="handleFormSubmit(event)">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label class="form-label">Name <span class="required">*</span></label>
-                                    <input type="text" name="firstName" class="form-input" placeholder="John Brooks" required>
-                                </div>
-                                <div class="form-group">
-                                <label class="form-label">Company Name <span class="required">*</span></label>
-                                <input type="text" name="company" class="form-input" placeholder="Your Company Inc." required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                    <label class="form-label">Phone Number <span class="required">*</span></label>
-                                    <input type="tel" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Business Email <span class="required">*</span></label>
-                                    <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label class="form-label">How can we help you?</label>
-                                    <select name="industry" class="form-input form-select">
-                                        <option value="">Select Your Requirements</option>
-                                        <option value="Marketing/Sales Ready Leads">Marketing/Sales Ready Leads</option>
-                                        <option value="Data/Audience Targeting">Data/Audience Targeting</option>
-                                        <option value="Customer Intent">Customer Intent</option>
-                                        <option value="Content/Media Distribution">Content/Media Distribution</option>
-                                        <option value="Lead Nurturing">Lead Nurturing</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                <label class="form-label">Tell us about your lead generation goals </label>
-                                <textarea name="message" class="form-input" placeholder="What challenges are you facing with lead generation? What are your growth targets? Any specific industries you're targeting?" required></textarea>
-                            </div>
-                            </div>
-
-                        
-
-                            <button type="submit" class="submit-btn">
-                                Get My Custom Strategy
-                            </button>
-
-
-                            <div class="guarantee">
-                            </div>
-                            </form>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
+
+    <div class="content row">
+        <div class="col-md-3"></div>
+        
+        <div class="col-md-6">
+            <!-- Contact Form -->
+            <div class="form-container">
+                <div class="form-header">
+                    <h2 class="form-title">Start Your Growth Journey</h2>
+                
+                </div>
+
+                <form id="contactForm" class="form-grid" method="POST" action="backend/submit.php">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Name <span class="required">*</span></label>
+                            <input type="text" name="firstName" class="form-input" placeholder="John Brooks" required>
+                        </div>
+                        <div class="form-group">
+                        <label class="form-label">Company Name <span class="required">*</span></label>
+                        <input type="text" name="company" class="form-input" placeholder="Your Company Inc." required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                            <label class="form-label">Phone Number <span class="required">*</span></label>
+                            <input type="tel" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Business Email <span class="required">*</span></label>
+                            <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">How can we help you?</label>
+                            <select name="industry" class="form-input form-select">
+                                <option value="">Select Your Requirements</option>
+                                <option value="Marketing/Sales Ready Leads">Marketing/Sales Ready Leads</option>
+                                <option value="Data/Audience Targeting">Data/Audience Targeting</option>
+                                <option value="Customer Intent">Customer Intent</option>
+                                <option value="Content/Media Distribution">Content/Media Distribution</option>
+                                <option value="Lead Nurturing">Lead Nurturing</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                        <label class="form-label">Tell us about your goals </label>
+                        <textarea name="message" class="form-input" placeholder="What challenges are you facing with lead generation? What are your growth targets? Any specific industries you're targeting?" required></textarea>
+                    </div>
+                    </div>
+
+                
+
+                    <button type="submit" class="submit-btn">
+                        Get My Custom Strategy
+                    </button>
+
+
+                    <div class="guarantee">
+                    </div>
+                    </form>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <br/><br/>
 
     <script>
         function handleFormSubmit(event) {
