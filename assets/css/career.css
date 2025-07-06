@@ -260,7 +260,7 @@
         }
         
         .benefit-card {
-            background: #fafafa;
+            background: white;
             padding: 25px 25px 5px;
             border-radius: 16px;
             text-align: left;
@@ -344,7 +344,7 @@
         }
         
         .position-card {
-            background: #fafafa;
+            background: white;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 25px;
@@ -367,7 +367,7 @@
         .position-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 16px 32px rgba(0,0,0,0.1);
-            background: #fafafa;
+            background: white;
         }
         
         .position-header {
@@ -439,6 +439,7 @@
         .apply-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+            overflow: hidden;
         }
         .apply-btn::before {
             content: '';
@@ -496,7 +497,7 @@
             border-radius: 12px;
             font-size: 0.82rem;
             transition: all 0.3s ease;
-            background: #fafafa;
+            background: white;
         }
         
         .form-group input:focus,
@@ -528,7 +529,7 @@
             padding: 16px 20px;
             border: 2px dashed #cbd5e1;
             border-radius: 12px;
-            background: #fafafa;
+            background: white;
             color: #718096;
             transition: all 0.3s ease;
         }
