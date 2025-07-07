@@ -649,3 +649,19 @@
         .loading .submit-btn {
             background: #a0aec0;
         }
+        @media(max-width: 900px){
+.section-title {
+    font-size: 1.2rem;
+
+        }
+    .container {
+
+    padding: 0 0px;
+    }
+    .form-row {
+    gap: 0px;
+}
+        
+
+
+}

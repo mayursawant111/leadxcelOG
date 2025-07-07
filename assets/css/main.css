@@ -821,7 +821,7 @@ section,
 .section {
   color: var(--default-color);
   /* background-color: var(--background-color); */
-  padding: 80px 0 30px 0;
+  padding: 55px 0 30px 0;
   scroll-margin-top: 100px;
   overflow: clip;
 }
@@ -1378,7 +1378,7 @@ section,
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials {
-  padding: 80px 0;
+  padding: 66px 0 0px 0;
   position: relative;
 }
 
@@ -2557,6 +2557,12 @@ margin-right: auto;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-container-overlap {
+    position: relative;
+    margin-top: -150px;
+    margin-bottom: 60px;
+    z-index: 10;
+}
 /* Responsive Design */
 @media (max-width: 1024px) {
   .testimonial-overlay-container {
