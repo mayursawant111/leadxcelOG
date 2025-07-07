@@ -74,7 +74,7 @@
 
         /* Main Content */
         .main-content {
-            padding: 3rem 0 4rem 0;
+            padding: 0rem 0 4rem 0;
             background: var(--white);
         }
 
@@ -103,7 +103,7 @@
         .about-content {
             /* background: var(--white); */
             /* border-radius: 16px; */
-            padding: 2rem 1rem 2rem 1rem;
+            padding: 0;
             /* box-shadow: var(--shadow-xl); */
             /* border: 1px solid #e2e8f0; */
             margin-bottom: -1rem;
@@ -132,7 +132,7 @@
 
         /* Features Grid */
         .features-section {
-            padding: 1rem 0;
+            padding: 6rem 0 1rem 0;
             background: none;
         }
 
@@ -524,7 +524,7 @@
     .image-row img {
       width: 100%;
       height: auto;
-      border-radius: 12px;
+      border-radius: 0px;
     }
 
     .text-row {
