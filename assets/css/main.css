@@ -2580,7 +2580,7 @@ margin-right: auto;
   
   .testimonial-overlay-container {
     padding: 40px 0;
-    min-height: 80vh;
+    min-height: 8vh;
   }
   
   .testimonial-card {
@@ -2612,4 +2612,8 @@ margin-right: auto;
   .testimonial-text::before {
     left: -15px;
   }
+  
+  .hero-testimonial-section {
+        min-height: 2vh;
+    }
 }
