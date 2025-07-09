@@ -223,7 +223,7 @@ h6 {
 --------------------------------------------------------------*/
 
 .hero-wrap{
-    background: url(../../images/bg4.jpg);
+    background: url(../../images/bg4_7_optimized.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0%;
@@ -2028,9 +2028,8 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
+/* .starter-section {
   /* Add your styles here */
-}
 
 .custom-container{
 max-width: 60%;
@@ -2402,7 +2401,6 @@ margin-right: auto;
     rgba(0, 0, 0, 0.6) 100%
   );
   z-index: 2; */
-}
 
 /* Overlapping Testimonial Container */
 .testimonial-overlay-container {
