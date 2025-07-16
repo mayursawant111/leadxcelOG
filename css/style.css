@@ -9163,14 +9163,14 @@ textarea.form-control {
 
 .heading-section h2 {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   color: #000; }
   @media (max-width: 767.98px) {
     .heading-section h2 {
       font-size: 30px; } }
 
 .heading-section.heading-section-white .subheading {
-  color: rgba(255, 255, 255, 0.9); }
+  color: black; }
 
 .heading-section.heading-section-white h2 {
   font-size: 30px;
@@ -9386,7 +9386,7 @@ textarea.form-control {
 
 .ftco-counter {
   padding: 2em 0;
-  background: #5423c6; }
+  background: #ffffff; }
   @media (max-width: 991.98px) {
     .ftco-counter {
       background-position: center center !important; } }
@@ -9397,7 +9397,7 @@ textarea.form-control {
     display: inline-flex; }
   .ftco-counter .text span {
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.7); }
+    color: black; }
   @media (max-width: 767.98px) {
     .ftco-counter .counter-wrap {
       margin-bottom: 20px; } }
@@ -9581,7 +9581,10 @@ textarea.form-control {
   font-size: 40px; }
 
 .block-18 .text strong {
-  font-size: 30px;    display: inline-flex;color: #fff; }
+  font-size: 40px; 
+  font-weight: 400;  
+   display: inline-flex;
+   color: black; }
 
 .block-18 .text span {
   display: block; }

@@ -2659,3 +2659,92 @@ margin-right: auto;
     font-size: 1.5rem;
     font-weight: bold;
 }
+/* Ensure the container allows full width usage */
+.ftco-section-data .container {
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+/* Target the specific section */
+.target-accounts-section {
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  justify-content: space-between; /* Pushes content to opposite sides */
+  gap: 1.5rem; /* Gap between image and content */
+  width: 100%; /* Full width */
+  margin: 0;
+  padding: 2rem 0; /* Vertical padding only */
+}
+
+/* Image container - 75% width (9 out of 12 parts) */
+.target-accounts-image {
+  flex: 0 0 calc(70% - 0.75rem); /* Subtract half of gap from width */
+  max-width: calc(70% - 0.75rem);
+}
+
+.target-accounts-image img {
+  width: 100%;
+  max-width: 800px; /* Limit maximum width */
+  height: auto;
+  max-height: 500px; /* Limit maximum height */
+  object-fit: contain; /* Ensures image fits within bounds without distortion */
+  border-radius: 8px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+}
+
+/* Text content - 25% width (3 out of 12 parts) */
+.target-accounts-content {
+  flex: 0 0 calc(30% - 0.75rem); /* Subtract half of gap from width */
+  max-width: calc(30% - 0.75rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: flex-start; /* Keeps text left-aligned within its container */
+  height: 100%;
+  padding: 0;
+}
+
+.target-accounts-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.target-accounts-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Remove default container constraints */
+.target-accounts-section * {
+  box-sizing: border-box;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .target-accounts-section {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .target-accounts-image,
+  .target-accounts-content {
+    flex: none;
+    max-width: 100%;
+  }
+  
+  .target-accounts-image img {
+    max-width: 100%;
+    max-height: 300px; /* Smaller height on mobile */
+  }
+  
+  .target-accounts-content {
+    justify-content: flex-start;
+  }
+}

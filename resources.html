@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies | LeadXcel B2B Lead Generation</title>
+    <title>How It Works - LeadXcel B2B | B2B Lead Generation Process</title>
+    <meta name="description" content="Discover our proven 6-step B2B lead generation process that delivers qualified prospects directly to your sales team.">
     <style>
         * {
             margin: 0;
@@ -12,1132 +13,452 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #fafafa;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 40px 20px;
         }
 
-        /* Header Section */
         .header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 80px 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,0 1000,0 1000,100 0,80"/></svg>');
-            background-size: cover;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 2;
+            margin-bottom: 60px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .header h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-size: 3rem;
             margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #2c3e50;
+        }
+
+        .header .italic {
+            font-style: italic;
+            color: #667eea;
         }
 
         .header p {
-            font-size: 1.3rem;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            color: #666;
             max-width: 600px;
             margin: 0 auto;
         }
 
-        .header-stats {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin-top: 50px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #fbbf24;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-
-        /* Filter Section */
-        .filters {
-            background: white;
-            padding: 50px 0;
-            border-bottom: 1px solid #e5e5e5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .filters h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #1e3a8a;
-            margin-bottom: 40px;
-        }
-
-        .filter-group {
-            margin-bottom: 30px;
-        }
-
-        .filter-group h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1e3a8a;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .filter-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .filter-tag {
-            background: #f8fafc;
-            border: 2px solid #e2e8f0;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            color: #64748b;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .filter-tag:hover,
-        .filter-tag.active {
-            background: #fbbf24;
-            color: #1e3a8a;
-            border-color: #fbbf24;
-            transform: translateY(-2px);
-        }
-
-        /* Case Studies Grid */
-        .case-studies-grid {
-            padding: 80px 0;
-        }
-
-        .case-studies-container {
+        .process-flow {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
             margin-bottom: 60px;
         }
 
-        .case-study-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .case-study-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-        }
-
-        .case-study-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        .step-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .case-study-image::before {
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .step-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="white" opacity="0.1"><circle cx="20" cy="20" r="2"/><circle cx="80" cy="20" r="2"/><circle cx="20" cy="80" r="2"/><circle cx="80" cy="80" r="2"/><circle cx="50" cy="50" r="3"/></svg>');
-            background-size: 40px 40px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
         }
 
-        .case-study-image .company-logo {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: #1e3a8a;
-            font-size: 1.2rem;
-        }
-
-        .case-study-content {
-            padding: 30px;
-        }
-
-        .case-study-meta {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .meta-tag {
-            background: #1e3a8a;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .case-study-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            margin-bottom: 10px;
-        }
-
-        .case-study-description {
-            color: #64748b;
-            font-size: 1rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
-        .case-study-results {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .result-item {
-            text-align: center;
-            padding: 15px;
-            background: #f8fafc;
-            border-radius: 8px;
-        }
-
-        .result-number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e3a8a;
-            display: block;
-        }
-
-        .result-label {
-            font-size: 0.8rem;
-            color: #64748b;
-            margin-top: 5px;
-        }
-
-        .case-study-cta {
+        .step-number {
             display: inline-block;
-            background: #fbbf24;
-            color: #1e3a8a;
-            padding: 12px 24px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            width: 100%;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
             text-align: center;
-        }
-
-        .case-study-cta:hover {
-            background: #f59e0b;
-            transform: translateY(-2px);
-        }
-
-        /* Individual Case Study Sub-Pages */
-        .case-study-detail {
-            background: white;
-            border-radius: 16px;
-            padding: 50px;
-            margin: 40px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .case-study-detail-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-
-        .case-study-detail-header h1 {
-            font-size: 2.5rem;
-            color: #1e3a8a;
-            margin-bottom: 15px;
-        }
-
-        .case-study-detail-header p {
-            font-size: 1.2rem;
-            color: #64748b;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .case-study-sections {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 40px;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #1e3a8a;
+            line-height: 40px;
+            font-weight: bold;
             margin-bottom: 20px;
-            position: relative;
+            font-size: 1.2rem;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: #fbbf24;
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
         }
 
-        .section-content {
-            color: #64748b;
-            line-height: 1.7;
-            font-size: 1.05rem;
+        .step-description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
         }
 
-        .results-showcase {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin: 50px 0;
-            padding: 40px;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border-radius: 16px;
+        .step-details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
         }
 
-        .results-showcase .result-item {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .results-showcase .result-number {
-            font-size: 2.5rem;
+        .step-details h4 {
+            color: #2c3e50;
             margin-bottom: 10px;
-        }
-
-        .testimonial-section {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 16px;
-            margin: 40px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .testimonial-quote {
-            font-size: 1.3rem;
-            font-style: italic;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
             font-size: 1.1rem;
-            font-weight: 600;
-            opacity: 0.9;
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
+        .step-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .step-details li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .step-details li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .benefits-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefits-section h2 {
             text-align: center;
-            padding: 80px 0;
-            margin-top: 80px;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        .benefit-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .benefit-description {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .cta-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            color: #2c3e50;
         }
 
         .cta-section p {
             font-size: 1.2rem;
+            color: #666;
             margin-bottom: 30px;
-            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-button {
             display: inline-block;
-            background: #fbbf24;
-            color: #1e3a8a;
-            padding: 18px 35px;
-            border-radius: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: bold;
             font-size: 1.1rem;
             transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button:hover {
-            background: #f59e0b;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
-        /* Responsive Design */
+        .flow-connector {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .process-flow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .process-flow {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
-            .case-studies-container {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
             .header h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
-
-            .header-stats {
-                flex-direction: column;
-                gap: 30px;
+            
+            .header p {
+                font-size: 1rem;
             }
-
-            .case-study-sections {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .results-showcase {
-                grid-template-columns: 1fr 1fr;
+            
+            .benefits-section h2,
+            .cta-section h2 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Main Case Studies Page -->
-    <div id="main-page">
-        <header class="header">
-            <div class="container">
-                <div class="header-content">
-                    <h1>Success Stories</h1>
-                    <p>Discover how LeadXcel transforms B2B lead generation across industries with proven strategies and measurable results</p>
-                    <div class="header-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">100+</span>
-                            <span class="stat-label">Successful Campaigns</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">10x</span>
-                            <span class="stat-label">Pipeline Growth</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">6</span>
-                            <span class="stat-label">Industry Verticals</span>
-                        </div>
-                    </div>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>How It <span class="italic">Works</span></h1>
+            <p>Transform your B2B lead generation with our proven process that delivers qualified prospects directly to your sales team.</p>
+        </div>
+
+        <!-- Process Flow Section -->
+        <div class="process-flow">
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-title">Strategy Development</div>
+                <div class="step-description">
+                    We begin by defining your ideal customer profile (ICP), target accounts, key decision-makers, and success metrics to build a strong foundation for your lead generation campaign.
+                </div>
+                <div class="step-details">
+                    <h4>Key Activities:</h4>
+                    <ul>
+                        <li>Define target persona and company criteria</li>
+                        <li>Identify key stakeholders and decision-makers</li>
+                        <li>Set campaign objectives and KPIs</li>
+                        <li>Develop messaging strategy</li>
+                    </ul>
                 </div>
             </div>
-        </header>
 
-        <section class="filters">
-            <div class="container">
-                <h2>Filter Case Studies</h2>
-                <div class="filter-group">
-                    <h3>Campaign Type</h3>
-                    <div class="filter-tags">
-                        <span class="filter-tag active">All Campaigns</span>
-                        <span class="filter-tag">ABM</span>
-                        <span class="filter-tag">Content Marketing</span>
-                        <span class="filter-tag">LinkedIn Outreach</span>
-                        <span class="filter-tag">Email Marketing</span>
-                        <span class="filter-tag">Demand Generation</span>
-                    </div>
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-title">Intent-Driven List Building</div>
+                <div class="step-description">
+                    Leveraging account and contact intent data, we identify and prioritize high-intent prospects who are actively researching solutions like yours.
                 </div>
-                
-                <div class="filter-group">
-                    <h3>Industry Focus</h3>
-                    <div class="filter-tags">
-                        <span class="filter-tag active">All Industries</span>
-                        <span class="filter-tag">SaaS</span>
-                        <span class="filter-tag">Healthcare</span>
-                        <span class="filter-tag">Financial Services</span>
-                        <span class="filter-tag">Manufacturing</span>
-                        <span class="filter-tag">IT Services</span>
-                        <span class="filter-tag">Professional Services</span>
-                    </div>
+                <div class="step-details">
+                    <h4>What We Do:</h4>
+                    <ul>
+                        <li>Analyze buyer intent signals</li>
+                        <li>Build targeted prospect lists</li>
+                        <li>Verify contact information</li>
+                        <li>Score leads based on engagement potential</li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <section class="case-studies-grid">
-            <div class="container">
-                <div class="case-studies-container">
-                    <!-- Case Study 1: TechFlow Solutions -->
-                    <div class="case-study-card" onclick="showCaseStudy(1)">
-                        <div class="case-study-image">
-                            <div class="company-logo">TF</div>
-                        </div>
-                        <div class="case-study-content">
-                            <div class="case-study-meta">
-                                <span class="meta-tag">ABM</span>
-                                <span class="meta-tag">SaaS</span>
-                            </div>
-                            <h3 class="case-study-title">TechFlow Solutions</h3>
-                            <p class="case-study-description">Cybersecurity SaaS company achieved 300% pipeline growth through targeted Account-Based Marketing strategy</p>
-                            <div class="case-study-results">
-                                <div class="result-item">
-                                    <span class="result-number">300%</span>
-                                    <span class="result-label">Pipeline Growth</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-number">47%</span>
-                                    <span class="result-label">Meeting Rate</span>
-                                </div>
-                            </div>
-                            <a href="#" class="case-study-cta">View Full Case Study</a>
-                        </div>
-                    </div>
-
-                    <!-- Case Study 2: MedTech Innovations -->
-                    <div class="case-study-card" onclick="showCaseStudy(2)">
-                        <div class="case-study-image">
-                            <div class="company-logo">MI</div>
-                        </div>
-                        <div class="case-study-content">
-                            <div class="case-study-meta">
-                                <span class="meta-tag">Content</span>
-                                <span class="meta-tag">Healthcare</span>
-                            </div>
-                            <h3 class="case-study-title">MedTech Innovations</h3>
-                            <p class="case-study-description">Healthcare technology company accelerated market entry with strategic content marketing campaigns</p>
-                            <div class="case-study-results">
-                                <div class="result-item">
-                                    <span class="result-number">85%</span>
-                                    <span class="result-label">BANT Leads</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-number">15</span>
-                                    <span class="result-label">New Markets</span>
-                                </div>
-                            </div>
-                            <a href="#" class="case-study-cta">View Full Case Study</a>
-                        </div>
-                    </div>
-
-                    <!-- Case Study 3: FinanceForward Solutions -->
-                    <div class="case-study-card" onclick="showCaseStudy(3)">
-                        <div class="case-study-image">
-                            <div class="company-logo">FF</div>
-                        </div>
-                        <div class="case-study-content">
-                            <div class="case-study-meta">
-                                <span class="meta-tag">LinkedIn</span>
-                                <span class="meta-tag">FinTech</span>
-                            </div>
-                            <h3 class="case-study-title">FinanceForward Solutions</h3>
-                            <p class="case-study-description">Financial services company expanded into new verticals through strategic LinkedIn outreach campaigns</p>
-                            <div class="case-study-results">
-                                <div class="result-item">
-                                    <span class="result-number">200%</span>
-                                    <span class="result-label">Lead Volume</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-number">$1.8M</span>
-                                    <span class="result-label">New Revenue</span>
-                                </div>
-                            </div>
-                            <a href="#" class="case-study-cta">View Full Case Study</a>
-                        </div>
-                    </div>
-
-                    <!-- Case Study 4: Industrial Systems Corp -->
-                    <div class="case-study-card" onclick="showCaseStudy(4)">
-                        <div class="case-study-image">
-                            <div class="company-logo">IS</div>
-                        </div>
-                        <div class="case-study-content">
-                            <div class="case-study-meta">
-                                <span class="meta-tag">Email</span>
-                                <span class="meta-tag">Manufacturing</span>
-                            </div>
-                            <h3 class="case-study-title">Industrial Systems Corp</h3>
-                            <p class="case-study-description">Manufacturing company achieved 400% ROI through precision email marketing and lead nurturing campaigns</p>
-                            <div class="case-study-results">
-                                <div class="result-item">
-                                    <span class="result-number">400%</span>
-                                    <span class="result-label">ROI</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-number">65%</span>
-                                    <span class="result-label">Open Rate</span>
-                                </div>
-                            </div>
-                            <a href="#" class="case-study-cta">View Full Case Study</a>
-                        </div>
-                    </div>
-
-                    <!-- Case Study 5: CloudTech Enterprises -->
-                    <div class="case-study-card" onclick="showCaseStudy(5)">
-                        <div class="case-study-image">
-                            <div class="company-logo">CT</div>
-                        </div>
-                        <div class="case-study-content">
-                            <div class="case-study-meta">
-                                <span class="meta-tag">Demand Gen</span>
-                                <span class="meta-tag">IT Services</span>
-                            </div>
-                            <h3 class="case-study-title">CloudTech Enterprises</h3>
-                            <p class="case-study-description">IT services company overcame market saturation with comprehensive demand generation strategies</p>
-                            <div class="case-study-results">
-                                <div class="result-item">
-                                    <span class="result-number">150%</span>
-                                    <span class="result-label">Quality Meetings</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-number">35%</span>
-                                    <span class="result-label">Shorter Cycle</span>
-                                </div>
-                            </div>
-                            <a href="#" class="case-study-cta">View Full Case Study</a>
-                        </div>
-                    </div>
-
-                    <!-- Case Study 6: ConsultPro Group -->
-                    <div class="case-study-card" onclick="showCaseStudy(6)">
-                        <div class="case-study-image">
-                            <div class="company-logo">CP</div>
-                        </div>
-                        <div class="case-study-content">
-                            <div class="case-study-meta">
-                                <span class="meta-tag">ABM</span>
-                                <span class="meta-tag">Consulting</span>
-                            </div>
-                            <h3 class="case-study-title">ConsultPro Group</h3>
-                            <p class="case-study-description">Professional services firm accelerated enterprise sales through strategic account-based marketing</p>
-                            <div class="case-study-results">
-                                <div class="result-item">
-                                    <span class="result-number">80%</span>
-                                    <span class="result-label">Pipeline Quality</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-number">55%</span>
-                                    <span class="result-label">Deal Value</span>
-                                </div>
-                            </div>
-                            <a href="#" class="case-study-cta">View Full Case Study</a>
-                        </div>
-                    </div>
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-title">Content Development</div>
+                <div class="step-description">
+                    Our team creates compelling, personalized content assets including whitepapers, case studies, videos, and email sequences tailored to your target audience.
+                </div>
+                <div class="step-details">
+                    <h4>Content Types:</h4>
+                    <ul>
+                        <li>Industry-specific whitepapers</li>
+                        <li>Personalized video messages</li>
+                        <li>Case studies and success stories</li>
+                        <li>Multi-touch email sequences</li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <section class="cta-section">
-            <div class="container">
-                <h2>Ready to Transform Your Lead Generation?</h2>
-                <p>Join 100+ successful companies already growing with LeadXcel's proven strategies</p>
-                <a href="#contact" class="cta-button">Start Your Success Story</a>
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-title">Multi-Channel Outreach</div>
+                <div class="step-description">
+                    We execute coordinated campaigns across multiple touchpoints including email, LinkedIn, phone, and direct mail to maximize engagement rates.
+                </div>
+                <div class="step-details">
+                    <h4>Channels We Use:</h4>
+                    <ul>
+                        <li>Personalized email campaigns</li>
+                        <li>LinkedIn outreach and connection requests</li>
+                        <li>Strategic phone calls</li>
+                        <li>Direct mail for high-value prospects</li>
+                    </ul>
+                </div>
             </div>
-        </section>
-    </div>
 
-    <!-- Individual Case Study Sub-Pages -->
-    <div id="case-study-1" class="case-study-page" style="display: none;">
-        <div class="container">
-            <div class="case-study-detail">
-                <div class="case-study-detail-header">
-                    <h1>TechFlow Solutions: 300% Pipeline Growth</h1>
-                    <p>How a cybersecurity SaaS company achieved unprecedented growth through targeted Account-Based Marketing with LeadXcel's AI-powered approach</p>
+            <!-- Step 5 -->
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-title">Quality Control & Optimization</div>
+                <div class="step-description">
+                    We employ a meticulous data validation process to ensure all information is accurate and relevant before any outreach begins.
                 </div>
-
-                <div class="case-study-sections">
-                    <div>
-                        <h3 class="section-title">The Challenge</h3>
-                        <div class="section-content">
-                            <p>TechFlow Solutions, a promising cybersecurity SaaS company, was struggling to penetrate enterprise accounts in their target market. Despite having a strong product offering, their traditional lead generation approach was yielding disappointing results:</p>
-                            <ul>
-                                <li>Only 12% of outreach converted to qualified meetings</li>
-                                <li>Sales team overwhelmed with unqualified leads</li>
-                                <li>Long sales cycles draining resources without meaningful results</li>
-                                <li>Difficulty standing out in the crowded cybersecurity market</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="section-title">LeadXcel's Solution</h3>
-                        <div class="section-content">
-                            <p>Our team implemented a comprehensive Account-Based Marketing strategy targeting 250 carefully selected high-value accounts:</p>
-                            <ul>
-                                <li>AI-powered lead qualification using LeadXcel's proprietary system</li>
-                                <li>Multi-channel outreach with personalized messaging</li>
-                                <li>Intent data analysis to identify prospects with genuine buying signals</li>
-                                <li>Leveraged our network of 10,000+ vertical professionals</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="step-details">
+                    <h4>Our Process:</h4>
+                    <ul>
+                        <li>Real-time data verification</li>
+                        <li>A/B testing of messaging</li>
+                        <li>Campaign performance monitoring</li>
+                        <li>Continuous optimization based on results</li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="results-showcase">
-                    <div class="result-item">
-                        <span class="result-number">300%</span>
-                        <span class="result-label">Pipeline Growth</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">47%</span>
-                        <span class="result-label">Meeting Rate</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">$2.3M</span>
-                        <span class="result-label">New Pipeline</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">90 Days</span>
-                        <span class="result-label">Timeline</span>
-                    </div>
+            <!-- Step 6 -->
+            <div class="step-card">
+                <div class="step-number">6</div>
+                <div class="step-title">Lead Delivery</div>
+                <div class="step-description">
+                    Qualified leads are delivered directly to your sales team through your preferred CRM or communication method, complete with contact details and engagement history.
                 </div>
-
-                <div class="testimonial-section">
-                    <p class="testimonial-quote">"LeadXcel's systematic approach completely transformed our sales process. Their AI system handled all the heavy lifting of lead qualification, allowing our sales team to focus purely on closing high-value deals."</p>
-                    <p class="testimonial-author">Sarah Johnson, VP of Sales - TechFlow Solutions</p>
-                </div>
-
-                <div style="text-align: center; margin-top: 40px;">
-                    <button onclick="showMainPage()" class="cta-button">← Back to Case Studies</button>
+                <div class="step-details">
+                    <h4>What You Get:</h4>
+                    <ul>
+                        <li>Qualified, interested prospects</li>
+                        <li>Complete contact information</li>
+                        <li>Engagement history and notes</li>
+                        <li>Integration with your existing sales process</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Additional Case Study Sub-Pages (2-6) -->
-    <div id="case-study-2" class="case-study-page" style="display: none;">
-        <div class="container">
-            <div class="case-study-detail">
-                <div class="case-study-detail-header">
-                    <h1>MedTech Innovations: Healthcare Market Entry</h1>
-                    <p>How a healthcare technology startup achieved 85% BANT-qualified leads through strategic content marketing and compliance-focused outreach</p>
+        <!-- Benefits Section -->
+        <div class="benefits-section">
+            <h2>Why Choose LeadXcel B2B?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-title">Proven Results</div>
+                    <div class="benefit-description">Our systematic approach consistently delivers high-quality leads that convert to revenue.</div>
                 </div>
-
-                <div class="case-study-sections">
-                    <div>
-                        <h3 class="section-title">The Challenge</h3>
-                        <div class="section-content">
-                            <p>MedTech Innovations needed to quickly establish market presence in the highly regulated healthcare industry:</p>
-                            <ul>
-                                <li>Complex buyer journeys with multiple stakeholders</li>
-                                <li>Strict regulatory compliance requirements</li>
-                                <li>Limited brand recognition in target markets</li>
-                                <li>Need for rapid market penetration</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="section-title">LeadXcel's Solution</h3>
-                        <div class="section-content">
-                            <p>We deployed a comprehensive content marketing strategy tailored for healthcare decision-makers:</p>
-                            <ul>
-                                <li>Compliance-focused messaging and content</li>
-                                <li>Multi-channel campaigns targeting C-suite and IT directors</li>
-                                <li>Educational content addressing specific healthcare challenges</li>
-                                <li>Leveraged our healthcare vertical expertise</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔧</div>
+                    <div class="benefit-title">Full-Service Solution</div>
+                    <div class="benefit-description">From strategy to delivery, we handle every aspect of your lead generation campaign.</div>
                 </div>
-
-                <div class="results-showcase">
-                    <div class="result-item">
-                        <span class="result-number">85%</span>
-                        <span class="result-label">BANT Leads</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">34%</span>
-                        <span class="result-label">Demo Rate</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">15</span>
-                        <span class="result-label">New Markets</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">60 Days</span>
-                        <span class="result-label">Timeline</span>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⭐</div>
+                    <div class="benefit-title">Quality Focused</div>
+                    <div class="benefit-description">We prioritize lead quality over quantity to maximize your sales team's efficiency.</div>
                 </div>
-
-                <div class="testimonial-section">
-                    <p class="testimonial-quote">"The quality of leads from LeadXcel was exceptional. We went from zero market presence to having a full pipeline in just two months. Their healthcare expertise was invaluable."</p>
-                    <p class="testimonial-author">Dr. Michael Chen, CEO - MedTech Innovations</p>
-                </div>
-
-                <div style="text-align: center; margin-top: 40px;">
-                    <button onclick="showMainPage()" class="cta-button">← Back to Case Studies</button>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <div class="benefit-title">Transparent Reporting</div>
+                    <div class="benefit-description">Regular updates on campaign performance and detailed metrics tracking.</div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Continue with remaining case studies 3-6 following the same pattern -->
-    <div id="case-study-3" class="case-study-page" style="display: none;">
-        <div class="container">
-            <div class="case-study-detail">
-                <div class="case-study-detail-header">
-                    <h1>FinanceForward Solutions: LinkedIn Success</h1>
-                    <p>How a financial services company expanded into new verticals with strategic LinkedIn outreach, achieving 200% lead volume increase</p>
-                </div>
-
-                <div class="case-study-sections">
-                    <div>
-                        <h3 class="section-title">The Challenge</h3>
-                        <div class="section-content">
-                            <p>FinanceForward wanted to expand beyond traditional banking into insurance and investment sectors:</p>
-                            <ul>
-                                <li>Limited expertise in new vertical markets</li>
-                                <li>Need for specialized messaging per industry</li>
-                                <li>Complex regulatory environments</li>
-                                <li>Established competition in target sectors</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="section-title">LeadXcel's Solution</h3>
-                        <div class="section-content">
-                            <p>We created vertical-specific LinkedIn campaigns with customized messaging:</p>
-                            <ul>
-                                <li>Industry-specific content and messaging</li>
-                                <li>Multi-touch LinkedIn outreach sequences</li>
-                                <li>Targeted C-suite and department heads</li>
-                                <li>Compliance-focused approach for financial services</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="results-showcase">
-                    <div class="result-item">
-                        <span class="result-number">200%</span>
-                        <span class="result-label">Lead Volume</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">28%</span>
-                        <span class="result-label">Conversion Rate</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">$1.8M</span>
-                        <span class="result-label">New Revenue</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">3</span>
-                        <span class="result-label">New Verticals</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-section">
-                    <p class="testimonial-quote">"LeadXcel's deep understanding of different verticals was game-changing. They positioned us perfectly in markets we'd never accessed before."</p>
-                    <p class="testimonial-author">Robert Kim, Head of Business Development - FinanceForward Solutions</p>
-                </div>
-
-                <div style="text-align: center; margin-top: 40px;">
-                    <button onclick="showMainPage()" class="cta-button">← Back to Case Studies</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Case Studies 4-6 follow the same pattern with different content -->
-    <div id="case-study-4" class="case-study-page" style="display: none;">
-        <div class="container">
-            <div class="case-study-detail">
-                <div class="case-study-detail-header">
-                    <h1>Industrial Systems Corp: Email Marketing Excellence</h1>
-                    <p>How a manufacturing company achieved 400% ROI through precision email campaigns and lead nurturing automation</p>
-                </div>
-
-                <div class="case-study-sections">
-                    <div>
-                        <h3 class="section-title">The Challenge</h3>
-                        <div class="section-content">
-                            <p>Industrial Systems Corp struggled with long sales cycles and low email engagement:</p>
-                            <ul>
-                                <li>Traditional manufacturing buyers slow to adopt digital</li>
-                                <li>Long decision-making processes</li>
-                                <li>Low email open and click rates</li>
-                                <li>Difficulty nurturing leads over extended periods</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="section-title">LeadXcel's Solution</h3>
-                        <div class="section-content">
-                            <p>We implemented a sophisticated email marketing and nurturing system:</p>
-                            <ul>
-                                <li>Industry-specific content addressing manufacturing challenges</li>
-                                <li>Automated nurturing sequences for different buyer stages</li>
-                                <li>Personalized messaging based on company size and needs</li>
-                                <li>Multi-touch campaigns with strategic timing</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="results-showcase">
-                    <div class="result-item">
-                        <span class="result-number">400%</span>
-                        <span class="result-label">ROI</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">65%</span>
-                        <span class="result-label">Open Rate</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">12%</span>
-                        <span class="result-label">Click Rate</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">120 Days</span>
-                        <span class="result-label">Average Cycle</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-section">
-                    <p class="testimonial-quote">"LeadXcel's email campaigns transformed our lead nurturing. Their understanding of manufacturing buying cycles was crucial to our success."</p>
-                    <p class="testimonial-author">Mark Thompson, VP Marketing - Industrial Systems Corp</p>
-                </div>
-
-                <div style="text-align: center; margin-top: 40px;">
-                    <button onclick="showMainPage()" class="cta-button">← Back to Case Studies</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="case-study-5" class="case-study-page" style="display: none;">
-        <div class="container">
-            <div class="case-study-detail">
-                <div class="case-study-detail-header">
-                    <h1>CloudTech Enterprises: Demand Generation Success</h1>
-                    <p>How an IT services company overcame market saturation with comprehensive demand generation strategies and data-driven targeting</p>
-                </div>
-
-                <div class="case-study-sections">
-                    <div>
-                        <h3 class="section-title">The Challenge</h3>
-                        <div class="section-content">
-                            <p>CloudTech faced intense competition in the saturated IT services market:</p>
-                            <ul>
-                                <li>Highly competitive market with numerous players</li>
-                                <li>Difficulty differentiating from competitors</li>
-                                <li>Low-quality leads from traditional methods</li>
-                                <li>Extended sales cycles draining resources</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="section-title">LeadXcel's Solution</h3>
-                        <div class="section-content">
-                            <p>We implemented a comprehensive demand generation strategy:</p>
-                            <ul>
-                                <li>Intent data analysis for precise targeting</li>
-                                <li>Multi-channel demand generation campaigns</li>
-                                <li>Personalized content addressing specific IT challenges</li>
-                                <li>Account-based approach for enterprise prospects</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="results-showcase">
-                    <div class="result-item">
-                        <span class="result-number">150%</span>
-                        <span class="result-label">Quality Meetings</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">40%</span>
-                        <span class="result-label">Deal Size</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">35%</span>
-                        <span class="result-label">Shorter Cycle</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">450%</span>
-                        <span class="result-label">ROI</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-section">
-                    <p class="testimonial-quote">"LeadXcel's demand generation approach helped us cut through the noise in our competitive market. Their data-driven targeting was exactly what we needed."</p>
-                    <p class="testimonial-author">Jennifer Martinez, CMO - CloudTech Enterprises</p>
-                </div>
-
-                <div style="text-align: center; margin-top: 40px;">
-                    <button onclick="showMainPage()" class="cta-button">← Back to Case Studies</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="case-study-6" class="case-study-page" style="display: none;">
-        <div class="container">
-            <div class="case-study-detail">
-                <div class="case-study-detail-header">
-                    <h1>ConsultPro Group: Enterprise ABM Success</h1>
-                    <p>How a professional services firm accelerated enterprise sales through strategic account-based marketing and stakeholder engagement</p>
-                </div>
-
-                <div class="case-study-sections">
-                    <div>
-                        <h3 class="section-title">The Challenge</h3>
-                        <div class="section-content">
-                            <p>ConsultPro Group needed to penetrate large enterprise accounts with complex buying processes:</p>
-                            <ul>
-                                <li>Multiple stakeholders in enterprise sales cycles</li>
-                                <li>Long decision-making processes</li>
-                                <li>Need for executive-level engagement</li>
-                                <li>Complex service offerings requiring education</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="section-title">LeadXcel's Solution</h3>
-                        <div class="section-content">
-                            <p>We implemented a comprehensive ABM strategy for enterprise accounts:</p>
-                            <ul>
-                                <li>Multi-stakeholder engagement strategies</li>
-                                <li>C-suite targeted messaging and outreach</li>
-                                <li>Personalized content for different decision makers</li>
-                                <li>Account-specific campaigns and nurturing</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="results-showcase">
-                    <div class="result-item">
-                        <span class="result-number">65%</span>
-                        <span class="result-label">Account Engagement</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">35%</span>
-                        <span class="result-label">Shorter Cycle</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">55%</span>
-                        <span class="result-label">Deal Value</span>
-                    </div>
-                    <div class="result-item">
-                        <span class="result-number">80%</span>
-                        <span class="result-label">Pipeline Quality</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-section">
-                    <p class="testimonial-quote">"LeadXcel's systematic approach to enterprise sales was exactly what we needed. Their process helped us navigate complex organizations effectively."</p>
-                    <p class="testimonial-author">Lisa Thompson, Enterprise Sales Director - ConsultPro Group</p>
-                </div>
-
-                <div style="text-align: center; margin-top: 40px;">
-                    <button onclick="showMainPage()" class="cta-button">← Back to Case Studies</button>
-                </div>
-            </div>
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Ready to Get Started?</h2>
+            <p>Let us show you how our proven process can transform your B2B lead generation efforts. Contact us today to discuss your specific needs and objectives.</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
         </div>
     </div>
 
     <script>
-        // Navigation functions
-        function showCaseStudy(id) {
-            document.getElementById('main-page').style.display = 'none';
-            document.getElementById('case-study-' + id).style.display = 'block';
-            window.scrollTo(0, 0);
-        }
+        // Add smooth scrolling and animation effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate cards on scroll
+            const cards = document.querySelectorAll('.step-card');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
 
-        function showMainPage() {
-            document.querySelectorAll('.case-study-page').forEach(page => {
-                page.style.display = 'none';
-            });
-            document.getElementById('main-page').style.display = 'block';
-            window.scrollTo(0, 0);
-        }
-
-        // Filter functionality
-        document.querySelectorAll('.filter-tag').forEach(tag => {
-            tag.addEventListener('click', function() {
-                this.parentNode.querySelectorAll('.filter-tag').forEach(sibling => {
-                    sibling.classList.remove('active');
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
                 });
-                this.classList.add('active');
-                
-                // Add filter animation
-                const cards = document.querySelectorAll('.case-study-card');
-                cards.forEach(card => {
-                    card.style.opacity = '0.5';
-                    card.style.transform = 'scale(0.95)';
-                });
-                
-                setTimeout(() => {
-                    cards.forEach(card => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'scale(1)';
-                    });
-                }, 300);
-            });
-        });
+            }, observerOptions);
 
-        // Add loading animation
-        window.addEventListener('load', function() {
-            const cards = document.querySelectorAll('.case-study-card');
-            cards.forEach((card, index) => {
+            cards.forEach(card => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
-                
-                setTimeout(() => {
-                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 100);
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+
+            // Smooth scrolling for CTA button
+            document.querySelector('.cta-button').addEventListener('click', function(e) {
+                e.preventDefault();
+                // You can customize this to scroll to your contact form
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
