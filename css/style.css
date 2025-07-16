@@ -8993,7 +8993,7 @@ textarea.form-control {
   border-radius: 50%; }
 
 .ftco-section {
-  padding: 12em 0 6em 0;
+  padding: 6em 0 6em 0;
   position: relative; }
 
   .ftco-section-data {
@@ -9396,8 +9396,8 @@ textarea.form-control {
     color: #fff;
     display: inline-flex; }
   .ftco-counter .text span {
-    font-size: 16px;
-    color: black; }
+    font-size: 12px;
+    color: #808080; }
   @media (max-width: 767.98px) {
     .ftco-counter .counter-wrap {
       margin-bottom: 20px; } }
@@ -9584,7 +9584,7 @@ textarea.form-control {
   font-size: 40px; 
   font-weight: 400;  
    display: inline-flex;
-   color: black; }
+   color: #5423c6; }
 
 .block-18 .text span {
   display: block; }
@@ -10556,4 +10556,36 @@ textarea.form-control {
     .pb-5, .py-5 {
     padding-bottom: 0.1rem !important;
 }
+}
+
+
+.cta-section {
+        border: 1px solid #f7f7f7;
+    text-align: center;
+    padding: 60px 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #e6e6e6, #ffffff);
+    /* margin-top: 100px; */
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 15px 20px rgb(254 254 254 / 20%);
+    width: 80% !important;
+}
+
+.cta-section p{
+      color: #555555;
+}
+
+.cta-section a{
+      border: 1px solid;
+    padding: 16px 25px;
+    background: #421b9b;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.bg-gray{
+  background: #f9f9f9;
 }
