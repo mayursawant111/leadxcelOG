@@ -232,7 +232,7 @@
             padding: 42px;
             margin-top: -75px;
             background: #ffffff;
-            margin-bottom: 55px;
+            margin-bottom: 100px;
         }
         
         .section-title {
@@ -380,7 +380,7 @@
         }
         
         .position-title {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #1a202c;
             font-weight: 600;
             margin-bottom: 8px;

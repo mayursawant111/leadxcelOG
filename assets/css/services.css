@@ -400,7 +400,7 @@
 
         .faq-item {
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 10px;
             padding: 2.5rem;
             box-shadow: var(--shadow-md);
             border: 0px solid #e2e8f0;
@@ -455,7 +455,7 @@
         .step-number {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #5423c6 0%, #ee5a24 250%);
+    background: linear-gradient(135deg, #5423c6 0%, #ee5a24 450%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -464,6 +464,9 @@
     margin: 0 auto 20px;
     font-size: 1.5rem;
     font-weight: bold;
+}
+.faqmargin{
+    margin-top: 90px;
 }
 
         /* Responsive Design */

@@ -98,12 +98,13 @@
 		</div>
 	  </div><!-- End Page Title -->
 
-	<!-- Features Section -->
+<!-- Features Section -->
+   
     <section id="features" class="features section">
   
 		<div class="container">
 
-  			<div class="row gy-4 align-items-center features-item">
+  			<div id="full-funnel-abm" class="row gy-4 align-items-center features-item">
 			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
 			  <img src="images/services/abm.svg" class="img-fluid" alt="">
 			</div>
@@ -119,7 +120,7 @@
 			</div>
 		  </div><!-- Features Item -->
 
-		   <div class="row gy-4 align-items-center features-item">
+		   <div id="bant-lead-generation" class="row gy-4 align-items-center features-item">
 			<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
 			  <img src="images/services/lead generation.svg" class="img-fluid" alt="">
 			</div>
@@ -136,14 +137,14 @@
 			</div>
 		  </div><!-- Features Item -->
 
-		  <div class="row gy-4 align-items-center features-item">
+		  <div id="demand-generation" class="row gy-4 align-items-center features-item">
 			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
 			  <img src="images/services/consyn2.svg" class="img-fluid" alt="">
 			</div>
 			<div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
 			  <h3>Demand Generation</h3>
 			  <p>
-				Our Demand Generation service is designed to create interest in your product or service across your target market. We create informative and engaging content, run smart campaigns, and use multiple channels to make sure your message reaches the right people. The goal is to attract attention, educate your audience, and keep them engaged until they’re ready to buy.
+				Our Demand Generation service is designed to create interest in your product or service across your target market. We create informative and engaging content, run smart campaigns, and use multiple channels to make sure your message reaches the right people. The goal is to attract attention, educate your audience, and keep them engaged until they're ready to buy.
 			  </p>
 			  <ul>
 				<li><i class="bi bi-check"></i><span>Multi-Channel Outreach</span></li>
@@ -153,7 +154,7 @@
 			</div>
 		  </div><!-- Features Item -->
   
-		  <div class="row gy-4 align-items-center features-item">
+		  <div id="content-connect" class="row gy-4 align-items-center features-item">
 			<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
 			  <img src="images/services/consyn1.svg" class="img-fluid" alt="">
 			</div>
@@ -170,7 +171,7 @@
 			</div>
 		  </div><!-- Features Item -->
   
-		  <div class="row gy-4 align-items-center features-item">
+		  <div id="email-marketing" class="row gy-4 align-items-center features-item">
 			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
 			  <img src="images/services/email marketing.svg" class="img-fluid" alt="">
 			</div>
@@ -187,14 +188,14 @@
 			</div>
 		  </div><!-- Features Item -->
 
-     <div class="row gy-4 align-items-center features-item">
+     <div id="data-solutions" class="row gy-4 align-items-center features-item">
 			<div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
 			  <img src="images/services/data solutions.svg" class="img-fluid" alt="">
 			</div>
 			<div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
 			  <h3>Data Solutions</h3>
 			  <p>
-			  We provide high-quality B2B data that helps you connect with the right people. Our data includes accurate contact details, firmographics, and intent signals. Whether you need a fresh list of prospects or want to clean and enrich your existing database, we’ve got you covered.</p>
+			  We provide high-quality B2B data that helps you connect with the right people. Our data includes accurate contact details, firmographics, and intent signals. Whether you need a fresh list of prospects or want to clean and enrich your existing database, we've got you covered.</p>
 			  <ul>
 				<li><i class="bi bi-check"></i> <span>Verified & Updated B2B Data</span></li>
 				<li><i class="bi bi-check"></i><span>Custom Lists Based on ICP</span></li>
@@ -202,7 +203,8 @@
 			  </ul>
 			</div>
 		  </div><!-- Features Item -->
-      <div class="row gy-4 align-items-center features-item">
+      
+      <div id="intent-intelligence" class="row gy-4 align-items-center features-item">
 			<div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
 			  <img src="images/services/intent_intelligence.svg" class="img-fluid" alt="">
 			</div>
@@ -221,10 +223,11 @@
   
 	  </section><!-- /Features Section -->
 
+
 <!-- Process Section -->
          <section class="main-content">
      <div class=" section-title " data-aos="fade-up">
-		  <h2>How we execute</h2>
+		  <h2>How We Help You Xcel</h2>
       <p>A systematic approach that ensures consistent results and maximum ROI for your lead generation campaigns</p>
             
             <div class="process-steps">
@@ -265,7 +268,7 @@
     	<div class="container">
     		<div class="row progress-content-center mb-5">
           <div class="text-center heading-section heading-section-white ftco-animate">
-            <span class="subheading">The Results</span>
+            <span class="subheading">Milestones Achieved</span>
           </div>
         </div>
     		<div class="row justify-content-center">
@@ -310,7 +313,7 @@
     </section>
 
 	<!-- Faq Section -->
-    <section id="faq" class="faq section">
+    <section id="faq" class="faq section faqmargin">
 
 		<!-- Section Title -->
 		<div class="container section-title" data-aos="fade-up">
@@ -435,6 +438,39 @@
 	  </section><!-- /Faq Section -->
 
 </main>
+<script>
+// Handle anchor scrolling on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            // Add a small delay to ensure page is fully loaded
+            setTimeout(function() {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        }
+    }
+});
+
+// Handle hash change events (for same-page navigation)
+window.addEventListener('hashchange', function() {
+    const targetId = window.location.hash.substring(1);
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+});
+</script>
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">

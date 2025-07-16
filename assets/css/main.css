@@ -2649,7 +2649,7 @@ margin-right: auto;
         .step-number {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #5423c6 0%, #ee5a24 250%);
+    background: linear-gradient(135deg, #5423c6 0%, #ee5a24 450%);
     color: white;
     border-radius: 50%;
     display: flex;

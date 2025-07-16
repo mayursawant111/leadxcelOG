@@ -8434,10 +8434,10 @@ h1, h2, h3, h4, h5,
             padding-right: 3em; } }
 
     .hero-wrap .slider-text .subheading {
-          max-width: 65%;
+          max-width: 80%;
       color: #000;
       font-weight: 700;
-      font-size: 26px;
+      font-size: 17px;
       letter-spacing: 4px;
       text-transform: uppercase;
       display: inline-block;
@@ -8993,7 +8993,7 @@ textarea.form-control {
   border-radius: 50%; }
 
 .ftco-section {
-  padding: 6em 0 6em 0;
+  padding: 12em 0 6em 0;
   position: relative; }
 
   .ftco-section-data {

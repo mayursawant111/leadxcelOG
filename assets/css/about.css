@@ -74,7 +74,7 @@
 
         /* Main Content */
         .main-content {
-            padding: 0rem 0 9rem 0;
+            padding: 0rem 0 5rem 0;
             background: var(--white);
         }
 
@@ -141,6 +141,7 @@
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 0.5rem;
             margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
         .feature-card {
@@ -400,7 +401,7 @@
 
         .faq-item {
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 10px;
             padding: 2.5rem;
             box-shadow: var(--shadow-md);
             border: 0px solid #e2e8f0;
@@ -517,9 +518,10 @@
             }
         }
 /* new rows added */
-.row {
-      margin-bottom: 20px;
-    }
+.vi{
+    margin-bottom: 150px;
+    margin-top: 80px;
+}
 
     .image-row img {
       width: 100%;
@@ -533,3 +535,25 @@
       color: #333;
       line-height: 1.6;
     }
+.mission-card{
+        border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 20px;
+    position: absolute;
+    top: -160px;
+    right: -90px;
+    z-index: 1;
+    background:#d1d3ff;
+
+}
+.vision-card{
+        border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 20px;
+    position: absolute;
+    top: -173px;
+    left: -90px;
+    z-index: 1;
+    background: #d1d3ff;    
+
+}
