@@ -284,7 +284,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 button:not(:disabled),
@@ -313,7 +313,7 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  -webkit-appearance: listbox;
+  appearance: listbox;
 }
 
 textarea {
@@ -351,7 +351,7 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -12260,7 +12260,7 @@ h5,
   cursor: pointer;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
+  border-radius: 30px;
   /* border-radius: 8px; */
   -webkit-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
@@ -13473,7 +13473,7 @@ textarea.form-control {
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -13510,7 +13510,7 @@ textarea.form-control {
 }
 
 .ftco-counter {
-  padding: 2em 0;
+  padding: 6em 0;
   background: #ffffff;
 }
 
