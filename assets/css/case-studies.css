@@ -1,0 +1,950 @@
+    /* Modern Professional Case Study Section */
+    .case-study-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        font-size: 16px;
+        font-family: 'Inter', 'Roboto', sans-serif;
+        position: relative;
+    }
+
+    .case-study-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #e9ecef, transparent);
+    }
+
+    .case-study-header {
+        text-align: center;
+        margin-bottom: 80px;
+        position: relative;
+    }
+
+    .case-study-header::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #5423c6, #6c5ce7);
+        border-radius: 2px;
+    }
+
+    .case-study-header span {
+        color: #6c757d;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .case-study-header h2 {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #2c3e50;
+        margin: 0 0 25px 0;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.2;
+    }
+
+    .case-study-header p {
+        color: #5a6c7d;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+
+    /* Enhanced Filter Design with Career Page Animations */
+    .case-study-filter {
+        background: #f8f9fa;
+        backdrop-filter: blur(10px);
+        padding: 25px 35px;
+        border-radius: 16px;
+        margin-bottom: 80px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    .filter-row {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .filter-label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #2c3e50;
+        font-family: 'Poppins', sans-serif;
+        white-space: nowrap;
+    }
+
+    .filter-options {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* LeadXcel Career Page Button Animation */
+    .filter-option {
+        padding: 10px 20px;
+        border: 2px solid #e9ecef;
+        background: white;
+        color: #6c757d;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .filter-option::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        transition: left 0.5s;
+    }
+
+    .filter-option:hover::before {
+        left: 100%;
+    }
+
+    .filter-option:hover,
+    .filter-option.active {
+        background: #5423c6;
+        color: white;
+        border-color: #5423c6;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(84, 35, 198, 0.3);
+    }
+
+    /* Professional Typography */
+    .case-study-title {
+        font-size: 2.1rem;
+        font-weight: 500;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 100px;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.3;
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    .case-study-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 2px;
+        background: linear-gradient(90deg, #5423c6, #6c5ce7);
+    }
+
+    /* Campaign Overview with Career Page Hover Animation */
+    .campaign-overview {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        margin-bottom: 120px;
+        padding: 60px 40px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.9) 100%);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(20px); */
+    }
+
+    .overview-item {
+        text-align: center;
+        padding: 40px 25px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .overview-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: linear-gradient(90deg, #5423c6, #6c5ce7);
+    }
+
+    /* LeadXcel Career Page Container Hover Animation */
+    .overview-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        background: white;
+        border-color: rgba(84, 35, 198, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .overview-item:hover::before {
+        background: linear-gradient(90deg, #28a745, #20c997);
+    }
+
+    .overview-item h4 {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #5423c6;
+        margin-bottom: 15px;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+    }
+
+    .overview-item:hover h4 {
+        color: #2c3e50;
+    }
+
+    .overview-item p {
+        color: #2c3e50;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .overview-item .result-highlight {
+        color: #28a745;
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+
+    /* Content Sections - Professional Styling */
+    .content-section {
+        margin-bottom: 120px;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .content-section h3 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 40px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .content-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, #5423c6, #6c5ce7);
+    }
+
+    .content-section .section-text {
+        color: #4a5568;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 60px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 400;
+    }
+
+    /* About Client - Left Title, Right Content */
+    .about-client-section {
+        display: grid;
+        grid-template-columns: 3fr 9fr;
+        gap: 60px;
+        align-items: flex-start;
+        margin-bottom: 120px;
+        padding: 60px 0;
+    }
+
+    .about-client-section h3 {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #2c3e50;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .about-client-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: linear-gradient(90deg, #5423c6, #6c5ce7);
+    }
+
+    .about-client-section .section-text {
+        color: #4a5568;
+        font-size: 1rem;
+        line-height: 1.8;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    /* Challenge Section - Single Row with Career Page Animation */
+    .challenge-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    .challenge-item {
+        padding: 40px 30px;
+        background: white;
+        border-radius: 16px;
+        border: 1px solid #e9ecef;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .challenge-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #dc3545, #e74c3c);
+    }
+
+    /* LeadXcel Career Page Container Hover Animation */
+    .challenge-item:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        border-color: rgba(84, 35, 198, 0.3);
+    }
+
+    .challenge-item:hover::before {
+        background: linear-gradient(90deg, #5423c6, #6c5ce7);
+    }
+
+    .challenge-item h4 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+
+    .challenge-item:hover h4 {
+        color: #5423c6;
+    }
+
+    .challenge-item p {
+        color: #5a6c7d;
+        margin: 0;
+        line-height: 1.7;
+        font-size: 1rem;
+    }
+
+    /* Professional Image Sections */
+    .graph-section {
+        margin: 80px 0;
+        padding: 60px 0;
+    }
+
+    .graph-section h4 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 50px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .graph-section h4::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, #5423c6, #6c5ce7);
+    }
+
+    .graph-layout {
+        display: grid;
+        grid-template-columns: 2fr 6fr 2fr;
+        gap: 40px;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .graph-content {
+        aspect-ratio: 4/3;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #5a6c7d;
+        font-size: 1.1rem;
+        font-weight: 500;
+        border: 2px dashed #dee2e6;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .graph-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(84, 35, 198, 0.05), rgba(108, 92, 231, 0.05));
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+
+    .graph-content:hover::before {
+        opacity: 1;
+    }
+
+    .graph-text {
+        color: #4a5568;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+
+    .graph-text-left {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .graph-text-right {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    /* Solution Phases - Career Page Animation */
+    .solution-phases {
+        margin-top: 60px;
+    }
+
+    .phase-title {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 50px;
+        font-size: 1.8rem;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .phase-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 2px;
+        background: linear-gradient(90deg, #28a745, #20c997);
+    }
+
+    .phase-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+
+    .phase-detail {
+        background: white;
+        padding: 45px 35px;
+        border-radius: 16px;
+        border: 1px solid #e9ecef;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .phase-detail::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #28a745, #20c997);
+    }
+
+    /* LeadXcel Career Page Container Hover Animation */
+    .phase-detail:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        border-color: rgba(84, 35, 198, 0.3);
+    }
+
+    .phase-detail:hover::before {
+        background: linear-gradient(90deg, #5423c6, #6c5ce7);
+    }
+
+    .phase-detail h5 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 25px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3rem;
+        transition: color 0.3s ease;
+    }
+
+    .phase-detail:hover h5 {
+        color: #5423c6;
+    }
+
+    .phase-detail p {
+        color: #5a6c7d;
+        font-size: 1.05rem;
+        margin: 0;
+        line-height: 1.7;
+    }
+
+    /* Results Section - Professional Table */
+    .results-section {
+        margin: 120px 0;
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .results-container {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 60px 50px;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        margin-top: 40px;
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .results-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .results-table th,
+    .results-table td {
+        padding: 20px 25px;
+        text-align: left;
+        border-bottom: 1px solid rgba(233, 236, 239, 0.5);
+    }
+
+    .results-table th {
+        background: linear-gradient(135deg, #5423c6, #6c5ce7);
+        color: white;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+    }
+
+    .results-table td {
+        color: #2c3e50;
+        font-weight: 500;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.8);
+        transition: all 0.3s ease;
+    }
+
+    .results-table tbody tr:hover {
+        background: rgba(248, 249, 250, 0.9);
+        transform: scale(1.01);
+    }
+
+    .improvement-cell {
+        color: #28a745;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    /* Professional Client Quote */
+    .client-quote {
+        margin: 120px 0;
+        padding: 80px 60px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.9) 100%);
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(20px);
+    }
+
+    .client-quote::before {
+        content: '"';
+        font-size: 4rem;
+        color: rgba(84, 35, 198, 0.2);
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        font-family: serif;
+    }
+
+    .client-quote p {
+        font-size: 1.4rem;
+        font-style: italic;
+        margin-bottom: 30px;
+        color: #2c3e50;
+        line-height: 1.8;
+        position: relative;
+        z-index: 1;
+        font-weight: 400;
+    }
+
+    .client-quote .attribution {
+        font-weight: 600;
+        color: #5423c6;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1rem;
+    }
+
+    /* Success Factors - Single Row with Career Page Animation */
+    .success-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    .success-item {
+        background: white;
+        padding: 40px 30px;
+        border-radius: 16px;
+        border: 1px solid #e9ecef;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .success-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #17a2b8, #20c997);
+    }
+
+    /* LeadXcel Career Page Container Hover Animation */
+    .success-item:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        border-color: rgba(84, 35, 198, 0.3);
+    }
+
+    .success-item:hover::before {
+        background: linear-gradient(90deg, #5423c6, #6c5ce7);
+    }
+
+    .success-item h4 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 25px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3rem;
+        transition: color 0.3s ease;
+    }
+
+    .success-item:hover h4 {
+        color: #5423c6;
+    }
+
+    .success-item h4::before {
+        content: "✓ ";
+        color: #28a745;
+        font-weight: 700;
+        margin-right: 10px;
+    }
+
+    .success-item p {
+        color: #5a6c7d;
+        margin: 0;
+        line-height: 1.7;
+        font-size: 1.05rem;
+    }
+
+    /* Professional CTA Section with Career Page Button Animation */
+    .cta-section {
+        text-align: center;
+        padding: 100px 60px;
+        background: linear-gradient(135deg, #5423c6, #6c5ce7);
+        margin-top: 120px;
+        border-radius: 20px;
+        color: white;
+        box-shadow: 0 20px 60px rgba(84, 35, 198, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+        background-size: 50px 50px;
+    }
+
+    .cta-section h3 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        z-index: 1;
+    }
+
+    .cta-section p {
+        font-size: 1.3rem;
+        margin-bottom: 40px;
+        opacity: 0.9;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* LeadXcel Career Page Button Animation */
+    .cta-section .btn {
+        background: white;
+        color: #5423c6;
+        padding: 18px 45px;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .cta-section .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(84, 35, 198, 0.2), transparent);
+        transition: left 0.5s;
+    }
+
+    .cta-section .btn:hover::before {
+        left: 100%;
+    }
+
+    .cta-section .btn:hover {
+        background: rgba(255, 255, 255, 0.95);
+        color: #5423c6;
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Case Study Content Container */
+    .case-study-content {
+        display: none;
+    }
+
+    .case-study-content.active {
+        display: block;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+        .about-client-section {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .about-client-section h3 {
+            text-align: center;
+        }
+
+        .about-client-section h3::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .graph-layout {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .graph-text-left,
+        .graph-text-right {
+            text-align: center;
+            padding: 0;
+        }
+
+        .challenge-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .success-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .case-study-section {
+            padding: 80px 0;
+        }
+
+        .case-study-header h2 {
+            font-size: 2.2rem;
+        }
+
+        .case-study-title {
+            font-size: 2rem;
+            margin-bottom: 80px;
+        }
+
+        .content-section {
+            margin-bottom: 100px;
+            padding: 40px 0;
+        }
+
+        .content-section h3 {
+            font-size: 2rem;
+        }
+
+        .campaign-overview {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            padding: 40px 25px;
+            margin-bottom: 100px;
+        }
+
+        .challenge-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .success-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .phase-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .filter-row {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .filter-group {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .filter-options {
+            justify-content: center;
+            width: 100%;
+        }
+
+        .results-table th,
+        .results-table td {
+            padding: 15px 20px;
+            font-size: 0.9rem;
+        }
+
+        .client-quote {
+            padding: 60px 30px;
+            margin: 100px 0;
+        }
+
+        .client-quote p {
+            font-size: 1.2rem;
+        }
+
+        .cta-section {
+            padding: 80px 30px;
+            margin-top: 100px;
+        }
+
+        .cta-section h3 {
+            font-size: 2.2rem;
+        }
+
+        .graph-content {
+            height: 250px;
+        }
+
+        .results-container {
+            padding: 40px 25px;
+        }
+    }
