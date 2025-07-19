@@ -281,6 +281,29 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
+.target-accounts-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.target-accounts-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.process-step h4 {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -1918,6 +1941,12 @@ section,
   font-size: 14px;
 }
 
+.process-step {
+  text-align: center;
+  font-size: 15px;
+  padding: 30px 20px;
+}
+
 .contact .php-email-form {
   height: 100%;
 }
@@ -2095,6 +2124,20 @@ section,
   justify-content: flex-start;
   align-items: center;
   background-color: #000000;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #5423c6 0%, #ee5a24 450%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .track-horizontal {
@@ -2333,10 +2376,24 @@ section,
     padding-left: 0;
   }
 
+  .process-step h4 {
+    font-size: 1rem;
+  }
+
   .process-step {
     text-align: center;
     font-size: 12px;
     padding: 0;
+  }
+
+  .target-accounts-content h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .target-accounts-content p {
+    font-size: 12px;
+    text-align: center;
   }
 
   .step-number {
@@ -2346,7 +2403,7 @@ section,
   }
 
   .navmenu ul {
-    inset: 50px 30px 372px 270px;
+    inset: 10px 10px 385px 220px;
   }
 
   .navmenu a,
@@ -2659,38 +2716,15 @@ section,
   margin-top: 50px;
 }
 
-.process-step {
-  text-align: center;
-  font-size: 15px;
-  padding: 30px 20px;
-}
 
-.process-step h4 {
-  font-size: 1.1rem;
-  text-align: center;
-  color: #333;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
+
 
 .process-step p {
   color: #666;
   line-height: 1.6;
 }
 
-.step-number {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #5423c6 0%, #ee5a24 450%);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+
 
 /* Ensure the container allows full width usage */
 .ftco-section-data .container {
@@ -2747,21 +2781,6 @@ section,
   /* Keeps text left-aligned within its container */
   height: 100%;
   padding: 0;
-}
-
-.target-accounts-content h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-  line-height: 1.2;
-}
-
-.target-accounts-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 1.5rem;
 }
 
 /* Remove default container constraints */
