@@ -5,7 +5,6 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
 /*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
@@ -50,7 +49,6 @@
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
 .light-background {
   --background-color: #f7f9fc;
   --surface-color: #ffffff;
@@ -233,7 +231,6 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-
 .hero-wrap {
   background: url(../../images/bg4_7_optimized.webp);
   background-size: cover;
@@ -249,7 +246,6 @@ h6 {
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
-
 }
 
 .header .logo {
@@ -2046,7 +2042,6 @@ section,
 --------------------------------------------------------------*/
 /* .starter-section {
   /* Add your styles here */
-
 .custom-container {
   max-width: 60%;
   margin-left: auto;
@@ -2057,9 +2052,7 @@ section,
   color: white !important;
 }
 
-
 /* marqeee*/
-
 .spacer-100 {
   width: 100px;
   height: 100px;
@@ -2336,8 +2329,20 @@ section,
 
 @media (max-width: 900px) {
   .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .process-step {
+    text-align: center;
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 
   .navmenu ul {
@@ -2351,7 +2356,6 @@ section,
 
   body {
     font-size: 13px;
-
   }
 
   .services .icon span {
@@ -2377,11 +2381,9 @@ section,
   .page-title .breadcrumbs ol {
     font-size: 13px;
   }
-
 }
 
 /* index page service section */
-
 /* Hero Testimonial Section */
 /* .hero-testimonial-section {
   position: relative;
@@ -2392,7 +2394,6 @@ section,
   justify-content: center;
   overflow: hidden;
 } */
-
 .hero-container {
   position: relative;
   width: 100%;
@@ -2432,7 +2433,6 @@ section,
     rgba(0, 0, 0, 0.6) 100%
   );
   z-index: 2; */
-
 /* Overlapping Testimonial Container */
 .testimonial-overlay-container {
   position: relative;
@@ -2559,7 +2559,6 @@ section,
     transform: translateY(0);
   }
 } */
-
 .testimonial-card>* {
   animation: fadeInUp 0.8s ease-out forwards;
 }
