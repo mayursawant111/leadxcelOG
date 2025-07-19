@@ -2403,7 +2403,7 @@ section,
   }
 
   .navmenu ul {
-    inset: 10px 10px 385px 220px;
+    inset: 10px 10px 10px 10px;
   }
 
   .navmenu a,
