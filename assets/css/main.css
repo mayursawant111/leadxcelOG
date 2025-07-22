@@ -1266,6 +1266,7 @@ section,
 .features .features-item h3 {
   font-weight: 700;
   font-size: 26px;
+  color: #252525;
 }
 
 .features .features-item ul {
@@ -1547,11 +1548,13 @@ section,
 .faq .faq-container .faq-item {
   position: relative;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color: color-mix(in srgb, var(--default-color), transparent 96%);
   overflow: hidden;
   transition: 0.3s;
 }
+
 
 .faq .faq-container .faq-item:last-child {
   margin-bottom: 0;
@@ -2438,11 +2441,22 @@ section,
   .page-title .breadcrumbs ol {
     font-size: 13px;
   }
+
+  .faq-item {
+    padding: 10px;
+  }
+
+  .faq .faq-container .faq-item .faq-toggle {
+
+    right: 10px;
+  }
 }
+
+
 
 /* index page service section */
 /* Hero Testimonial Section */
-/* .hero-testimonial-section {
+.hero-testimonial-section {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -2450,7 +2464,8 @@ section,
   align-items: center;
   justify-content: center;
   overflow: hidden;
-} */
+}
+
 .hero-container {
   position: relative;
   width: 100%;

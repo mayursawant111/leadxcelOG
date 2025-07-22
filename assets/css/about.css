@@ -288,8 +288,15 @@
         }
 
         @keyframes glow-pulse {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 1; }
+
+            0%,
+            100% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 1;
+            }
         }
 
         .leader-image-container {
@@ -387,8 +394,7 @@
             font-weight: 500;
         }
 
-        FAQ Section
-        .faq-section {
+        FAQ Section .faq-section {
             padding: 6rem 0;
             background: var(--secondary-color);
         }
@@ -427,6 +433,102 @@
             line-height: 1.7;
         }
 
+        /* new rows added */
+        .vi {
+            margin-bottom: 150px;
+            margin-top: 80px;
+        }
+
+        .image-row img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 0px;
+        }
+
+        .text-row {
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .mission-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 20px;
+            position: absolute;
+            top: -160px;
+            right: -90px;
+            z-index: 1;
+            background: #d1d3ff;
+
+        }
+
+        .mission-card .mission-text {
+            font-size: 14px;
+            font-weight: 500;
+            text-align: right;
+        }
+
+        .vision-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 20px;
+            position: absolute;
+            top: -173px;
+            left: -90px;
+            z-index: 1;
+            background: #d1d3ff;
+
+        }
+
+        .back-section {
+            background-image: url('../../images/team.png');
+            /* Replace with your actual image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 130vh;
+            /* Or any height like 600px */
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            /* push text to bottom */
+            padding: 0 30rem 3rem;
+            text-align: center;
+            /* left, right, bottom padding */
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .expert-section {
+            background-image: url('../../images/expertisee.png');
+            /* Replace with your actual image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 130vh;
+            /* Or any height like 600px */
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            /* push text to bottom */
+            padding: 0 30rem 3rem;
+            text-align: center;
+            /* left, right, bottom padding */
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .back-text {
+            width: 100%;
+            max-width: 800px;
+            padding: 6rem;
+            background: rgba(0, 0, 0, 0.5);
+            /* improves readability */
+            border-radius: 10px;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .container {
@@ -449,7 +551,69 @@
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+            .testimonials .testimonial-item h3 {
+                font-size: 16px;
+                font-weight: bold;
+                margin: 10px 0 5px 0;
+            }
+
+            .container {
+                padding: 0;
+            }
+
+            .feature-description {
+                font-size: 13px;
+            }
+
+            .section-title p {
+                font-size: 14px;
+            }
+
+            .vision-card {
+
+                position: relative;
+                top: 15px;
+                left: 0;
+
+            }
+
+            .mission-card {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 15px;
+            }
+
+            .vi {
+                margin-bottom: 50px;
+                margin-top: 50px;
+            }
+
+            .faq .faq-container {
+                margin-top: 15px;
+                padding: 0;
+                margin: 0;
+            }
+
+            .faq .faq-container .faq-item h3 {
+                font-size: 12px;
+                margin: 0;
+            }
+
+            .feature-title {
+                font-size: 0.8rem;
+            }
+
+            .faq .faq-container .faq-item h3 {
+                font-size: 12px;
+
+            }
+
+
+        }
+
+        /* @media (max-width: 768px) {
             .hero-section {
                 padding: 6rem 0 4rem;
             }
@@ -471,7 +635,7 @@
             }
 
             .feature-card {
-                padding: 2rem;
+                padding: 1rem;
             }
 
             .features-grid {
@@ -510,50 +674,10 @@
             }
 
             .about-content {
-                padding: 2rem;
+                padding: 0rem;
             }
 
             .leader-spotlight {
                 padding: 1.5rem;
             }
-        }
-/* new rows added */
-.vi{
-    margin-bottom: 150px;
-    margin-top: 80px;
-}
-
-    .image-row img {
-      width: 100%;
-      height: auto;
-      border-radius: 15px;
-      margin-top: 0px;
-    }
-
-    .text-row {
-      font-size: 1.2rem;
-      color: #333;
-      line-height: 1.6;
-    }
-.mission-card{
-        border: 1px solid #e2e8f0;
-    border-radius: 15px;
-    padding: 20px;
-    position: absolute;
-    top: -160px;
-    right: -90px;
-    z-index: 1;
-    background:#d1d3ff;
-
-}
-.vision-card{
-        border: 1px solid #e2e8f0;
-    border-radius: 15px;
-    padding: 20px;
-    position: absolute;
-    top: -173px;
-    left: -90px;
-    z-index: 1;
-    background: #d1d3ff;    
-
-}
+        } */

@@ -6,23 +6,23 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
-  var counter = function() {
-   
-    $('#section-counter').waypoint( function( direction ) {
-  
-      if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-  
+  var counter = function () {
+
+    $('#section-counter').waypoint(function (direction) {
+
+      if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+
         var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-        $('.number').each(function(){
+        $('.number').each(function () {
           var $this = $(this),
             num = $this.data('number');
-            console.log(num);
+          console.log(num);
           $this.animateNumber(
             {
               number: num,
@@ -30,63 +30,63 @@
             }, 7000
           );
         });
-        
+
       }
-  
-    } , { offset: '95%' } );
-  
+
+    }, { offset: '95%' });
+
   }
   counter();
 
-  var carousel = function() {
-    $('.home-slider').owlCarousel({
-      loop:true,
-      autoplay: true,
-      margin:0,
-      animateOut: 'fadeOut',
-      animateIn: 'fadeIn',
-      nav:false,
-      autoplayHoverPause: false,
-      items: 1,
-      navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
-      responsive:{
-        0:{
-          items:1,
-          nav:false
-        },
-        600:{
-          items:1,
-          nav:false
-        },
-        1000:{
-          items:1,
-          nav:false
-        }
-      }
-    });
-    $('.carousel-testimony').owlCarousel({
-      center: true,
-      loop: true,
-      items:1,
-      margin: 30,
-      stagePadding: 0,
-      nav: true,
-      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-      responsive:{
-        0:{
-          items: 1
-        },
-        600:{
-          items: 3
-        },
-        1000:{
-          items: 3
-        }
-      }
-    });
-  };
-  carousel();
-  
+  // var carousel = function() {
+  //   $('.home-slider').owlCarousel({
+  //     loop:true,
+  //     autoplay: true,
+  //     margin:0,
+  //     animateOut: 'fadeOut',
+  //     animateIn: 'fadeIn',
+  //     nav:false,
+  //     autoplayHoverPause: false,
+  //     items: 1,
+  //     navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
+  //     responsive:{
+  //       0:{
+  //         items:1,
+  //         nav:false
+  //       },
+  //       600:{
+  //         items:1,
+  //         nav:false
+  //       },
+  //       1000:{
+  //         items:1,
+  //         nav:false
+  //       }
+  //     }
+  //   });
+  //   $('.carousel-testimony').owlCarousel({
+  //     center: true,
+  //     loop: true,
+  //     items:1,
+  //     margin: 30,
+  //     stagePadding: 0,
+  //     nav: true,
+  //     navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+  //     responsive:{
+  //       0:{
+  //         items: 1
+  //       },
+  //       600:{
+  //         items: 3
+  //       },
+  //       1000:{
+  //         items: 3
+  //       }
+  //     }
+  //   });
+  // };
+  // carousel();
+
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
@@ -125,7 +125,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       e.preventDefault();
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
@@ -193,7 +193,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
+    document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
