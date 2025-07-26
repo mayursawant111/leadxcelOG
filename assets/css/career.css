@@ -179,12 +179,6 @@
 			box-sizing: border-box;
 		}
 
-		.container {
-			/* max-width: 1000px; */
-			margin: 0 auto;
-			padding: 0 35px;
-		}
-
 		/* Header Hero Section */
 		.hero-section {
 			background: linear-gradient(135deg, #667eea 0%, #5423c6 100%);
@@ -408,6 +402,10 @@
 			color: #1a202c;
 			font-weight: 600;
 			margin-bottom: 8px;
+		}
+
+		.current-section {
+			padding-bottom: 3rem;
 		}
 
 		.position-type {

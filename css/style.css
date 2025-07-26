@@ -9502,6 +9502,11 @@ button.bg-dark:focus {
   padding-top: 3rem !important;
 }
 
+.pt-9,
+.py-9 {
+  padding-top: 9rem !important;
+}
+
 .pr-5,
 .px-5 {
   padding-right: 3rem !important;
@@ -9509,7 +9514,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 1rem !important;
+  padding-bottom: 3rem !important;
 }
 
 .pl-5,
@@ -11787,7 +11792,7 @@ h5,
 .h5 {
   line-height: 1.5;
   color: #000;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .text-primary {
@@ -13000,8 +13005,7 @@ textarea.form-control {
 
 .ftco-footer {
   font-size: 14px;
-  padding: 6em 0;
-  padding-bottom: 2em;
+  padding: 4em 0 0 0;
   background: #421b9b;
 }
 
@@ -13541,7 +13545,7 @@ textarea.form-control {
 }
 
 .ftco-counter {
-  padding: 2em 0;
+  padding: 4em 0;
   background: #ffffff;
 }
 
@@ -15021,7 +15025,7 @@ textarea.form-control {
   }
 
   .block-18 .text strong {
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 500;
   }
 

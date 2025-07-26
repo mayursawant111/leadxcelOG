@@ -1,466 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How It Works - LeadXcel B2B | B2B Lead Generation Process</title>
-    <meta name="description" content="Discover our proven 6-step B2B lead generation process that delivers qualified prospects directly to your sales team.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About | LeadXcel B2B</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Arial', sans-serif;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f8fa;
+            color: #23252b;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
         }
 
-        .container {
+        .about-section {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 54px auto 72px;
+            padding: 0 18px;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .main-content {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
         }
 
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
+        .about-image {
+            flex: 1 1 50%;
+            min-width: 340px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            padding: 0;
         }
 
-        .header .italic {
-            font-style: italic;
-            color: #667eea;
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .process-flow {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .step-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .step-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        .step-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-        }
-
-        .step-number {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-
-        .step-title {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        .step-description {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .step-details {
-            background: #f8f9fa;
-            padding: 20px;
+        .about-image img {
+            width: 95%;
+            max-height: 440px;
+            object-fit: cover;
             border-radius: 10px;
-            border-left: 4px solid #667eea;
+            box-shadow: 0 4px 26px rgba(0, 0, 0, 0.09);
+            transition: transform 0.28s;
         }
 
-        .step-details h4 {
-            color: #2c3e50;
-            margin-bottom: 10px;
+        .about-image:hover img {
+            transform: scale(1.025) rotate(-0.5deg);
+        }
+
+        .about-text {
+            flex: 1 1 50%;
+            min-width: 350px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-text h2 {
+            margin-top: 0;
+            color: #194568;
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
             font-size: 1.1rem;
+            margin-bottom: 14px;
         }
 
-        .step-details ul {
-            list-style: none;
-            padding-left: 0;
+        .about-text ul {
+            padding-left: 24px;
+            margin: 0 0 18px 0;
         }
 
-        .step-details li {
-            padding: 5px 0;
-            color: #555;
-            position: relative;
-            padding-left: 20px;
+        .about-text li {
+            margin-bottom: 7px;
+            font-size: 1.07rem;
         }
 
-        .step-details li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
+        .additional-content {
+            max-width: 900px;
+            margin: 0 auto 32px;
+            padding: 0 18px;
         }
 
-        .benefits-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        .additional-content h3 {
+            color: #2665b4;
+            font-weight: 600;
+            font-size: 1.22rem;
+            margin-bottom: 14px;
         }
 
-        .benefits-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #2c3e50;
+        .additional-content ul {
+            padding-left: 24px;
+            margin: 0 0 24px 0;
         }
 
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        .additional-content li {
+            margin-bottom: 8px;
+            font-size: 1.07rem;
         }
 
-        .benefit-card {
-            text-align: center;
-            padding: 30px 20px;
-            background: #f8f9fa;
-            border-radius: 15px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
+        /* Responsive */
+        @media (max-width: 950px) {
+            .main-content {
+                flex-direction: column;
+                gap: 28px;
+            }
 
-        .benefit-card:hover {
-            border-color: #667eea;
-            transform: translateY(-3px);
-        }
+            .about-image,
+            .about-text {
+                flex: 1 1 100%;
+                min-width: 0;
+            }
 
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #667eea;
-        }
+            .about-image img {
+                max-height: 300px;
+                width: 100%;
+            }
 
-        .benefit-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        .benefit-description {
-            color: #666;
-            font-size: 1rem;
-        }
-
-        .cta-section {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 50px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .flow-connector {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .process-flow {
-                grid-template-columns: repeat(2, 1fr);
+            .additional-content {
+                padding: 0 12px;
             }
         }
 
-        @media (min-width: 1024px) {
-            .process-flow {
-                grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 540px) {
+            .about-section {
+                margin: 40px 10px 52px;
             }
-        }
 
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
+            .about-image img {
+                max-height: 220px;
             }
-            
-            .header p {
-                font-size: 1rem;
-            }
-            
-            .benefits-section h2,
-            .cta-section h2 {
-                font-size: 2rem;
+
+            .about-text h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <h1>How It <span class="italic">Works</span></h1>
-            <p>Transform your B2B lead generation with our proven process that delivers qualified prospects directly to your sales team.</p>
-        </div>
 
-        <!-- Process Flow Section -->
-        <div class="process-flow">
-            <!-- Step 1 -->
-            <div class="step-card">
-                <div class="step-number">1</div>
-                <div class="step-title">Strategy Development</div>
-                <div class="step-description">
-                    We begin by defining your ideal customer profile (ICP), target accounts, key decision-makers, and success metrics to build a strong foundation for your lead generation campaign.
-                </div>
-                <div class="step-details">
-                    <h4>Key Activities:</h4>
-                    <ul>
-                        <li>Define target persona and company criteria</li>
-                        <li>Identify key stakeholders and decision-makers</li>
-                        <li>Set campaign objectives and KPIs</li>
-                        <li>Develop messaging strategy</li>
-                    </ul>
-                </div>
+    <!-- Section 1 -->
+    <section class="about-section">
+        <div class="main-content">
+            <div class="about-image">
+                <img src="2150970189.jpg" alt="LeadXcel Data Insights" />
             </div>
-
-            <!-- Step 2 -->
-            <div class="step-card">
-                <div class="step-number">2</div>
-                <div class="step-title">Intent-Driven List Building</div>
-                <div class="step-description">
-                    Leveraging account and contact intent data, we identify and prioritize high-intent prospects who are actively researching solutions like yours.
-                </div>
-                <div class="step-details">
-                    <h4>What We Do:</h4>
-                    <ul>
-                        <li>Analyze buyer intent signals</li>
-                        <li>Build targeted prospect lists</li>
-                        <li>Verify contact information</li>
-                        <li>Score leads based on engagement potential</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="step-card">
-                <div class="step-number">3</div>
-                <div class="step-title">Content Development</div>
-                <div class="step-description">
-                    Our team creates compelling, personalized content assets including whitepapers, case studies, videos, and email sequences tailored to your target audience.
-                </div>
-                <div class="step-details">
-                    <h4>Content Types:</h4>
-                    <ul>
-                        <li>Industry-specific whitepapers</li>
-                        <li>Personalized video messages</li>
-                        <li>Case studies and success stories</li>
-                        <li>Multi-touch email sequences</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="step-card">
-                <div class="step-number">4</div>
-                <div class="step-title">Multi-Channel Outreach</div>
-                <div class="step-description">
-                    We execute coordinated campaigns across multiple touchpoints including email, LinkedIn, phone, and direct mail to maximize engagement rates.
-                </div>
-                <div class="step-details">
-                    <h4>Channels We Use:</h4>
-                    <ul>
-                        <li>Personalized email campaigns</li>
-                        <li>LinkedIn outreach and connection requests</li>
-                        <li>Strategic phone calls</li>
-                        <li>Direct mail for high-value prospects</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="step-card">
-                <div class="step-number">5</div>
-                <div class="step-title">Quality Control & Optimization</div>
-                <div class="step-description">
-                    We employ a meticulous data validation process to ensure all information is accurate and relevant before any outreach begins.
-                </div>
-                <div class="step-details">
-                    <h4>Our Process:</h4>
-                    <ul>
-                        <li>Real-time data verification</li>
-                        <li>A/B testing of messaging</li>
-                        <li>Campaign performance monitoring</li>
-                        <li>Continuous optimization based on results</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Step 6 -->
-            <div class="step-card">
-                <div class="step-number">6</div>
-                <div class="step-title">Lead Delivery</div>
-                <div class="step-description">
-                    Qualified leads are delivered directly to your sales team through your preferred CRM or communication method, complete with contact details and engagement history.
-                </div>
-                <div class="step-details">
-                    <h4>What You Get:</h4>
-                    <ul>
-                        <li>Qualified, interested prospects</li>
-                        <li>Complete contact information</li>
-                        <li>Engagement history and notes</li>
-                        <li>Integration with your existing sales process</li>
-                    </ul>
-                </div>
+            <div class="about-text">
+                <h2>Empowering Demand Generation with Intelligence</h2>
+                <p><strong>LeadXcel</strong> leverages <strong>AI-driven insights</strong> and advanced buyer journey
+                    analytics to precisely identify the right buyers at the opportune moment, significantly boosting
+                    market demand.</p>
+                <p>Our suite of services includes:</p>
+                <ul>
+                    <li>Lead Generation</li>
+                    <li>Account-Based Marketing</li>
+                    <li>Event Marketing</li>
+                    <li>Automation Support</li>
+                </ul>
+                <p>All services are powered by a combination of <strong>data intelligence</strong>, automation, and
+                    human verification to deliver consistent, scalable, and high-impact results.</p>
             </div>
         </div>
+        <div class="additional-content">
+            <h3>Why Choose LeadXcel?</h3>
+            <ul>
+                <li>Enhance your digital marketing strategies</li>
+                <li>Accelerate automation capabilities</li>
+                <li>Generate higher-quality leads that convert</li>
+            </ul>
+            <p><strong>Contact LeadXcel</strong> today to discover how we can elevate your lead generation efforts and
+                drive scalable growth for your business.</p>
+        </div>
+    </section>
 
-        <!-- Benefits Section -->
-        <div class="benefits-section">
-            <h2>Why Choose LeadXcel B2B?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
-                    <div class="benefit-title">Proven Results</div>
-                    <div class="benefit-description">Our systematic approach consistently delivers high-quality leads that convert to revenue.</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔧</div>
-                    <div class="benefit-title">Full-Service Solution</div>
-                    <div class="benefit-description">From strategy to delivery, we handle every aspect of your lead generation campaign.</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⭐</div>
-                    <div class="benefit-title">Quality Focused</div>
-                    <div class="benefit-description">We prioritize lead quality over quantity to maximize your sales team's efficiency.</div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">📊</div>
-                    <div class="benefit-title">Transparent Reporting</div>
-                    <div class="benefit-description">Regular updates on campaign performance and detailed metrics tracking.</div>
-                </div>
+    <!-- Section 2 -->
+    <section class="about-section">
+        <div class="main-content">
+            <div class="about-image">
+                <img src="2149241211.jpg" alt="Global B2B Marketing by LeadXcel" />
+            </div>
+            <div class="about-text">
+                <h2>Global Expertise in Performance-Driven Demand Generation</h2>
+                <p><strong>LeadXcel</strong> is a global, pay-for-performance demand generation partner with over a
+                    decade of expertise in <strong>B2B marketing</strong>. We empower clients to acquire
+                    <strong>high-quality leads</strong> and accelerate their sales pipeline through comprehensive,
+                    end-to-end marketing solutions.</p>
+                <p>Our specialization includes supporting:</p>
+                <ul>
+                    <li>Enterprise Tech Marketers</li>
+                    <li>Marketing Agencies</li>
+                    <li>Publishers</li>
+                </ul>
+                <p>We help shorten sales cycles, maximize marketing ROI, and fuel your growth ambitions.</p>
             </div>
         </div>
-
-        <!-- CTA Section -->
-        <div class="cta-section">
-            <h2>Ready to Get Started?</h2>
-            <p>Let us show you how our proven process can transform your B2B lead generation efforts. Contact us today to discuss your specific needs and objectives.</p>
-            <a href="#contact" class="cta-button">Get Started Today</a>
+        <div class="additional-content">
+            <h3>Omnichannel Leadership &amp; Massive Global Reach</h3>
+            <ul>
+                <li>Omnichannel approach spanning digital, events, and more</li>
+                <li>Access to 40+ million global contacts for unprecedented scale</li>
+                <li>Scalable growth solutions for technology companies</li>
+            </ul>
+            <p><strong>Partner with LeadXcel</strong> to harness proven strategies and data intelligence for superior
+                B2B results. Unlock your next stage of lead generation and market growth.</p>
         </div>
-    </div>
+    </section>
 
-    <script>
-        // Add smooth scrolling and animation effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate cards on scroll
-            const cards = document.querySelectorAll('.step-card');
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            cards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(card);
-            });
-
-            // Smooth scrolling for CTA button
-            document.querySelector('.cta-button').addEventListener('click', function(e) {
-                e.preventDefault();
-                // You can customize this to scroll to your contact form
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
+
 </html>
