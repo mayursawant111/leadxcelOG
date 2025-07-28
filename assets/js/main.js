@@ -216,5 +216,18 @@
       faqItem.parentNode.classList.toggle('faq-active');
     });
   });
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.faq-item').forEach(function (item) {
+      let toggleTargets = [item.querySelector('h3'), item.querySelector('.faq-toggle')];
+      toggleTargets.forEach(function (btn) {
+        if (btn) {
+          btn.addEventListener('click', function () {
+            item.classList.toggle('faq-active');
+          });
+        }
+      });
+    });
+  });
+
 
 })();

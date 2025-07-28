@@ -398,7 +398,7 @@
 		}
 
 		.position-title {
-			font-size: 1rem;
+			font-size: 0.95rem;
 			color: #1a202c;
 			font-weight: 600;
 			margin-bottom: 8px;
@@ -413,7 +413,7 @@
 			color: #234e52;
 			padding: 8px 16px;
 			border-radius: 20px;
-			font-size: 0.9rem;
+			font-size: 0.75rem;
 			font-weight: 500;
 			border: 1px solid #b2f5ea;
 		}

@@ -101,7 +101,7 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #586481;
+  color: #555555;
 }
 
 abbr[title],
@@ -11651,6 +11651,36 @@ a.text-dark:focus {
   visibility: hidden !important;
 }
 
+
+
+.about-image {
+  position: relative;
+  display: inline-block;
+}
+
+.about-image-text-overlay {
+  position: absolute;
+  top: 28%;
+  left: 5%;
+  right: 60%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
 @media print {
 
   *,
@@ -12581,20 +12611,20 @@ h5,
 
 #accordion .card .card-header {
   padding: 0;
-  background: transparent;
+  background: #f9f9f9;
   border-bottom: 1px solid #f0f0f0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
-  border-radius: 0;
+  border-radius: 15px;
 }
 
 #accordion .card .card-header a {
   padding: 12px 20px;
   display: block;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
-  color: #000;
+  color: #555555;
 }
 
 #accordion .card .card-header a span {

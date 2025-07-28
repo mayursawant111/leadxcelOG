@@ -95,14 +95,14 @@
 
 
         .about-content-container {
-            display: flex;
+            display: flow;
             align-items: flex-start;
             gap: 32px;
             /* adjust spacing as needed */
         }
 
         .about-image img {
-            width: 700px;
+            width: 800px;
             /* set your preferred width */
             height: auto;
             border-radius: 8px;
@@ -560,7 +560,7 @@
         }
 
         .leadxcel-mission p {
-            color: #586481;
+            color: #555555;
             font-size: 0.95rem;
             margin-bottom: 28px;
             line-height: 1.7;
@@ -569,10 +569,10 @@
 
         .leadxcel-leads-list {
             display: flex;
-            gap: 15px;
+            gap: 25px;
             justify-content: flex-start;
             flex-wrap: wrap;
-            margin-left: 135px;
+            margin-left: 160px;
         }
 
         .leadxcel-lead-type {
@@ -706,7 +706,7 @@
         }
 
         .value-text {
-            color: #586481;
+            color: #555555;
             font-size: 0.95rem;
             line-height: 1.5;
             margin-bottom: 0;
