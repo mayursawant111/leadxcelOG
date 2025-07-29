@@ -387,45 +387,6 @@
      font-weight: 500;
  }
 
- .process-steps {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-     gap: 15px;
-     margin-top: 50px;
- }
-
- .process-step {
-     text-align: center;
-     font-size: 15px;
-     padding: 30px 20px;
- }
-
- .process-step h4 {
-     font-size: 1.1rem;
-     text-align: center;
-     color: #333;
-     margin-bottom: 15px;
-     font-weight: 600;
- }
-
- .process-step p {
-     color: #666;
-     line-height: 1.6;
- }
-
- .step-number {
-     width: 60px;
-     height: 60px;
-     background: linear-gradient(135deg, #5423c6 0%, #ee5a24 450%);
-     color: white;
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     margin: 0 auto 20px;
-     font-size: 1.5rem;
-     font-weight: bold;
- }
 
  /* Responsive Design */
  @media (max-width: 1024px) {

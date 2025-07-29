@@ -186,22 +186,25 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
         }
+
 
         .feature-card {
             background: var(--white);
             padding: 1rem;
             border-radius: 16px;
-            /* box-shadow: var(--shadow-md); */
             border: 1px solid #e2e8f0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 1.5rem;
         }
+
 
         .feature-card::before {
             content: '';
@@ -984,7 +987,7 @@
             }
 
             .value-text {
-                font-size: .98rem;
+                font-size: 14px;
             }
         }
 
@@ -1033,6 +1036,7 @@
 
             .container {
                 padding: 0;
+                margin: 0 auto;
             }
 
             .feature-description {
@@ -1049,6 +1053,45 @@
                 top: 15px;
                 left: 0;
 
+            }
+
+            .vision-text {
+                font-size: 14px;
+            }
+
+            .mission-card .mission-text {
+                font-size: 14px;
+            }
+
+            .leadxcel-mission h2 {
+                font-size: 25px;
+            }
+
+            .leadxcel-mission p {
+                font-size: 14px;
+            }
+
+            .about-image img {
+                width: 318px;
+            }
+
+            .about-image-text-overlay {
+                position: absolute;
+                top: 48%;
+                left: 5%;
+                right: 7%;
+                font-size: 15px;
+            }
+
+            .leadxcel-leads-list {
+                gap: 11px;
+                margin-left: 5px;
+                font-size: 15px;
+            }
+
+            .leadxcel-lead-type {
+                gap: 9px;
+                font-size: 14px;
             }
 
             .mission-card {

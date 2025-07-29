@@ -656,7 +656,7 @@
 
 			.form-container {
 				padding: 40px 24px;
-				margin: 0 20px;
+				margin: 0 0px;
 			}
 
 			.position-header {
@@ -708,6 +708,9 @@
 				gap: 0px;
 			}
 
+			.benefit-card p {
+				font-size: 14px;
+			}
 
 
 		}
