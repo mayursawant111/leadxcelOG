@@ -98,7 +98,7 @@
 
 /* Main Content */
 .main-content {
-    padding: 50px 20px 50px 20px;
+    /* padding: 20px 20px 20px 20px; */
     background: #ffffff;
 }
 
@@ -254,10 +254,44 @@
     color: #6b7280;
 }
 
+
+.contact-info-section {
+    background-color: #f4f4f7;
+    /* Soft neutral background */
+    border-top: 1px solid #e0e0e0;
+}
+
+.contact-info-section .section-title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: #2c2c51;
+    /* LeadXcel purple or deep slate */
+}
+
+.contact-info-section .section-detail {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-info-section .section-link {
+    font-size: 0.9rem;
+    color: #5b3cc4;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact-info-section .section-link:hover {
+    text-decoration: underline;
+    color: #3d28a0;
+}
+
+
 /* Contact Form */
 .form-container {
     background: white;
-    padding: 30px;
+    padding: 50px 30px 30px 30px;
     border-radius: 24px;
     box-shadow: 0 32px 64px rgba(0, 0, 0, 0.08);
     border: 1px solid #e5e7eb;
@@ -278,6 +312,7 @@
     text-align: center;
     margin-bottom: 50px;
 }
+
 
 .form-title {
     font-size: 1.9rem;
@@ -577,6 +612,50 @@ textarea.form-input {
         margin-bottom: 50px;
         margin-top: -55px;
         flex-wrap: wrap;
+    }
+
+    .contact-card {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .contact-card h3 {
+        font-size: 18px;
+    }
+
+    .contact-card p {
+
+        font-size: 14px;
+    }
+
+    .contact-card a {
+        font-size: 17px;
+    }
+
+    .form-label {
+        font-size: 0.8rem;
+    }
+
+    .form-row {
+
+        gap: 0px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        gap: 0px;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-info-section .section-detail {
+        font-size: 0.9rem;
     }
 
     .section-title {

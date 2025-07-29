@@ -23,9 +23,25 @@
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/contact.css" rel="stylesheet">
+  <!-- In your <head> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PEH8EZ6H5Z"></script>
   <script>
@@ -47,7 +63,7 @@
   </script>
 </head>
 
-<body class="about-page">
+<body>
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
@@ -82,9 +98,8 @@
       </div>
       <!-- End Section Title -->
     </div>
-    </div><!-- End Page Title -->
     <!-- Main Content -->
-    <section class="main-content">
+    <section class="main-content p-0">
       <div class="container">
         <div class="contact-cards">
           <div class="contact-card ">
@@ -128,75 +143,106 @@
         </div>
         <!-- </div> -->
       </div>
-    </section>
-    <div class="map-section">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10698.448182441301!2d73.94185061349711!3d18.552719076741674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3c3288ba495%3A0x38e833613a63004a!2sKharadi%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1752072797062!5m2!1sen!2sin"
-        width="100%" height="500" style="border:15px; padding: 50px 100px 50px 100px;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="content row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
-        <!-- Contact Form -->
-        <div class="form-container form-container-overlap">
-          <!-- <div class="form-container"> -->
-          <div class="form-header">
-            <h2 class="form-title">Start Your Growth Journey</h2>
+      <section>
+        <div class="map-section" style="overflow: hidden; border-radius: 16px; padding: 0 90px 0px 90px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10698.448182441301!2d73.94185061349711!3d18.552719076741674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3c3288ba495%3A0x38e833613a63004a!2sKharadi%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1752072797062!5m2!1sen!2sin"
+            width="100%" height="400" style="border: 0; border-radius: 16px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </section>
+      <div class="content row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <!-- Contact Form -->
+          <div class="form-container form-container-overlap">
+            <!-- <div class="form-container"> -->
+            <div class="form-header">
+              <h2 class="form-title">Start Your Growth Journey</h2>
+            </div>
+            <form id="contactForm" class="form-grid">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Name <span class="required">*</span></label>
+                  <input type="text" name="firstName" class="form-input" placeholder="John Brooks" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Company Name <span class="required">*</span></label>
+                  <input type="text" name="company" class="form-input" placeholder="Your Company Inc." required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Phone Number <span class="required">*</span></label>
+                  <input type="tel" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Business Email <span class="required">*</span></label>
+                  <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">How can we help you?</label>
+                  <select name="industry" class="form-input form-select">
+                    <option value="">Select Your Requirements</option>
+                    <option value="Marketing/Sales Ready Leads">Marketing/Sales Ready Leads</option>
+                    <option value="Data/Audience Targeting">Data/Audience Targeting</option>
+                    <option value="Customer Intent">Customer Intent</option>
+                    <option value="Content/Media Distribution">Content/Media Distribution</option>
+                    <option value="Lead Nurturing">Lead Nurturing</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Tell us about your goals </label>
+                  <textarea name="message" class="form-input"
+                    placeholder="What challenges are you facing with lead generation? What are your growth targets? Any specific industries you're targeting?"
+                    required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="submit-btn">
+                Get My Custom Strategy
+              </button>
+              <div id="formMessage" class="form-message"></div>
+              <div class="guarantee">
+              </div>
+            </form>
           </div>
-          <form id="contactForm" class="form-grid">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Name <span class="required">*</span></label>
-                <input type="text" name="firstName" class="form-input" placeholder="John Brooks" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Company Name <span class="required">*</span></label>
-                <input type="text" name="company" class="form-input" placeholder="Your Company Inc." required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Phone Number <span class="required">*</span></label>
-                <input type="tel" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Business Email <span class="required">*</span></label>
-                <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">How can we help you?</label>
-                <select name="industry" class="form-input form-select">
-                  <option value="">Select Your Requirements</option>
-                  <option value="Marketing/Sales Ready Leads">Marketing/Sales Ready Leads</option>
-                  <option value="Data/Audience Targeting">Data/Audience Targeting</option>
-                  <option value="Customer Intent">Customer Intent</option>
-                  <option value="Content/Media Distribution">Content/Media Distribution</option>
-                  <option value="Lead Nurturing">Lead Nurturing</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Tell us about your goals </label>
-                <textarea name="message" class="form-input"
-                  placeholder="What challenges are you facing with lead generation? What are your growth targets? Any specific industries you're targeting?"
-                  required></textarea>
-              </div>
-            </div>
-            <button type="submit" class="submit-btn">
-              Get My Custom Strategy
-            </button>
-            <div id="formMessage" class="form-message"></div>
-            <div class="guarantee">
-            </div>
-          </form>
         </div>
       </div>
-      <div class="col-md-3"></div>
-    </div>
-    </div>
+
+      <section class="contact-info-section py-5 bg-light">
+        <div class="container">
+          <div class="row text-center text-md-start gy-4">
+
+            <div class="col-md-3">
+              <h5 class="section-title">Our Office</h5>
+              <p class="section-detail mb-0">Kharadi, Pune,<br>Maharashtra 411014</p>
+            </div>
+
+            <div class="col-md-3">
+              <h5 class="section-title">HR Department</h5>
+              <p class="section-detail mb-1">hr@leadxcelb2b.com</p>
+            </div>
+
+            <div class="col-md-3">
+              <h5 class="section-title">General Queries</h5>
+              <p class="section-detail mb-1">info@leadxcelb2b.com</p>
+            </div>
+
+            <div class="col-md-3">
+              <h5 class="section-title">Join Our Team</h5>
+              <p class="section-detail mb-1">career@leadxcelb2b.com</p>
+              <a href="/leadxcelb2b.com/career.html" class="section-link">View Openings</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
   </main>
   <script>
     document.getElementById('contactForm').addEventListener('submit', function (e) {
