@@ -193,7 +193,7 @@
 
         .feature-card {
             background: var(--white);
-            padding: 1rem;
+            padding: 2rem;
             border-radius: 16px;
             border: 1px solid #e2e8f0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

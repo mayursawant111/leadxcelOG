@@ -255,12 +255,6 @@
 }
 
 
-.contact-info-section {
-    background-color: #f4f4f7;
-    /* Soft neutral background */
-    border-top: 1px solid #e0e0e0;
-}
-
 .contact-info-section .section-title {
     font-weight: 600;
     font-size: 1.125rem;
@@ -491,6 +485,75 @@ textarea.form-input {
     height: 20px;
 }
 
+.map-marker {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #6f42c1;
+    /* LeadXcel purple */
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(111, 66, 193, 0.4);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.map-marker:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+.map-marker::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background: rgba(111, 66, 193, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse-ring 1.6s ease-out infinite;
+    z-index: -1;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+.map-marker .tooltip {
+    display: none;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #6f42c1;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 20;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.map-marker:hover .tooltip {
+    display: block;
+    opacity: 1;
+}
+
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -653,6 +716,7 @@ textarea.form-input {
         width: 50px;
         height: 50px;
     }
+
 
     .contact-info-section .section-detail {
         font-size: 0.9rem;
